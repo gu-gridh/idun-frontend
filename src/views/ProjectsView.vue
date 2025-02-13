@@ -2,7 +2,7 @@
     <div>
         <h1>Projects</h1>
         <ul v-for="item in project" :key="item.id">
-            <li><h2>{{ item.name }}</h2></li>
+            <li><router-link :to="`/projects/${item.id}`"><h2>{{ item.name }}</h2></router-link></li>
             <p>{{ item.description }}</p>
         </ul>
     </div>
@@ -11,9 +11,9 @@
 <script setup lang="ts">
 import { fetchByResourceClass } from '@/db';
 import { onMounted, ref } from 'vue';
-import type { Project } from '@/types';
+import type { Projects } from '@/types';
 
-const project = ref<Project[]>([]);
+const project = ref<Projects[]>([]);
 const projectsId = ref(99) //this is the id for resource class 'Projects'
 const numItems = ref(50) //this is the number of items to fetch
 
@@ -48,7 +48,8 @@ p {
 }
 
 li {
-    margin-top: 10px;
+    
+    list-style: none;
 }
 
 </style>
