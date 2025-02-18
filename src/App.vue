@@ -18,5 +18,6 @@ import { RouterLink, RouterView } from 'vue-router'
   max-width: 80%;
   margin: 0 auto;
   padding-top: 20px;
+  padding-bottom: 80px;
 }
 </style>

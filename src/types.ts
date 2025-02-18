@@ -7,8 +7,17 @@ export interface Projects {
 
 export interface Project {
     id: number
+    identifier: [
+        {
+            '@value': string
+        }
+    ]
     name: string
-    owner: string
+    owner: [
+        {
+            display_title: string
+        }
+    ]
     description: []
     homepage: string
     contributor: [
@@ -23,11 +32,14 @@ export interface Project {
     ]
     funding: [
         {
-            value: string
+           '@value': string
         }
     ]
-    contributingRole: []
-    timeInterval: []
+    timeInterval: [
+        {
+            '@value': string
+        }
+    ]
     subjectArea: []
     subject: []
 }    
