@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <!---- will fetch 3 page blocks from Omeka S API -->
-    <div class="row">
+    <div class="content">
       <div class="column">
         <div>
           <span v-html="redData1.html"></span>
@@ -13,6 +13,7 @@
         </div>
       </div>
 
+      
       <div class="row">
         <div class="column">
           <div class="green">
@@ -48,6 +49,19 @@
         </div>
         <div class="col-blue">
           GITHUB
+        </div>
+      </div>
+      <!-- Active projects -->
+      <h3>Aktuella projekt</h3>
+      <div class="projects">
+        <div class="col-ocean">
+          Aktiva projekt
+        </div>
+        <div class="col-pink">
+          Aktiva projekt
+        </div>
+        <div class="col-yellow">
+          Aktiva projekt
         </div>
       </div>
     </div>
@@ -92,12 +106,21 @@ const convertToJson = (data: any) => {
 
 
 <style scoped>
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
+  gap: 20px;
 }
 
 .links {
@@ -106,7 +129,19 @@ const convertToJson = (data: any) => {
   flex-grow: 1;
   width: 100%;
   align-items: center;
-  margin-top: 30px;;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
+  gap: 30px;
 }
 
 .column {
@@ -116,12 +151,12 @@ const convertToJson = (data: any) => {
   flex: 1;
   width: 50%;
   padding: 10px;
-  margin: 10px;
+  
   
 }
 
 .pink {
-  background-color: #fd1daf;
+  background-color: #ff42a1;
   height: 150px;
   padding: 10px;
 }
@@ -142,7 +177,30 @@ const convertToJson = (data: any) => {
   background-color: #00a1ff;
   height: 100px;
   padding: 10px;
-  margin: 10px;
+  flex: 1 1 0;
+  width: 0;
+}
+
+.col-ocean {
+  background-color: #14e6cf;
+  height: 150px;
+  padding: 10px;
+  flex: 1 1 0;
+  width: 0;
+}
+
+.col-pink {
+  background-color: #ff42a1;
+  height: 150px;
+  padding: 10px;
+  flex: 1 1 0;
+  width: 0;
+}
+
+.col-yellow {
+  background-color: #ffda31;
+  height: 150px;
+  padding: 10px;
   flex: 1 1 0;
   width: 0;
 }
