@@ -1,9 +1,11 @@
-@import './base.css';
+/* @import './base.css'; */
+
 
 #app {
-  margin: 0 auto;
+
   padding: 2rem;
   font-weight: normal;
+  width: 100%;
 }
 
 a,
@@ -13,6 +15,7 @@ a,
   transition: 0.4s;
   padding: 2px;
 }
+
 
 @media (hover: hover) {
   /* a:hover {
@@ -27,6 +30,6 @@ a,
   }
 
   #app {
-    padding: 0 2rem;
+    padding: 0 5rem;
   }
 }

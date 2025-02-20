@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
     <nav>
-      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/">GRIDH</RouterLink>
       <RouterLink to="/projects">Projects</RouterLink>
     </nav>
     <div class="container">
@@ -15,9 +15,10 @@ import { RouterLink, RouterView } from 'vue-router'
 <style scoped>
 /* container */
 .container {
-  max-width: 80%;
-  margin: 0 auto;
-  padding-top: 20px;
+  width: 100%;
+  padding-top: 40px;
   padding-bottom: 80px;
+  display: flex;
+  margin: 15px;
 }
 </style>
