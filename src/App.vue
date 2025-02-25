@@ -19,6 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
   padding-top: 40px;
   padding-bottom: 80px;
   display: flex;
-  margin: 15px;
+  margin: 0px;
+  font-family: "Barlow Condensed", sans-serif !important;
 }
 </style>
