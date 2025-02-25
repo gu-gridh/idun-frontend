@@ -92,7 +92,7 @@
 
   .intro-article {
     columns: 2;
-    column-gap: 40px;
+    column-gap: 90px;
     font-size: 20px;
     font-weight: 300;
     text-align: justify;
