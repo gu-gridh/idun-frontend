@@ -344,23 +344,7 @@ width:150px;
 
 
 
-  .pink {
-    background-color: #ff42a1;
-    height: 150px;
-    padding: 10px;
-  }
 
-  .green {
-    background-color: #60d937;
-    height: 150px;
-    padding: 10px;
-  }
-
-  .orange {
-    background-color: #feae00;
-    height: 150px;
-    padding: 10px;
-  }
 
   .link-item {
     background: linear-gradient(180deg, rgba(255, 0, 100, 0.1) 0%, rgba(230, 230, 230, 1) 100%);
@@ -383,7 +367,7 @@ width:150px;
     display:flex;
     flex-direction: row;
     align-items: center;
-    height: 150px;
+    height: 190px;
     padding: 10px;
     flex: 1 1 0;
     width: 0;
@@ -396,17 +380,11 @@ width:150px;
 
   .pink {
     background: linear-gradient(180deg, rgba(255, 0, 200, 0.2) 0%, rgba(240, 240, 250, 1) 100%);
-    height: 150px;
-    padding: 10px;
-    flex: 1 1 0;
-    width: 0;
+  
   }
 
   .yellow {
     background: linear-gradient(180deg, rgba(255, 255, 00, 0.2) 0%, rgba(210, 250, 230, 1) 100%);
-    height: 150px;
-    padding: 10px;
-    flex: 1 1 0;
-    width: 0;
+  
   }
 </style>
