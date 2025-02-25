@@ -102,7 +102,7 @@
     font-weight: 500;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1100px) {
     .intro-article {
       columns: 1;
 
