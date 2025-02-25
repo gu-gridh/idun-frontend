@@ -29,7 +29,7 @@
       </div>
       <div class="intro-article">
         <p> The Gothenburg Research Infrastructure in Digital Humanities (GRIDH) is a research node and infrastructure
-          that offer expertise in <span>deep learning and Artificial Intelligence</span>, <span>visualisation</span> and <span>visual analysis</span>, <span>spatio-temporal
+          that offer expertise in <span>deep learning and artificial intelligence</span>, <span>visualisation</span> and <span>visual analysis</span>, <span>spatio-temporal
           interfaces</span>, and <span>natural language processing</span>. Our mission is to strengthen, renew and enrich research and
           teaching through digital source material, tools and methods.  </p> 
 
@@ -57,14 +57,16 @@
     font-family: "Barlow Condensed", sans-serif !important;
     text-align: left;
     width: calc(50%);
-    font-weight: 100;
+    font-weight: 200;
     line-height: 0.85;
     margin-left: 60px;
+    color: var(--theme-heading);
   }
 
   .title-gridh {
     width: 100%;
     font-size: 80px;
+
   }
 
 
