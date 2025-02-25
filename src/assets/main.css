@@ -1,4 +1,8 @@
-/* @import './base.css'; */
+:root {
+ --theme-heading:rgb(100,100,100);
+ --theme-livedata:orange;
+}
+
 
 body{
 

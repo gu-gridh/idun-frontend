@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+
     <!---- will fetch 3 page blocks from Omeka S API -->
     <div class="content">
       <div class="row grey-gradient">
@@ -155,7 +156,8 @@
 
 
 
-<style scoped>
+<style>
+ 
   .content {
     padding: 0;
     margin: 0;
@@ -197,7 +199,7 @@
   }
 
   .hoverable:hover{
-transform:scale(1.05);
+transform:scale(1.03);
   }
 
   .data-module {
@@ -212,7 +214,7 @@ transform:scale(1.05);
   .text-module {
     background-color: none;
     padding: 20px;
-    color: rgb(100, 100, 100);
+    color:var(--theme-heading);
     padding-bottom: 40px;
     padding-left: 40px
   }
@@ -237,7 +239,7 @@ width:150px;
   }
 
   .text-module span {
-    color: orange;
+    color:var(--theme-livedata);
   }
 
   .network-module {
@@ -285,23 +287,23 @@ width:150px;
   }
 
   .info-module-slogan span {
-    color: orange;
+    color:var(--theme-livedata);
     font-weight:400;
   }
 
 
   .info-module-slogan h1 {
-    color: rgb(100, 100, 100);
+    color:var(--theme-heading);
     font-size: 50px;
     margin-top: 10px;
     line-height: 0.85;
   }
 
   .info-module-slogan h2 {
-    color: rgb(100, 100, 100);
+    color:var(--theme-heading);
     margin-top: -20px;
     max-width: 600px;
-    font-weight:200;
+    font-weight:300;
   }
 
 
