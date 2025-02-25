@@ -79,12 +79,12 @@
   .intro-space {
     width: calc(100% - 140px);
     padding-left: 60px;
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   .intro-title {
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--theme-heading);
   }
 
