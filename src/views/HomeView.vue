@@ -46,7 +46,7 @@
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
-            <h1>So many researchers!</h1>
+            <h1>So many collaborations!</h1>
             <h2>GRIDH has to date been involved in more than <span>32</span> research projects, and helped gather more
               than <span>320 million</span> in funding.</h2>
             <span v-html="redData2.html"></span>
