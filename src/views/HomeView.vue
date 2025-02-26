@@ -10,6 +10,7 @@
             <h1>So many projects!</h1>
             <h2>GRIDH has to date been involved in more than <span>29</span> research projects, and helped gather more
               than <span>320 million</span> in funding.</h2>
+              <div class="text-module-link hoverable" style="width:150px;">Contact us and start a project</div>
             <span v-html="redData1.html"></span>
           </div>
         </div>
@@ -260,8 +261,10 @@ transform:scale(1.03);
   }
 
   .text-module-link {
+    color:var(--theme-heading);
     font-size: 22px;
 width:150px;
+cursor:pointer;
   }
 
   .text-module span {
