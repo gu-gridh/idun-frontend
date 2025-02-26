@@ -37,7 +37,7 @@
       <div class="row">
         <div class="data-module">
           <div class="buffer">
-            <div class="network-module hoverable">
+            <div class="module hoverable theme-gradient-1">
 
             </div>
           </div>
@@ -65,9 +65,28 @@
         </div>
         <div class="data-module">
           <div class="buffer">
-            <div class="carousel-module hoverable">
+            <div class="module hoverable theme-gradient-2">
 
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="data-module">
+          <div class="buffer">
+            <div class="module hoverable theme-gradient-1">
+
+            </div>
+          </div>
+        </div>
+        <div class="info-module">
+          <div class="info-module-slogan right">
+            <div class="text-module-title">Global datasets</div>
+            <h1>From all over the place!</h1>
+            <h2>GRIDH has to date been involved in more than <span>32</span> research projects, and helped gather more
+              than <span>320 million</span> in funding.</h2>
+            <span v-html="redData2.html"></span>
           </div>
         </div>
       </div>
@@ -193,6 +212,13 @@
   .pink-gradient-inverted {
     background: linear-gradient(180deg, rgba(100, 100, 200, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
   }
+  .theme-gradient-1 {
+  background: linear-gradient(360deg, rgba(255, 0, 200, 0.1) 0%, rgba(240, 240, 240, 1) 100%);
+  }
+
+  .theme-gradient-2 {
+    background: linear-gradient(360deg, rgba(0, 0, 200, 0.1) 0%, rgba(240, 240, 240, 1) 100%);
+  }
 
   .hoverable{
     transition: all 0.2s ease-in-out;
@@ -242,21 +268,14 @@ width:150px;
     color:var(--theme-livedata);
   }
 
-  .network-module {
-    background: linear-gradient(360deg, rgba(255, 0, 200, 0.1) 0%, rgba(240, 240, 240, 1) 100%);
+  .module {
+    
     border-radius: 15px;
     width: 100%;
     min-height: 300px;
     height: 30vh;
   }
 
-  .carousel-module {
-    background: linear-gradient(360deg, rgba(0, 0, 200, 0.1) 0%, rgba(240, 240, 240, 1) 100%);
-    border-radius: 15px;
-    width: 100%;
-    min-height: 300px;
-    height: 25vh;
-  }
 
 
 
