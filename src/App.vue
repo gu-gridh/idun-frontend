@@ -57,15 +57,19 @@
     font-family: "Barlow Condensed", sans-serif !important;
     text-align: left;
     width: calc(50%);
-    font-weight: 200;
+    font-weight: 600;
     line-height: 0.85;
     margin-left: 60px;
     color: var(--theme-heading);
+    background: -webkit-linear-gradient(rgba(255, 0, 200, 0.5), rgba(200, 200, 240, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
 
   .title-gridh {
     width: 100%;
     font-size: 80px;
+    
 
   }
 
