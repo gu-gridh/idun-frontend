@@ -61,7 +61,7 @@
     line-height: 0.85;
     margin-left: 60px;
     color: var(--theme-heading);
-    background: -webkit-linear-gradient(rgba(255, 0, 200, 0.5), rgba(200, 200, 240, 1));
+    background: -webkit-linear-gradient(#f194b8, #9b8bf4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
@@ -78,6 +78,7 @@
     width: 100%;
     font-size: 60px;
     min-width: 500px;
+    padding-bottom:10px;
   }
 
 
@@ -105,7 +106,7 @@
 
   .intro-article span {
     color: var(--theme-livedata);
-    font-weight: 500;
+    font-weight: 700;
   }
 
   @media screen and (max-width: 1100px) {

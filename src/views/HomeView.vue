@@ -310,7 +310,7 @@ cursor:pointer;
 
   .info-module-slogan span {
     color:var(--theme-livedata);
-    font-weight:400;
+    font-weight:600;
   }
 
 
