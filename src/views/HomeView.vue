@@ -117,7 +117,7 @@
         <div class="project-container">
           <h3>Aktuella projekt</h3>
           <div class="projects">
-            <div class="project-item ocean">
+            <div class="project-item ocean" style="border-radius:10px 0 0 10px">
               <div class="link-title">
               Aktiva projekt
             </div>
@@ -127,7 +127,7 @@
               Aktiva projekt
             </div>
             </div>
-            <div class="project-item yellow">
+            <div class="project-item yellow" style="border-radius:0px 10px 10px 0px">
               <div class="link-title">
               Aktiva projekt
             </div>
