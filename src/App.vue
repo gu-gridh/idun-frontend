@@ -1,8 +1,12 @@
 <script setup lang="ts">
-  import { RouterLink, RouterView } from 'vue-router'
+  import { RouterLink, RouterView } from "vue-router";
+  import Footer from "@/components/Footer.vue";
+
+
 </script>
 
 <template>
+
   <!--    <nav>
       <RouterLink to="/">GRIDH</RouterLink>
       <RouterLink to="/projects">Projects</RouterLink>
@@ -39,9 +43,11 @@
       </div>
     </div>
   </div>
+
   <div class="container">
     <RouterView />
   </div>
+  <Footer />
 </template>
 
 <style>
