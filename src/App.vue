@@ -61,7 +61,7 @@
     line-height: 0.85;
     margin-left: 60px;
     color: var(--theme-heading);
-    background: -webkit-linear-gradient(#f194b8, #9b8bf4);
+    background: -webkit-linear-gradient(var(--theme-livedata1), var(--theme-livedata2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
@@ -105,7 +105,7 @@
   }
 
   .intro-article span {
-    color: var(--theme-livedata);
+    color: var(--theme-livedata1);
     font-weight: 700;
   }
 
@@ -115,6 +115,20 @@
 
     }
   }
+
+  .livedata-pulse {
+
+  /* Standard Syntax */
+  animation: livedata-pulse 2.0s infinite; 
+}
+
+
+/* Standard Syntax */
+@keyframes livedata-pulse{
+  0%{color:var(--theme-livedata1);}	
+	50%{color:var(--theme-livedata2);}
+  100%{color:var(--theme-livedata1);}	
+}
 
 
 .gu-logo{

@@ -17,14 +17,14 @@
         <div class="data-module">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><span>8</span> active </div>
+            <div class="text-module-data"><span class="livedata-pulse">8</span> active </div>
             <div class="text-module-description">Active info text </div>
 
-            <div class="text-module-data"><span>21</span> maintained </div>
+            <div class="text-module-data"><span class="livedata-pulse">21</span> maintained </div>
             <div class="text-module-description">Maintained info text </div>
 
 
-            <div class="text-module-data"><span>320</span> million </div>
+            <div class="text-module-data"><span class="livedata-pulse">320</span> million </div>
             <div class="text-module-description">Money-maker info text </div>
 
 
@@ -268,11 +268,10 @@ cursor:pointer;
   }
 
   .text-module span {
-    color:var(--theme-livedata);
+    color:var(--theme-livedata1);
   }
 
   .module {
-    
     border-radius: 15px;
     width: 100%;
     min-height: 300px;
@@ -309,7 +308,7 @@ cursor:pointer;
   }
 
   .info-module-slogan span {
-    color:var(--theme-livedata);
+    color:var(--theme-livedata1);
     font-weight:600;
   }
 
