@@ -2,13 +2,13 @@
   <footer id="footer">
     <div id="developer-info">
       <div class="links-stack ">
-        <a class="site-link link" href="https://www.gu.se/digital-humaniora" target="_blank">Main university site</a>
+        <a class="site-link link" href="https://www.gu.se/digital-humaniora" target="_blank">GRIDH home</a>
         <a class="site-link link" href="https://github.com/gu-gridh/" target="_blank">GitHub repository</a>
       </div>
-   <!--    <div class="links-stack border-style">
-      <a class="site-link link" href="https://github.com/gu-gridh/etruscantombs#datasets" target="_blank">Dataset documentation</a>
-      <a href="#" class="download-link link" @click="downloadData">Download the structured data</a>
-    </div> -->
+     <div class="links-stack border-style">
+      Address: Box 100, 405 30 Gothenburg <br>
+      Telephone: +46 (0) 31-786 0000
+    </div> 
     </div>
     <div class="partners">
       <a href="https://dh.gu.se/">
@@ -58,7 +58,7 @@
 
   .GRIDHLogo {
     float: right;
-    margin-top: 27px;
+    margin-top: 30px;
     width: auto;
     height: auto;
     text-align: left;
@@ -72,7 +72,7 @@
 
   .PartnerLogo {
     float: right;
-    margin-top: 27px;
+    margin-top: 30px;
     width: auto;
     height: auto;
     text-align: left;
@@ -91,7 +91,7 @@
   display: flex; 
   align-items: flex-end; 
   margin-left: 40px;
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 1.5em;
   line-height: 1.4;
   font-weight: 200;
