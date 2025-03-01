@@ -18,10 +18,10 @@
           <div class="text-module">
             <div class="text-module-title">Projects </div>
             <div class="text-module-data"><span class="livedata-pulse">8</span> active projects </div>
-            <div class="text-module-description">Active info text </div>
+            <div class="text-module-description">Active projects info text </div>
 
             <div class="text-module-data"><span class="livedata-pulse">21</span> portals and tools </div>
-            <div class="text-module-description">Maintained info text </div>
+            <div class="text-module-description">Portals and tools info text </div>
 
 
             <div class="text-module-data"><span class="livedata-pulse">320</span> million in funding</div>
