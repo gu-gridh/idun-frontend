@@ -7,11 +7,15 @@
 
 <template>
 
-  <!--    <nav>
-      <RouterLink to="/">GRIDH</RouterLink>
-      <RouterLink to="/projects">Projects</RouterLink>
-    </nav> -->
+
+  <div class="top-menu">
+    <div class="menu-item  menu-selected">Home</div>
+    <div class="menu-item">Portals and tools</div>
+    <div class="menu-item">Projects</div>
+</div>
+
   <div class="top">
+    
     <div class="title-space">
       <div class="title-gridh">
         GRIDH:
@@ -23,8 +27,8 @@
       </div>
       <div class="gu-logo">
         <div class="logo"></div>
+      </div>
     </div>
-  </div>
 
     <div class="intro-space">
       <div class="text-module-title">Cutting Edge Expertise</div>
@@ -33,9 +37,11 @@
       </div>
       <div class="intro-article">
         <p> The Gothenburg Research Infrastructure in Digital Humanities (GRIDH) is a research node and infrastructure
-          that offer expertise in <span>deep learning and artificial intelligence</span>, <span>visualisation</span> and <span>visual analysis</span>, <span>spatio-temporal
-          interfaces</span>, and <span>natural language processing</span>. Our mission is to strengthen, renew and enrich research and
-          teaching through digital source material, tools and methods.  </p> 
+          that offer expertise in <span>deep learning and artificial intelligence</span>, <span>visualisation</span> and
+          <span>visual analysis</span>, <span>spatio-temporal
+            interfaces</span>, and <span>natural language processing</span>. Our mission is to strengthen, renew and
+          enrich research and
+          teaching through digital source material, tools and methods. </p>
 
         <p>We help researchers to develop research applications and navigate datasets, and is a resource for memory
           institutions that seek new ways to make their collections and archives available for research and public
@@ -51,12 +57,43 @@
 </template>
 
 <style>
+  .top-menu {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    color:white;
+    margin-left:60px;
+    font-family: "Barlow Condensed", sans-serif !important;
+  }
+
+  .menu-item{
+    color:black;
+    background-color:none;
+    padding:20px 20px;
+    cursor:pointer;
+    margin-right:0.5px;
+  }
+
+  .menu-item:hover{
+    background: linear-gradient(360deg, #f194b8 0%, #9b8bf4 100%);
+    color:white;
+
+  }
+
+
+
+
+.menu-selected {
+  background: linear-gradient(360deg, #f194b8 0%, #9b8bf4 100%);
+  color:white;
+  }
+
   .top {
     font-family: "Barlow Condensed", sans-serif !important;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .title-space {
@@ -68,14 +105,14 @@
     margin-left: 60px;
     color: var(--theme-heading);
     background: -webkit-linear-gradient(var(--theme-livedata1), var(--theme-livedata2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .title-gridh {
     width: 100%;
     font-size: 80px;
-    
+
 
   }
 
@@ -84,7 +121,7 @@
     width: 100%;
     font-size: 60px;
     min-width: 500px;
-    padding-bottom:10px;
+    padding-bottom: 10px;
   }
 
 
@@ -124,40 +161,48 @@
 
   .livedata-pulse {
 
+    /* Standard Syntax */
+    animation: livedata-pulse 2.0s infinite;
+  }
+
+
   /* Standard Syntax */
-  animation: livedata-pulse 2.0s infinite; 
-}
+  @keyframes livedata-pulse {
+    0% {
+      color: var(--theme-livedata1);
+    }
+
+    50% {
+      color: var(--theme-livedata2);
+    }
+
+    100% {
+      color: var(--theme-livedata1);
+    }
+  }
 
 
-/* Standard Syntax */
-@keyframes livedata-pulse{
-  0%{color:var(--theme-livedata1);}	
-	50%{color:var(--theme-livedata2);}
-  100%{color:var(--theme-livedata1);}	
-}
+  .gu-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 80px;
+    top: 0px;
+    height: 170px;
+    width: 150px;
+    border-radius: 0px 0px 5px 5px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(51, 51, 51) 100%);
+  }
 
-
-.gu-logo{
-  display:flex;
-  flex-direction: column;
-  justify-content:flex-end;
-  align-items: center;
-  position:absolute;
-  right:80px;
-  top:0px;
-  height:170px;
-  width:150px;
-  border-radius:0px 0px 5px 5px;
-  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(51, 51, 51) 100%);
-}
-
-.logo{
-width:120px;
-height:120px;
-  background: url(gu_logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+  .logo {
+    width: 120px;
+    height: 120px;
+    background: url(gu_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
   .container {
     width: 100%;
