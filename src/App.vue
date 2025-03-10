@@ -1,8 +1,6 @@
 <script setup lang="ts">
   import { RouterLink, RouterView } from "vue-router";
   import Footer from "@/components/Footer.vue";
-
-
 </script>
 
 <template>
@@ -11,7 +9,7 @@
   <div class="top-menu">
     <div class="menu-item  menu-selected">Home</div>
     <div class="menu-item">Portals and tools</div>
-    <div class="menu-item">Projects</div>
+    <div class="menu-item"><router-link to="projects">Projects</router-link></div>
 </div>
 
   <div class="top">
@@ -79,9 +77,6 @@
     color:white;
 
   }
-
-
-
 
 .menu-selected {
   background: linear-gradient(360deg, #f194b8 0%, #9b8bf4 100%);
