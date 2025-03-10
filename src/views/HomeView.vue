@@ -43,6 +43,7 @@
             </div>
           </div>
         </div>
+        <!-- Network chart ?-->
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
@@ -55,6 +56,7 @@
       </div>
 
       <div class="row">
+        <!-- some kind of vizualisation -->
         <div class="info-module">
           <div class="info-module-slogan left">
             <div class="text-module-title">Data stewardship</div>
@@ -81,6 +83,7 @@
             </div>
           </div>
         </div>
+        <!-- Map -->
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">Global datasets</div>
@@ -113,7 +116,7 @@
           </div>
           </div>
         </div>
-        <!-- Active projects -->
+        <!-- Active projects --> <!-- should be marked out in database -->
         <div class="project-container">
           <h3>Aktuella projekt</h3>
           <div class="projects">
