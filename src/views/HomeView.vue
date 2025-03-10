@@ -79,7 +79,7 @@
         <div class="data-module">
           <div class="buffer">
             <div class="module hoverable theme-gradient-1">
-
+              <Map/>
             </div>
           </div>
         </div>
@@ -146,6 +146,7 @@
 
   import { fetchAllPages } from '@/db';
   import { onMounted, ref } from 'vue';
+  import Map from '@/components/Map.vue';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
