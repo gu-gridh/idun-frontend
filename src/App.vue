@@ -7,7 +7,7 @@
 
 
   <div class="top-menu">
-    <div class="menu-item  menu-selected">Home</div>
+    <div class="menu-item  menu-selected"><router-link to="/">Home</router-link></div>
     <div class="menu-item">Portals and tools</div>
     <div class="menu-item"><router-link to="projects">Projects</router-link></div>
 </div>
@@ -65,7 +65,7 @@
   }
 
   .menu-item{
-    color:black;
+    color:black ;
     background-color:none;
     padding:20px 20px;
     cursor:pointer;
@@ -76,6 +76,10 @@
     background: linear-gradient(360deg, #f194b8 0%, #9b8bf4 100%);
     color:white;
 
+  }
+
+  .menu-item:visited{
+    color:black !important;
   }
 
 .menu-selected {
