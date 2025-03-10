@@ -1,4 +1,4 @@
-const apiUrl = 'https://dev.dh.gu.se/api/'
+const apiUrl = 'https://idun.dh.gu.se/api/'
 
 const header: RequestInit = {
     method: "GET",
