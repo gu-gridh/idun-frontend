@@ -39,7 +39,7 @@
         <div class="data-module">
           <div class="buffer">
             <div class="module hoverable theme-gradient-1">
-
+              <img src="https://cylynx.imgix.net/uploads/graphvis_visjs.jpg?auto=format,compress" alt="placeholder" style="max-width: 100%;"/>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
         <div class="data-module">
           <div class="buffer">
             <div class="module hoverable theme-gradient-2">
-
+              
             </div>
           </div>
         </div>
@@ -280,7 +280,6 @@ transform:scale(1.03);
     width: 100%;
     min-height: 300px;
     height: 30vh;
-    padding: 7px;
   }
 
 
