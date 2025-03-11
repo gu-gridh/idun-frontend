@@ -267,8 +267,8 @@ transform:scale(1.03);
   .text-module-link {
     color:var(--theme-heading);
     font-size: 22px;
-width:150px;
-cursor:pointer;
+    width:150px;
+    cursor:pointer;
   }
 
   .text-module span {
@@ -280,6 +280,7 @@ cursor:pointer;
     width: 100%;
     min-height: 300px;
     height: 30vh;
+    padding: 7px;
   }
 
 
