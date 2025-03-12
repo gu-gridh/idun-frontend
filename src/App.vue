@@ -9,7 +9,7 @@
   <div class="top-menu">
     <div class="menu-item  menu-selected"><router-link to="/">Home</router-link></div>
     <div class="menu-item">Portals and tools</div>
-    <div class="menu-item"><router-link to="projects">Projects</router-link></div>
+    <div class="menu-item"><router-link to="/projects">Projects</router-link></div>
 </div>
 
   <div class="top">
