@@ -1,16 +1,17 @@
 <template>
     <div class="projects-container">
-        <masonry-wall :items="projects" :column-width="300" :gap="5">
+        <masonry-wall :items="projects" :column-width="300" :gap="0">
             <template #default="{ index, item }">
-                <div :gap="5">
-        <p>{{ item.name}}</p>
-      </div>
+                <ProjectItem
+                :id="item.id"
+                    :title="item.name"
+                    :url="'/projects/' + item.id"
+                    :image="''"
+                >
+                    <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span>
+                </ProjectItem>
             </template>
         </masonry-wall>
-        <!-- <ul v-for="item in projects" :key="item.id">
-            <li><router-link :to="`/projects/${item.id}`"><h2>{{ item.name }}</h2></router-link></li>
-            <p>{{ item.description }}</p>
-        </ul> -->
     </div>
 </template>
 
@@ -19,6 +20,7 @@ import { fetchByResourceClass } from '@/db';
 import { onMounted, ref } from 'vue';
 import type { Projects } from '@/types';
 import MasonryWall from '@yeger/vue-masonry-wall';
+import ProjectItem from '@/components/ProjectItem.vue';
 
 const projects = ref<Projects[]>([]);
 const projectsId = ref(99) //this is the id for resource class 'Projects'
@@ -37,12 +39,13 @@ const translateResponse = (response: any) => {
         return {
             id: item['o:id'],
             name: item['o:title'],
-            description: Array.isArray(item['dcterms:description']) ? item['dcterms:description'][0]?.['@value'] : item['dcterms:description']?.['@value'],
+            //description: Array.isArray(item['dcterms:description']) ? item['dcterms:description'][0]?.['@value'] : item['dcterms:description']?.['@value'],
             subject: item['dcterms:subject'], //array
-            funding: item['vivo:hasFundingVehicle'], //array
-            contributingRole: item['vivo:contributingRole'], //array
-            timeInterval: item['vivo:dateTimeInterval'], //array
-            subjectArea: item['vivo:hasSubjectArea'], //array
+            // funding: item['vivo:hasFundingVehicle'], //array
+            // contributingRole: item['vivo:contributingRole'], //array
+            // timeInterval: item['vivo:dateTimeInterval'], //array
+            subjectArea: item['vivo:hasSubjectArea'], //arraye
+            shortDescription: item['bibo:shortDescription'], //array
         }
     });
 }
@@ -51,12 +54,14 @@ const translateResponse = (response: any) => {
 
 <style scoped>
 .projects-container {
-    padding: 55px;
+    width: calc(100% - 140px);
+    padding-left: 60px;
 }
 li {
     
     list-style: none;
 }
+
 
 /* ::v-deep .masonry-column:nth-child(2n) > :nth-child(2n + 1) .wide-card {
   background-color: rgb(250 250 250);

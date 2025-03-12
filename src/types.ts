@@ -2,7 +2,14 @@ export interface Projects {
     id: number
     name: string
     description: []
-
+    shortDescription: [{
+        '@value': string
+    }]
+    links: [
+        {
+            '@id': string
+        }
+    ]
 }
 
 export interface Project {
@@ -41,5 +48,6 @@ export interface Project {
         }
     ]
     subjectArea: []
-    subject: []
+    subject: [],
+    
 }    

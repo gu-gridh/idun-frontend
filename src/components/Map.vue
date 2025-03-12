@@ -4,6 +4,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
+// @ts-ignore
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
