@@ -28,10 +28,10 @@ const numItems = ref(50) //this is the number of items to fetch
 
 onMounted (async () => {
     const response = await fetchByResourceClass(projectsId.value, numItems.value);
-    projects.value = translateResponse(response);
+    projects.value = await translateResponse(response);
     console.log(projects.value);
     //sort by name value
-    projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
+    //projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
 });
 
 const translateResponse = (response: any) => {

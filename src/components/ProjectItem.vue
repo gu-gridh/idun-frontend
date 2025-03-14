@@ -1,9 +1,9 @@
 <template>
   <router-link :to="'/projects/' + id">
-    <div class="vertical-card">
+    <div class="vertical-card"> <!-- TODO random background color? -->
       <figure>
-        <img :src="image" alt="Project image" />
-      </figure>
+      <img :src="image.src" alt="Project image" />
+    </figure>
       <div class="card-info">
         <h3 class="card-title">
           {{ title }}
@@ -11,26 +11,12 @@
         <div class="card-body">
           <slot />
         </div>
-      </div>
-    </div>
-  <div class="vertical-card"> <!-- TODO random background color? -->
-    <figure>
-    <img :src="image.src" alt="Project image" />
-  </figure>
-    <!-- <PreviewLabel v-if="previewLabel">{{ previewLabel }}</PreviewLabel> -->
-    <div class="card-info">
-      <h3 class="card-title">
-        {{ title }}
-      </h3>
-      <div class="card-body">
-        <slot />
-      </div>
 
-      <div class="card-tags">
-        <!-- <Tag v-for="tag in tags" :key="tag">#{{ tag }}</Tag> -->
+        <div class="card-tags">
+          <!-- <Tag v-for="tag in tags" :key="tag">#{{ tag }}</Tag> -->
+        </div>
       </div>
     </div>
-  </div>
   </router-link>
 </template>
 

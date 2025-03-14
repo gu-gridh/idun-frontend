@@ -29,7 +29,7 @@ const initMap = () => {
     places.value.forEach((place: any) => {
         L.marker(place.coords).addTo(map)
             .bindPopup(place.name)
-            .openPopup();
+            //.openPopup();
     });
 }
 
