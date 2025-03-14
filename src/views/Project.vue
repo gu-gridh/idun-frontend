@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h1>{{ project.name }}</h1>
         <p>Identifier: <span v-for="id in project.identifier">{{ id['@value'] }}</span> </p>
         <p>{{ project.description }}</p>
