@@ -8,7 +8,7 @@
           <div class="info-module-slogan left">
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
-            <h2>GRIDH has to date been involved in more than <span>29</span> research projects, and helped gather more
+            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
               than <span>320 million</span> in funding.</h2>
               <div class="text-module-link hoverable" style="width:150px;">Contact us and start a project</div>
             <span v-html="redData1.html"></span>
@@ -28,7 +28,7 @@
             <div class="text-module-description">Money-maker info text </div>
 
 
-            <div class="text-module-link hoverable">See all projects </div>
+            <div class="text-module-link hoverable"><router-link to="/projects">See all projects</router-link></div>
 
           </div>
         </div>
@@ -48,7 +48,7 @@
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
             <h1>So many collaborations!</h1>
-            <h2>GRIDH has to date been involved in more than <span>32</span> research projects, and helped gather more
+            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
               than <span>320 million</span> in funding.</h2>
             <span v-html="redData2.html"></span>
           </div>
@@ -61,7 +61,7 @@
           <div class="info-module-slogan left">
             <div class="text-module-title">Data stewardship</div>
             <h1>So much data!</h1>
-            <h2>GRIDH has to date been involved in more than <span>32</span> research projects, and helped gather more
+            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
               than <span>320 million</span> in funding.</h2>
             <span v-html="redData3.html"></span>
           </div>
@@ -151,10 +151,22 @@
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
   const redData3 = ref({ html: '' });
+  const projectsNum = ref(0);
 
-  onMounted(() => {
+  onMounted(async () => {
     //fetch data from Omeka pages
-    fetchPageData();
+    await fetchPageData();
+    //fetch number of projects
+    await fetch('https://idun.dh.gu.se/api/infos/items?resource_class_id=99&per_page=200', 
+    {
+      method: "GET",
+      credentials: "include" as RequestCredentials
+    }
+    )
+      .then(response => response.json())
+      .then(data => {
+        projectsNum.value = data.total
+      });
   });
 
   const fetchPageData = async () => {
