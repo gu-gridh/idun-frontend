@@ -8,7 +8,7 @@
 
   <div class="top-menu">
     <div class="menu-item  menu-selected"><router-link to="/">Home</router-link></div>
-    <div class="menu-item">Portals and tools</div>
+    <div class="menu-item"><router-link to="/tools">Portals and tools</router-link></div>
     <div class="menu-item"><router-link to="/projects">Projects</router-link></div>
 </div>
 
@@ -58,7 +58,7 @@
   .top-menu {
     display: flex;
     flex-direction: row;
-    width: 300px;
+    width: 500px;
     color:white;
     margin-left:60px;
     font-family: "Barlow Condensed", sans-serif !important;
