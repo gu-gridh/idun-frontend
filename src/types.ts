@@ -10,6 +10,11 @@ export interface Projects {
             '@id': string
         }
     ]
+    image: {
+        small: string,
+        medium: string,
+        large: string
+    }
 }
 
 export interface Project {
@@ -50,4 +55,23 @@ export interface Project {
     subjectArea: []
     subject: [],
     
-}    
+}   
+
+export interface Tool {
+    id: number
+    name: string
+    description: []
+    shortDescription: [{
+        '@value': string
+    }]
+    links: [
+        {
+            '@id': string
+        }
+    ]
+    image: {
+        small: string,
+        medium: string,
+        large: string
+    }
+}

@@ -19,6 +19,11 @@ export const fetchByResourceClass = async (id: number, items: number) => {
         return await response.json()
 }
 
+export const fetchByResourceTemplate = async (id: number) => {
+    const response = await fetch(apiUrl + 'items?resource_template_id=' + id, header)
+    return  response
+}
+
 export const fetchAllPages = async () => {
     const response = await fetch(apiUrl + 'site_pages', header
       
