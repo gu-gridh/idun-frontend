@@ -2,7 +2,7 @@
   <router-link :to="'/projects/' + id">
     <div class="vertical-card"> <!-- TODO random background color? -->
       <figure>
-      <img :src="image.src" alt="Project image" />
+      <img :src="image" alt="Project image" />
     </figure>
       <div class="card-info">
         <h3 class="card-title">
@@ -30,6 +30,7 @@ defineProps(["id", "title", "image", "links", ]);
   transition: all 0.1s ease-in-out;
   overflow: hidden;
   cursor: pointer;
+  max-width: 300px;
 }
 
 .vertical-card:hover {

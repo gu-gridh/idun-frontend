@@ -6,7 +6,7 @@
                 :id="item.id"
                     :title="item.name"
                     :url="'/projects/' + item.id"
-                    :image="''"
+                    :image="item.image.medium"
                 >
                     <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span>
                 </ProjectItem>
@@ -28,8 +28,9 @@ const numItems = ref(50) //this is the number of items to fetch
 
 onMounted (async () => {
     const response = await fetchByResourceClass(projectsId.value, numItems.value);
+    console.log(response);
     projects.value = await translateResponse(response);
-    console.log(projects.value);
+    //console.log(projects.value);
     //sort by name value
     //projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
 });
@@ -46,6 +47,7 @@ const translateResponse = (response: any) => {
             // timeInterval: item['vivo:dateTimeInterval'], //array
             subjectArea: item['vivo:hasSubjectArea'], //arraye
             shortDescription: item['bibo:shortDescription'], //array
+            image: item['thumbnail_display_urls']
         }
     });
 }
