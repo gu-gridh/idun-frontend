@@ -30,3 +30,8 @@ export const fetchAllPages = async () => {
     )
         return await response.json()
 }
+
+export const fetchCount = async (fetchstring: string) => {
+    const response = await fetch('https://idun.dh.gu.se/api/infos/' + fetchstring, header)
+    return await response.json()
+}

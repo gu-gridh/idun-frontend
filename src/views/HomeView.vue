@@ -20,7 +20,7 @@
             <div class="text-module-data"><span class="livedata-pulse">8</span> active projects </div>
             <div class="text-module-description">Active projects info text </div>
 
-            <div class="text-module-data"><span class="livedata-pulse">21</span> portals and tools </div>
+            <div class="text-module-data"><span class="livedata-pulse">{{ toolsNum }}</span> portals and tools </div>
             <div class="text-module-description">Portals and tools info text </div>
 
 
@@ -88,7 +88,7 @@
           <div class="info-module-slogan right">
             <div class="text-module-title">Global datasets</div>
             <h1>From all over the place!</h1>
-            <h2>GRIDH has to date been involved in more than <span>32</span> research projects, and helped gather more
+            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
               than <span>320 million</span> in funding.</h2>
             <span v-html="redData2.html"></span>
           </div>
@@ -144,7 +144,7 @@
 
 <script setup lang="ts">
 
-  import { fetchAllPages } from '@/db';
+  import { fetchAllPages, fetchCount } from '@/db';
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
 
@@ -152,20 +152,19 @@
   const redData2 = ref({ html: '' });
   const redData3 = ref({ html: '' });
   const projectsNum = ref(0);
+  const toolsNum = ref(0);
 
   onMounted(async () => {
     //fetch data from Omeka pages
     await fetchPageData();
     //fetch number of projects
-    await fetch('https://idun.dh.gu.se/api/infos/items?resource_class_id=99&per_page=200', 
-    {
-      method: "GET",
-      credentials: "include" as RequestCredentials
-    }
-    )
-      .then(response => response.json())
+    await fetchCount('items?resource_class_id=99')
       .then(data => {
         projectsNum.value = data.total
+      });
+    await fetchCount('items?resource_template_id=6')
+      .then(data => {
+        toolsNum.value = data.total
       });
   });
 
