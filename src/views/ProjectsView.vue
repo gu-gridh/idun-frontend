@@ -1,12 +1,12 @@
 <template>
     <div class="projects-container">
-        <masonry-wall :items="projects" :column-width="300" :gap="0">
+        <masonry-wall :items="projects" :column-width="225" :gap="0">
             <template #default="{ index, item }">
                 <ProjectItem
                 :id="item.id"
                     :title="item.name"
                     :url="'/projects/' + item.id"
-                    :image="item.image.medium"
+                    :image="item.image.large"
                 >
                     <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span>
                 </ProjectItem>

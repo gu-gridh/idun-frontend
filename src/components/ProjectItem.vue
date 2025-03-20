@@ -41,9 +41,17 @@ defineProps(["id", "title", "image", "links", ]);
   border-radius: 10px;
 }
 
+figure{
+  display: flex;
+    margin: 0;
+    overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .card-info {
   padding: 0.5rem 1rem;
