@@ -156,7 +156,7 @@
   const totFunding = ref(0);
 
   onMounted(async () => {
-    //fetch data from Omeka pages
+    //fetch html data from Omeka pages
     await fetchPageData();
     //fetch number of projects
     await fetchCount('items?resource_class_id=99')
@@ -179,7 +179,7 @@
             if (!isNaN(amount)) {
               totFunding.value += amount
             } else {
-              console.warn('Invalid funding value:', funding['@value'])
+              return
             }
           })
         }

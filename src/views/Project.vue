@@ -61,4 +61,11 @@ const translateResponse = (response: any): Project => {
 p {
     padding-top: 5px;
 }
+
+.container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: grid;
+}
 </style>
