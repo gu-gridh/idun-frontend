@@ -9,7 +9,7 @@
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
             <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
-              than <span>320 million</span> in funding.</h2>
+              than <span>{{ totFunding }} million</span> in funding.</h2>
               <div class="text-module-link hoverable" style="width:150px;">Contact us and start a project</div>
             <span v-html="redData1.html"></span>
           </div>
@@ -24,7 +24,7 @@
             <div class="text-module-description">Portals and tools info text </div>
 
 
-            <div class="text-module-data"><span class="livedata-pulse">320</span> million in funding</div>
+            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in funding</div>
             <div class="text-module-description">Money-maker info text </div>
 
 
@@ -49,7 +49,7 @@
             <div class="text-module-title">University wide support</div>
             <h1>So many collaborations!</h1>
             <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
-              than <span>320 million</span> in funding.</h2>
+              than <span>{{ totFunding }} million</span> in funding.</h2>
             <span v-html="redData2.html"></span>
           </div>
         </div>
@@ -62,7 +62,7 @@
             <div class="text-module-title">Data stewardship</div>
             <h1>So much data!</h1>
             <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
-              than <span>320 million</span> in funding.</h2>
+              than <span>{{ totFunding }} million</span> in funding.</h2>
             <span v-html="redData3.html"></span>
           </div>
         </div>
@@ -89,7 +89,7 @@
             <div class="text-module-title">Global datasets</div>
             <h1>From all over the place!</h1>
             <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
-              than <span>320 million</span> in funding.</h2>
+              than <span>{{ totFunding }} million</span> in funding.</h2>
             <span v-html="redData2.html"></span>
           </div>
         </div>
@@ -144,7 +144,7 @@
 
 <script setup lang="ts">
 
-  import { fetchAllPages, fetchCount } from '@/db';
+  import { fetchAllPages, fetchCount, fetchByResourceClass } from '@/db';
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
 
@@ -153,6 +153,7 @@
   const redData3 = ref({ html: '' });
   const projectsNum = ref(0);
   const toolsNum = ref(0);
+  const totFunding = ref(0);
 
   onMounted(async () => {
     //fetch data from Omeka pages
@@ -166,6 +167,26 @@
       .then(data => {
         toolsNum.value = data.total
       });
+      //fetch projects funding
+      const response = await fetchByResourceClass(99)
+      console.log('funding', response);
+      //for each item, get the funding array and sum it
+      totFunding.value = 0 
+      response.forEach((item: any) => {
+        if (item['schema:funding']) {
+          item['schema:funding'].forEach((funding: any) => {
+            const amount = Number(funding['@value'])
+            if (!isNaN(amount)) {
+              totFunding.value += amount
+            } else {
+              console.warn('Invalid funding value:', funding['@value'])
+            }
+          })
+        }
+      })
+      totFunding.value = totFunding.value / 1000000
+      //do not show decimals
+      totFunding.value = Math.round(totFunding.value)
   });
 
   const fetchPageData = async () => {
