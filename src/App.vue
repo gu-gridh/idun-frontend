@@ -211,4 +211,11 @@
     margin: 0px;
     font-family: "Barlow Condensed", sans-serif !important;
   }
+
+  @media screen and (max-width: 1100px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 </style>

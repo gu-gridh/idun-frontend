@@ -29,7 +29,6 @@ const route = useRoute();
 onMounted (async () => {
     const id = route.params.id;
     const response = await fetchItem(id as string);
-    //project.value = translateResponse(response);
     console.log(response);
     project.value = translateResponse(response) as Project;
     

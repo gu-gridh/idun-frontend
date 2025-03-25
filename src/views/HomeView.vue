@@ -112,7 +112,9 @@
           </div>
           <div class="link-item hoverable">
             <div class="link-title">
-            GITHUB
+              <a href="https://github.com/gu-gridh" target="_blank">
+                <img src="@/assets/githubLogo.png" alt="github logo" style="width: 150px;"/>
+              </a>
           </div>
           </div>
         </div>
@@ -179,7 +181,7 @@
             if (!isNaN(amount)) {
               totFunding.value += amount
             } else {
-              return
+              console.log('not a number', funding['@value'])
             }
           })
         }
@@ -443,5 +445,43 @@ transform:scale(1.03);
   .yellow {
     background: linear-gradient(180deg, rgba(255, 255, 00, 0.2) 0%, rgba(210, 250, 230, 1) 100%);
   
+  }
+
+  @media screen and (max-width: 800px) {
+    .content {
+      flex-direction: column;
+    }
+    .data-module {
+      width: 100%;
+    }
+    .info-module {
+      width: 100%;
+    }
+
+    .info-module .left {
+      text-align: left;
+      padding: 0px 20px 30px 20px;
+    }
+    .info-module .right {
+      text-align: left;
+      padding: 0px 20px 30px 20px;
+    }
+
+    .links {
+      flex-direction: row;
+      padding: 20px 20px;
+    }
+    .project-container {
+      width: 100%;
+      padding: 0px 20px;
+    }
+    .project-item {
+      height: 150px;
+    }
+    .buffer {
+      padding: 20px 20px;
+    }
+
+    
   }
 </style>
