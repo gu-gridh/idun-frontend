@@ -73,7 +73,7 @@
   }
 
   .menu-item:hover{
-    background: linear-gradient(360deg, #f194b8 0%, #9b8bf4 100%);
+    background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
     color:white;
 
   }
@@ -83,10 +83,10 @@
   }
 
 .menu-selected {
-  background: linear-gradient(360deg, #f194b8 0%, #9b8bf4 100%);
+  background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
   color:white;
   }
-
+  
   .top {
     font-family: "Barlow Condensed", sans-serif !important;
     display: flex;

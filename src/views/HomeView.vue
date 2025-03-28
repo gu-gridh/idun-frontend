@@ -39,7 +39,7 @@
         <div class="data-module">
           <div class="buffer">
             <div class="module hoverable theme-gradient-1">
-              <img src="https://cylynx.imgix.net/uploads/graphvis_visjs.jpg?auto=format,compress" alt="placeholder" style="max-width: 100%;"/>
+              <div class="network"></div>
             </div>
           </div>
         </div>
@@ -100,6 +100,11 @@
         <!-- Puffs -->
 
         <div class="links">
+          <div class="link-item hoverable">
+            <div class="link-title">
+            ProCURE Infrastucture
+          </div>
+          </div>
           <div class="link-item hoverable">
             <div class="link-title">
             Resurssida för AI-verktyg
@@ -445,6 +450,15 @@ transform:scale(1.03);
   .yellow {
     background: linear-gradient(180deg, rgba(255, 255, 00, 0.2) 0%, rgba(210, 250, 230, 1) 100%);
   
+  }
+
+  .network{
+   background-image:url(https://cylynx.imgix.net/uploads/graphvis_visjs.jpg?auto=format,compress); 
+   background-size: cover; 
+   background-position: 50%;
+   width:100%;
+   height:100%;
+   opacity:0.6;
   }
 
   @media screen and (max-width: 800px) {
