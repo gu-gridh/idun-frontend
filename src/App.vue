@@ -86,7 +86,7 @@
   background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
   color:white;
   }
-  
+
   .top {
     font-family: "Barlow Condensed", sans-serif !important;
     display: flex;
@@ -139,7 +139,8 @@
 
   .intro-article {
     columns: 2;
-    column-gap: 90px;
+    column-gap: 70px;
+    column-rule: 1px solid lightgrey;
     font-size: 20px;
     font-weight: 300;
     text-align: justify;

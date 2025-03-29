@@ -286,7 +286,7 @@ transform:scale(1.03);
     padding: 20px;
     color:var(--theme-heading);
     padding-bottom: 40px;
-    padding-left: 40px
+    padding-left: 30px
   }
 
   .text-module-title {
@@ -331,7 +331,7 @@ transform:scale(1.03);
 
   .info-module .left {
     text-align: right;
-    padding: 0px 60px 30px 60px;
+    padding: 0px 40px 30px 60px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -342,7 +342,7 @@ transform:scale(1.03);
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
-    padding: 0px 60px 30px 40px;
+    padding: 0px 60px 30px 30px;
   }
 
 
