@@ -102,7 +102,7 @@
         <div class="links">
           <div class="link-item hoverable">
             <div class="link-title">
-            ProCURE Infrastucture
+            ProCURE infrastructure
           </div>
           </div>
           <div class="link-item hoverable">
@@ -461,6 +461,7 @@ transform:scale(1.03);
    opacity:0.6;
   }
 
+
   @media screen and (max-width: 800px) {
     .content {
       flex-direction: column;
@@ -498,4 +499,5 @@ transform:scale(1.03);
 
     
   }
+
 </style>
