@@ -27,7 +27,7 @@ const projectsId = ref(99) //this is the id for resource class 'Projects'
 const numItems = ref(50) //this is the number of items to fetch
 
 onMounted (async () => {
-    const response = await fetchByResourceClass(projectsId.value, numItems.value);
+    const response = await fetchByResourceClass(projectsId.value);
     console.log(response);
     projects.value = await translateResponse(response);
     //console.log(projects.value);

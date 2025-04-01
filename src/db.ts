@@ -12,8 +12,8 @@ export const fetchItem = async (id: string) => {
     return await response.json()
 }
 
-export const fetchByResourceClass = async (id: number, items: number) => {
-    const response = await fetch(apiUrl + 'items?resource_class_id=' + id + '&per_page=' + items, header
+export const fetchByResourceClass = async (id: number) => {
+    const response = await fetch(apiUrl + 'items?resource_class_id=' + id, header
 
     )
         return await response.json()

@@ -29,7 +29,6 @@ const route = useRoute();
 onMounted (async () => {
     const id = route.params.id;
     const response = await fetchItem(id as string);
-    //project.value = translateResponse(response);
     console.log(response);
     project.value = translateResponse(response) as Project;
     
@@ -60,5 +59,12 @@ const translateResponse = (response: any): Project => {
 <style scoped>
 p {
     padding-top: 5px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: grid;
 }
 </style>

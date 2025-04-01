@@ -139,7 +139,8 @@
 
   .intro-article {
     columns: 2;
-    column-gap: 90px;
+    column-gap: 70px;
+    column-rule: 1px solid lightgrey;
     font-size: 20px;
     font-weight: 300;
     text-align: justify;
@@ -210,5 +211,12 @@
     display: flex;
     margin: 0px;
     font-family: "Barlow Condensed", sans-serif !important;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>
