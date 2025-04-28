@@ -15,6 +15,11 @@ export interface Projects {
         medium: string,
         large: string
     }
+    status: [
+        {
+            '@value': string
+        }
+    ]
 }
 
 export interface Project {
@@ -54,6 +59,11 @@ export interface Project {
     ]
     subjectArea: []
     subject: [],
+    status: [
+        {
+            '@value': string
+        }
+    ]
     
 }   
 
