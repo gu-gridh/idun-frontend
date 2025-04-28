@@ -17,7 +17,7 @@
         <div class="data-module">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><span class="livedata-pulse">8</span> active projects </div>
+            <div class="text-module-data"><router-link to="/active"> <span class="livedata-pulse">8</span> active projects</router-link> </div>
             <div class="text-module-description">Active projects info text </div>
 
             <div class="text-module-data"><span class="livedata-pulse">{{ toolsNum }}</span> portals and tools </div>
