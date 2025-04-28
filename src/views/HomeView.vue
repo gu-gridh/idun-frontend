@@ -39,7 +39,7 @@
         <div class="data-module">
           <div class="buffer">
             <div class="module hoverable theme-gradient-1">
-              <div class="network"></div>
+              <Graph/>
             </div>
           </div>
         </div>
@@ -154,6 +154,7 @@
   import { fetchAllPages, fetchCount, fetchByResourceClass } from '@/db';
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
+  import Graph from '@/components/Graph.vue';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
