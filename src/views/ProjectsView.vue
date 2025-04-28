@@ -54,7 +54,7 @@ const translateResponse = (response: any) => {
 
 </script>
 
-<style scoped>
+<style>
 .projects-container {
     width: calc(100% - 140px);
     padding-left: 60px;

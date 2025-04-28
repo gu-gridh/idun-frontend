@@ -1,6 +1,18 @@
 <template>
-    <div>
-        <p v-for = "tool in tools" :key="tool.id">{{ tool.name }}</p>
+    <div class="projects-container">
+        <masonry-wall v-if="tools && tools.length" :items="tools" :column-width="300" :gutter="20" :responsive="true" :resize="true">
+            <template #default="{ index, item }">
+                <ProjectItem
+                    :id="item.id"
+                    :title="item.name"
+                    :url="'/projects/' + item.id"
+                    :image="item.image.large"
+                >
+                    <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span>
+                </ProjectItem>
+            </template>
+        </masonry-wall>
+        <!-- <p v-for = "tool in tools" :key="tool.id">{{ tool.name }}</p> -->
     </div>
 </template>
 
@@ -8,6 +20,9 @@
 import { fetchByResourceTemplate } from '@/db';
 import type { Tool } from '@/types';
 import { onMounted, ref } from 'vue';
+import MasonryWall from '@yeger/vue-masonry-wall';
+import ProjectItem from '@/components/ProjectItem.vue';
+
 
 const tools = ref(<Tool[]>[]);
 
