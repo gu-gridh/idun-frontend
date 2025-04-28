@@ -19,7 +19,9 @@ export interface Projects {
         {
             '@value': string
         }
-    ]
+    ],
+    subject: [],
+    subjectArea: [],
 }
 
 export interface Project {

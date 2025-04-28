@@ -50,3 +50,13 @@ const translateResponse = (response: any) => {
     });
 }
 </script>
+
+<style scoped>
+.projects-container {
+    width: calc(100% - 140px);
+    padding-left: 60px;
+}
+li {
+    
+    list-style: none;
+}</style>

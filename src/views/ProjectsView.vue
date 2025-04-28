@@ -1,6 +1,6 @@
 <template>
     <div class="projects-container">
-        <masonry-wall :items="projects" :column-width="225" :gap="0">
+       <!--  <masonry-wall :items="projects" :column-width="225" :gap="0">
             <template #default="{ index, item }">
                 <ProjectItem
                 :id="item.id"
@@ -11,7 +11,12 @@
                     <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span>
                 </ProjectItem>
             </template>
-        </masonry-wall>
+        </masonry-wall> -->
+        <div v-for="project in projects" :key="project.id" class="project">
+            <h2>{{ project.name }}</h2>
+            <p v-for="description in project.shortDescription">{{ description['@value'] }}</p>
+            <p v-for="subject in project.subject">{{ subject['@value'] }}</p>
+        </div>
     </div>
 </template>
 
@@ -54,22 +59,20 @@ const translateResponse = (response: any) => {
 
 </script>
 
-<style>
-.projects-container {
-    width: calc(100% - 140px);
-    padding-left: 60px;
-}
-li {
-    
-    list-style: none;
-}
+<style scoped>
 
 
-/* ::v-deep .masonry-column:nth-child(2n) > :nth-child(2n + 1) .wide-card {
-  background-color: rgb(250 250 250);
+.project {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
-::v-deep .masonry-column:nth-child(2n + 1) > :nth-child(2n) .wide-card {
-  background-color: rgb(250 250 250);
-} */
+.project h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
 
 </style>
