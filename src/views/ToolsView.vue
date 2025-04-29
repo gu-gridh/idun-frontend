@@ -5,10 +5,10 @@
                 <ProjectItem
                     :id="item.id"
                     :title="item.name"
-                    :url="'/projects/' + item.id"
+                    :url="item.links[0]['@id']"
                     :image="item.image.large"
                 >
-                    <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span>
+                    <!-- <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span> -->
                 </ProjectItem>
             </template>
         </masonry-wall>
@@ -45,7 +45,8 @@ const translateResponse = (response: any) => {
             timeInterval: item['vivo:dateTimeInterval'], //array
             subjectArea: item['vivo:hasSubjectArea'], //array
             shortDescription: item['bibo:shortDescription'], //array
-            image: item['thumbnail_display_urls']
+            image: item['thumbnail_display_urls'],
+            links: item['foaf:homepage'], //array
         }
     });
 }

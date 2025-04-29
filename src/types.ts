@@ -27,6 +27,11 @@ export interface Projects {
             display_title: string,
             url: string
         }
+    ],
+    homepage: [
+        {
+            '@id': string
+        }
     ]
 }
 
