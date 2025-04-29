@@ -274,6 +274,7 @@ transform:scale(1.03);
 
   .buffer {
     padding: 50px 40px;
+    
   }
 
 
@@ -315,6 +316,7 @@ transform:scale(1.03);
     width: 100%;
     min-height: 300px;
     height: 30vh;
+    
   }
 
 

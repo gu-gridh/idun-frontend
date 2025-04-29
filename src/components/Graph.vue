@@ -37,13 +37,18 @@ onMounted(async () => {
 
   graphInstance = ForceGraph()(graphContainer.value)
   .graphData(graphData)
-  .width(graphContainer.value.clientWidth)
-  .height(graphContainer.value.clientHeight)
+  // .width(graphContainer.value.clientWidth)
+  // .height(graphContainer.value.clientHeight)
   .nodeId('id')
   .nodeLabel(node => node.id)
   .nodeColor(node => groupColors[node.group] || '#cccccc')
   .nodeRelSize(6)
-  .linkWidth(1)
+  .enableNodeDrag(true)
+  .onNodeDragEnd(node => {
+    node.fx = node.x;
+    node.fy = node.y;
+  })
+  .linkWidth(2)
   .linkColor(() => '#aaa')
   .linkDirectionalArrowLength(0)
   .linkDirectionalArrowRelPos(0)
@@ -105,6 +110,7 @@ onBeforeUnmount(() => {
   height: 100% !important;
   max-width: 100%;
   max-height: 100%;
+  pointer-events: auto ;
 }
 
 </style>
