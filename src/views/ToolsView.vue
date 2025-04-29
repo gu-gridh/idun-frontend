@@ -5,7 +5,7 @@
                 <ProjectItem
                     :id="item.id"
                     :title="item.name"
-                    :url="item.links[0]['@id']"
+                    :url="item.links?.[0]?.['@id'] || ''"
                     :image="item.image.large"
                 >
                     <!-- <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span> -->
@@ -28,9 +28,9 @@ const tools = ref(<Tool[]>[]);
 
 onMounted(async () => {
     const response = await fetchByResourceTemplate(6)
-    tools.value = await response.json()
-    tools.value = translateResponse(tools.value)
-    console.log(tools.value)
+    console.log(response);
+    tools.value = await translateResponse(response)
+    
 });
 
 const translateResponse = (response: any) => {

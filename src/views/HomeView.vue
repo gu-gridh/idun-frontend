@@ -20,7 +20,7 @@
             <div class="text-module-data"><router-link to="/active"> <span class="livedata-pulse">8</span> active projects</router-link> </div>
             <div class="text-module-description">Active projects info text </div>
 
-            <div class="text-module-data"><span class="livedata-pulse">{{ toolsNum }}</span> portals and tools </div>
+            <div class="text-module-data"><router-link to="/tools"> <span class="livedata-pulse">{{ toolsNum }}</span> portals and tools </router-link> </div>
             <div class="text-module-description">Portals and tools info text </div>
 
 
@@ -46,10 +46,8 @@
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
-            <h1>So many collaborations!</h1>
-            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
-              than <span>{{ totFunding }} million</span> in funding.</h2>
-            <span v-html="redData2.html"></span>
+            <h1>Collaborations</h1>
+          <h2 v-html="redData2.html"></h2>
           </div>
         </div>
       </div>
@@ -60,9 +58,7 @@
           <div class="info-module-slogan left">
             <div class="text-module-title">Data stewardship</div>
             <h1>So much data!</h1>
-            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
-              than <span>{{ totFunding }} million</span> in funding.</h2>
-            <span v-html="redData3.html"></span>
+            <h2 v-html="redData1.html"></h2>
           </div>
         </div>
         <div class="data-module">
@@ -87,9 +83,8 @@
           <div class="info-module-slogan right">
             <div class="text-module-title">Global datasets</div>
             <h1>From all over the place!</h1>
-            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
-              than <span>{{ totFunding }} million</span> in funding.</h2>
-            <span v-html="redData2.html"></span>
+            <h2 v-html="redData3.html"></h2>
+
           </div>
         </div>
       </div>
@@ -176,7 +171,6 @@
       });
       //fetch projects funding
       const response = await fetchByResourceClass(99)
-      console.log('funding', response);
       //for each item, get the funding array and sum it
       totFunding.value = 0 
       response.forEach((item: any) => {
@@ -203,7 +197,9 @@
         redData1.value = convertToJson(response[1])
         redData2.value = convertToJson(response[2])
         redData3.value = convertToJson(response[3])
-
+        console.log('redData1', redData1.value)
+        console.log('redData2', redData2.value)
+        console.log('redData3', redData3.value)
       })
 
   };

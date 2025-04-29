@@ -46,6 +46,7 @@ onMounted(async () => {
   .linkColor(() => '#aaa')
   .linkDirectionalArrowLength(0)
   .linkDirectionalArrowRelPos(0)
+
   // .nodeCanvasObject((node, ctx, globalScale) => {
   //   const label = node.id;
   //   const fontSize = 10 / globalScale;
