@@ -22,6 +22,12 @@ export interface Projects {
     ],
     subject: [],
     subjectArea: [],
+    owner: [
+        {
+            display_title: string,
+            url: string
+        }
+    ]
 }
 
 export interface Project {

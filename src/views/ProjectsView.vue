@@ -1,21 +1,10 @@
 <template>
     <div class="projects-container">
-       <!--  <masonry-wall :items="projects" :column-width="225" :gap="0">
-            <template #default="{ index, item }">
-                <ProjectItem
-                :id="item.id"
-                    :title="item.name"
-                    :url="'/projects/' + item.id"
-                    :image="item.image.large"
-                >
-                    <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span>
-                </ProjectItem>
-            </template>
-        </masonry-wall> -->
         <div v-for="project in projects" :key="project.id" class="project">
             <h2>{{ project.name }}</h2>
             <p v-for="description in project.shortDescription">{{ description['@value'] }}</p>
-            <p v-for="subject in project.subject">{{ subject['@value'] }}</p>
+            <!-- <p v-for="subject in project.subject">{{ subject['@value'] }}</p> -->
+             <p v-for="owner in project.owner">{{ owner.display_title}}</p> <!-- TODO add URL? -->
         </div>
     </div>
 </template>
@@ -24,8 +13,6 @@
 import { fetchByResourceClass } from '@/db';
 import { onMounted, ref } from 'vue';
 import type { Projects } from '@/types';
-import MasonryWall from '@yeger/vue-masonry-wall';
-import ProjectItem from '@/components/ProjectItem.vue';
 
 const projects = ref<Projects[]>([]);
 const projectsId = ref(99) //this is the id for resource class 'Projects'
@@ -37,7 +24,7 @@ onMounted (async () => {
     projects.value = await translateResponse(response);
     //console.log(projects.value);
     //sort by name value
-    //projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
+    projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
 });
 
 const translateResponse = (response: any) => {
@@ -52,7 +39,8 @@ const translateResponse = (response: any) => {
             // timeInterval: item['vivo:dateTimeInterval'], //array
             subjectArea: item['vivo:hasSubjectArea'], //arraye
             shortDescription: item['bibo:shortDescription'], //array
-            image: item['thumbnail_display_urls']
+            image: item['thumbnail_display_urls'],
+            owner: item['bibo:owner'], //array
         }
     });
 }
