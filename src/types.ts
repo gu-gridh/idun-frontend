@@ -19,6 +19,19 @@ export interface Projects {
         {
             '@value': string
         }
+    ],
+    subject: [],
+    subjectArea: [],
+    owner: [
+        {
+            display_title: string,
+            url: string
+        }
+    ],
+    homepage: [
+        {
+            '@id': string
+        }
     ]
 }
 

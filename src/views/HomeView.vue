@@ -38,12 +38,11 @@
       <div class="row">
         <div class="data-module">
           <div class="buffer">
-            <div class="module hoverable theme-gradient-1">
-              <div class="network"></div>
+            <div class="module hoverable theme-gradient-1 graph-wrapper">
+              <Graph/>
             </div>
           </div>
         </div>
-        <!-- Network chart ?-->
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
@@ -154,6 +153,7 @@
   import { fetchAllPages, fetchCount, fetchByResourceClass } from '@/db';
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
+  import Graph from '@/components/Graph.vue';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
@@ -460,6 +460,12 @@ transform:scale(1.03);
    height:100%;
    opacity:0.6;
   }
+
+  .graph-wrapper {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
 
 
   @media screen and (max-width: 800px) {

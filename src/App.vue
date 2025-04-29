@@ -7,9 +7,9 @@
 
 
   <div class="top-menu">
-    <div class="menu-item  menu-selected"><router-link to="/">Home</router-link></div>
-    <div class="menu-item"><router-link to="/tools">Portals and tools</router-link></div>
-    <div class="menu-item"><router-link to="/projects">Projects</router-link></div>
+    <router-link to="/"><div class="menu-item  menu-selected">Home</div></router-link>
+    <router-link to="/tools"><div class="menu-item">Portals and tools</div></router-link>
+    <router-link to="/projects"><div class="menu-item">Projects</div></router-link>
 </div>
 
   <div class="top">

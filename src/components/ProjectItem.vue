@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="'/projects/' + id">
+  <a :href="url" target="_blank" rel="noopener noreferrer">
     <div class="vertical-card"> <!-- TODO random background color? -->
       <figure>
       <img :src="image" alt="Project image" />
@@ -17,11 +17,11 @@
         </div>
       </div>
     </div>
-  </router-link>
+  </a>  
 </template>
 
 <script setup lang="ts">
-defineProps(["id", "title", "image", "links", ]);
+defineProps(["id", "title", "image", "url", ]);
 </script>
 
 <style scoped>
