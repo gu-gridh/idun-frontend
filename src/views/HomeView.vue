@@ -38,7 +38,7 @@
       <div class="row">
         <div class="data-module">
           <div class="buffer">
-            <div class="module hoverable theme-gradient-1 graph-wrapper">
+            <div class="module theme-gradient-1 graph-wrapper">
               <Graph/>
             </div>
           </div>
