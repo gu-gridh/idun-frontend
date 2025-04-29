@@ -46,7 +46,7 @@
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
-            <h1>Collaborations</h1>
+            <h1>Transdisciplinary collaborations</h1>
           <h2 v-html="redData2.html"></h2>
           </div>
         </div>
@@ -379,12 +379,12 @@ transform:scale(1.03);
     color:var(--theme-heading);
     font-size: 50px;
     margin-top: 10px;
-    line-height: 0.85;
+    line-height:1.0;
   }
 
   .info-module-slogan h2 {
     color:var(--theme-heading);
-    margin-top: -20px;
+    margin-top: -30px;
     max-width: 600px;
     font-weight:300;
     font-size:20px;
