@@ -48,6 +48,12 @@ onMounted(async () => {
     node.fx = node.x;
     node.fy = node.y;
   })
+  .nodePointerAreaPaint((node, color, ctx) => {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, 12, 0, 2 * Math.PI, false); // << larger hit area
+    ctx.fill();
+  })
   .linkWidth(2)
   .linkColor(() => '#aaa')
   .linkDirectionalArrowLength(0)
