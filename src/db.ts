@@ -21,7 +21,7 @@ export const fetchByResourceClass = async (id: number) => {
 
 export const fetchByResourceTemplate = async (id: number) => {
     const response = await fetch(apiUrl + 'items?resource_template_id=' + id, header)
-    return  response
+    return  await response.json()
 }
 
 export const fetchAllPages = async () => {
