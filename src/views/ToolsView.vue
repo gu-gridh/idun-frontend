@@ -30,7 +30,8 @@ onMounted(async () => {
     const response = await fetchByResourceTemplate(6)
     console.log(response);
     tools.value = await translateResponse(response)
-    
+    //then randomize the order
+    tools.value = tools.value.sort(() => Math.random() - 0.5);
 });
 
 const translateResponse = (response: any) => {
