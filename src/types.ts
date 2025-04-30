@@ -83,7 +83,6 @@ export interface Project {
 export interface Tool {
     id: number
     name: string
-    description: []
     shortDescription: [{
         '@value': string
     }]
@@ -96,5 +95,12 @@ export interface Tool {
         small: string,
         medium: string,
         large: string
-    }
+    },
+    subjectArea: [],
+    descriptionText: string,
+    legacy: [
+        {
+            '@value': string
+        }
+    ]
 }

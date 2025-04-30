@@ -9,11 +9,13 @@
           {{ title }}
         </h3>
         <div class="card-body">
-          <slot />
+          {{ Array.isArray(description) && description[0]?.['@value'] || '' }}
         </div>
 
         <div class="card-tags">
-          <!-- <Tag v-for="tag in tags" :key="tag">#{{ tag }}</Tag> -->
+          <span v-for="subject in subjectArea" :key="subject['@id']" class="tag">
+            #{{ subject['@value'] }}
+          </span>
         </div>
       </div>
     </div>
@@ -21,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps(["id", "title", "image", "url", ]);
+defineProps(["id", "title", "image", "url", "subjectArea", "description" ]);
 </script>
 
 <style scoped>
