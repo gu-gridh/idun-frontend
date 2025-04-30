@@ -9,12 +9,12 @@
           {{ title }}
         </h3>
         <div class="card-body">
-          {{ description[0]['@value'] }}
+          {{ Array.isArray(description) && description[0]?.['@value'] || '' }}
         </div>
 
         <div class="card-tags">
           <span v-for="subject in subjectArea" :key="subject['@id']" class="tag">
-            {{ subject['@value'] }}
+            #{{ subject['@value'] }}
           </span>
         </div>
       </div>

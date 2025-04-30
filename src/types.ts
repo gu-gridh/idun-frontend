@@ -97,4 +97,5 @@ export interface Tool {
         large: string
     },
     subjectArea: [],
+    descriptionText: string,
 }

@@ -3,15 +3,13 @@
         <masonry-wall v-if="tools && tools.length" :items="tools" :column-width="300" :gutter="20" :responsive="true" :resize="true">
             <template #default="{ index, item }">
                 <ProjectItem
-                    :id="item.id"
-                    :title="item.name"
-                    :url="item.links?.[0]?.['@id'] || ''"
-                    :image="item.image.large"
-                    :subjectArea="item.subjectArea"
-                    :description="item.shortDescription"
-                >
-                    <!-- <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span> -->
-                </ProjectItem>
+                :id="item.id"
+                :title="item.name"
+                :url="item.links?.[0]?.['@id'] || ''"
+                :image="item.image?.large || ''"
+                :subjectArea="item.subjectArea || []"
+                :description="item.descriptionText"
+                />
             </template>
         </masonry-wall>
         <!-- <p v-for = "tool in tools" :key="tool.id">{{ tool.name }}</p> -->
@@ -37,21 +35,19 @@ onMounted(async () => {
 });
 
 const translateResponse = (response: any) => {
-    return response.map((item: any) => {
-        return {
-            id: item['o:id'],
-            name: item['o:title'],
-            subject: item['dcterms:subject'], //array
-            funding: item['vivo:hasFundingVehicle'], //array
-            contributingRole: item['vivo:contributingRole'], //array
-            timeInterval: item['vivo:dateTimeInterval'], //array
-            subjectArea: item['dcterms:subject'], //array
-            shortDescription: item['dcterms:description'], //array
-            image: item['thumbnail_display_urls'],
-            links: item['foaf:homepage'], //array
-        }
-    });
-}
+    return response.map((item: any) => ({
+        id: item['o:id'] || '',
+        name: item['o:title'] || 'No title',
+        subject: item['dcterms:subject'] || [],
+        funding: item['vivo:hasFundingVehicle'] || [],
+        contributingRole: item['vivo:contributingRole'] || [],
+        timeInterval: item['vivo:dateTimeInterval'] || [],
+        subjectArea: item['dcterms:subject'] || [],
+        descriptionText:Array.isArray(item['dcterms:description']) && item['dcterms:description'][0]?.['@value'] || '',
+        image: item['thumbnail_display_urls'] || {},
+        links: item['foaf:homepage'] || [],
+    }));
+};
 </script>
 
 <style scoped>
