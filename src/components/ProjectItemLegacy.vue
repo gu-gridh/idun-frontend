@@ -1,6 +1,6 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
-    <div class="vertical-card"> <!-- TODO random background color? -->
+    <div class="horizontal-card"> <!-- TODO every other alterntate between two very light grey tones (look at old dh portal) -->
       <figure>
       <img :src="image" alt="Project image" />
     </figure>
@@ -30,17 +30,20 @@ defineProps(["id", "title", "image", "url", "subjectArea", "description" ]);
   a{
 padding:0px;
   }
-.vertical-card {
+.horizontal-card {
   position: relative;
   transition: all 0.1s ease-in-out;
   overflow: hidden;
   cursor: pointer;
-  max-width: 300px;
-  background-color:#ffd7e5;
+  max-width: auto;
+  max-height:150px;
+  background-color:#efefef;
   margin-top:0px!important;
+  display:flex;
+
 }
 
-.vertical-card:hover {
+.horizontal-card:hover {
   transform: scale(1.03);
   filter: brightness(110%);
   z-index: 10;
@@ -52,6 +55,8 @@ figure{
   display: flex;
     margin: 0;
     overflow: hidden;
+    width:150px;
+    height:150px;
 }
 
 img {
@@ -66,12 +71,13 @@ img {
 .card-title {
   font-size: 1.5rem;
   margin-block: 0 0.5rem;
-  font-weight:300;
+  font-weight:200;
   line-height: 1.0;
   margin-top:10px;
 }
 .card-body {
   margin-block: 0.8rem;
+  padding-right: 5px;
   font-size: 1.0rem;
   font-weight:300;
   line-height: 1.1;
@@ -89,7 +95,7 @@ img {
   background: inherit;
 }
 .card-tags {
-  border-top: thin dotted rgba(0 0 0 / 0.5);
+
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   display: flex;

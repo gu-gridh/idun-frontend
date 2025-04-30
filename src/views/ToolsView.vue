@@ -1,7 +1,7 @@
 <template>
     <div class="projects">
     <div class="projects-container">
-        <masonry-wall v-if="tools && tools.length" :column-width="200" :items="tools":gutter="20" :responsive="true" :resize="true">
+        <masonry-wall v-if="tools && tools.length" :column-width="250" :items="tools" :gutter="0" :responsive="true" :resize="true">
             <template #default="{ index, item }">
                 <ProjectItem
                 :id="item.id"
@@ -14,11 +14,15 @@
             </template>
         </masonry-wall>   
     </div>
+    <div class="legacy">
     <div class="projects-container">
-        Legacy
-        <masonry-wall v-if="legacy && legacy.length" :column-width="200" :items="legacy":gutter="20" :responsive="true" :resize="true">
+        <h1>Legacy Resources</h1>
+
+    <h2>These resources are not actively developed and maintained.</h2>
+
+        <masonry-wall v-if="legacy && legacy.length" :column-width="500" :items="legacy":gutter="0" :responsive="true" :resize="true">
             <template #default="{ index, item }">
-                <ProjectItem
+                <ProjectItemLegacy
                 :id="item.id"
                 :title="item.name"
                 :url="item.links?.[0]?.['@id'] || ''"
@@ -29,6 +33,7 @@
             </template>
         </masonry-wall>
     </div>
+    </div>
 </div>
 </template>
 
@@ -38,6 +43,7 @@ import type { Tool } from '@/types';
 import { onMounted, ref } from 'vue';
 import MasonryWall from '@yeger/vue-masonry-wall';
 import ProjectItem from '@/components/ProjectItem.vue';
+import ProjectItemLegacy from '@/components/ProjectItemLegacy.vue';
 
 
 const tools = ref(<Tool[]>[]);
@@ -80,16 +86,39 @@ const translateResponse = (response: any) => {
 </script>
 
 <style scoped>
+    h1{
+        font-weight:200;
+    }
+    h2{
+        font-weight:200;
+    }
 .projects {
     width: 100%;
     display: block;
+   
 }
 
 .projects-container {
     width: calc(100% - 140px);
     padding-left: 60px;
 }
-li {
-    
+.projects-container li {
     list-style: none;
-}</style>
+}
+
+.legacy{
+    border-top: thin dotted rgba(0 0 0 / 0.5);
+    padding-bottom:50px;
+    padding-top:20px;
+    margin-top:60px;
+    width: calc(100% - 0px);
+}
+
+.masonry-column{
+
+}
+
+.masonry-item{
+
+}
+</style>
