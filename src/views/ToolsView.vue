@@ -1,4 +1,5 @@
 <template>
+    <div class="projects">
     <div class="projects-container">
         <masonry-wall v-if="tools && tools.length" :column-width="200" :items="tools":gutter="20" :responsive="true" :resize="true">
             <template #default="{ index, item }">
@@ -28,6 +29,7 @@
             </template>
         </masonry-wall>
     </div>
+</div>
 </template>
 
 <script setup lang="ts">
@@ -78,6 +80,11 @@ const translateResponse = (response: any) => {
 </script>
 
 <style scoped>
+.projects {
+    width: 100%;
+    display: block;
+}
+
 .projects-container {
     width: calc(100% - 140px);
     padding-left: 60px;
