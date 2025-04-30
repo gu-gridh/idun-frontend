@@ -10,8 +10,8 @@
             <h1>So many projects!</h1>
             <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and helped gather more
               than <span>{{ totFunding }} million</span> in funding.</h2>
-              <div class="text-module-link hoverable" style="width:150px;">Contact us and start a project</div>
-            <span v-html="redData1.html"></span>
+              <div class="text-module-link hoverable" style="width:250px; margin-top:30px;">Contact us and start a project</div>
+            <!-- <span v-html="redData1.html"></span> -->
           </div>
         </div>
         <div class="data-module">
@@ -38,7 +38,7 @@
       <div class="row">
         <div class="data-module">
           <div class="buffer">
-            <div class="module hoverable theme-gradient-1 graph-wrapper">
+            <div class="module theme-gradient-1 graph-wrapper">
               <Graph/>
             </div>
           </div>
@@ -46,7 +46,7 @@
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
-            <h1>Collaborations</h1>
+            <h1>Transdisciplinary collaborations</h1>
           <h2 v-html="redData2.html"></h2>
           </div>
         </div>
@@ -216,7 +216,24 @@
 
 
 <style>
- 
+.float-tooltip-kap {
+  position: absolute;
+  white-space: nowrap;
+  top: 100px;
+  right:20px;
+  font-family: sans-serif!important;
+  font-size: 16px!important;
+  font-weight:100;
+  padding: 5px 8px 5px 8px!important;
+  border-radius: 5px!important;
+  color: black !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)!important;
+
+  /* by default */
+}
+
+
   .content {
     padding: 0;
     margin: 0;
@@ -288,6 +305,7 @@ transform:scale(1.03);
 
   .text-module-title {
     font-size: 18px;
+  
   }
 
   .text-module-data {
@@ -329,10 +347,12 @@ transform:scale(1.03);
 
   .info-module .left {
     text-align: right;
-    padding: 0px 40px 30px 60px;
+    padding: 0px 40px 0px 60px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
+
   }
 
   .info-module .right {
@@ -340,7 +360,8 @@ transform:scale(1.03);
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
-    padding: 0px 60px 30px 30px;
+    justify-content: center;
+    padding: 0px 60px 0px 30px;
   }
 
 
@@ -358,14 +379,15 @@ transform:scale(1.03);
     color:var(--theme-heading);
     font-size: 50px;
     margin-top: 10px;
-    line-height: 0.85;
+    line-height:1.0;
   }
 
   .info-module-slogan h2 {
     color:var(--theme-heading);
-    margin-top: -20px;
+    margin-top: -30px;
     max-width: 600px;
     font-weight:300;
+    font-size:20px;
   }
 
 
