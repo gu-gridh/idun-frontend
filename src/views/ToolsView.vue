@@ -7,6 +7,8 @@
                     :title="item.name"
                     :url="item.links?.[0]?.['@id'] || ''"
                     :image="item.image.large"
+                    :subjectArea="item.subjectArea"
+                    :description="item.shortDescription"
                 >
                     <!-- <span v-if="item.shortDescription">{{ item.shortDescription[0]['@value'] }}</span> -->
                 </ProjectItem>
@@ -39,13 +41,12 @@ const translateResponse = (response: any) => {
         return {
             id: item['o:id'],
             name: item['o:title'],
-            description: Array.isArray(item['dcterms:description']) ? item['dcterms:description'][0]?.['@value'] : item['dcterms:description']?.['@value'],
             subject: item['dcterms:subject'], //array
             funding: item['vivo:hasFundingVehicle'], //array
             contributingRole: item['vivo:contributingRole'], //array
             timeInterval: item['vivo:dateTimeInterval'], //array
-            subjectArea: item['vivo:hasSubjectArea'], //array
-            shortDescription: item['bibo:shortDescription'], //array
+            subjectArea: item['dcterms:subject'], //array
+            shortDescription: item['dcterms:description'], //array
             image: item['thumbnail_display_urls'],
             links: item['foaf:homepage'], //array
         }
