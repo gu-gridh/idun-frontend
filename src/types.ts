@@ -98,4 +98,9 @@ export interface Tool {
     },
     subjectArea: [],
     descriptionText: string,
+    legacy: [
+        {
+            '@value': string
+        }
+    ]
 }

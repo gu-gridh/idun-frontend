@@ -1,6 +1,21 @@
 <template>
     <div class="projects-container">
-        <masonry-wall v-if="tools && tools.length" :items="tools" :column-width="300" :gutter="20" :responsive="true" :resize="true">
+        <masonry-wall v-if="tools && tools.length" :column-width="200" :items="tools":gutter="20" :responsive="true" :resize="true">
+            <template #default="{ index, item }">
+                <ProjectItem
+                :id="item.id"
+                :title="item.name"
+                :url="item.links?.[0]?.['@id'] || ''"
+                :image="item.image?.large || ''"
+                :subjectArea="item.subjectArea || []"
+                :description="item.descriptionText"
+                />
+            </template>
+        </masonry-wall>   
+    </div>
+    <div class="projects-container">
+        Legacy
+        <masonry-wall v-if="legacy && legacy.length" :column-width="200" :items="legacy":gutter="20" :responsive="true" :resize="true">
             <template #default="{ index, item }">
                 <ProjectItem
                 :id="item.id"
@@ -12,7 +27,6 @@
                 />
             </template>
         </masonry-wall>
-        <!-- <p v-for = "tool in tools" :key="tool.id">{{ tool.name }}</p> -->
     </div>
 </template>
 
@@ -25,13 +39,25 @@ import ProjectItem from '@/components/ProjectItem.vue';
 
 
 const tools = ref(<Tool[]>[]);
+const legacy = ref(<Tool[]>[]);
 
 onMounted(async () => {
     const response = await fetchByResourceTemplate(6)
-    console.log(response);
     tools.value = await translateResponse(response)
     //then randomize the order
+    
+    //set them as either active or legacy tools according to legacy value
+    tools.value.forEach((tool) => {
+        if (tool.legacy?.[0]?.['@value'] === 'Legacy') {
+            legacy.value.push(tool);
+        } else if (tool.legacy?.[0]?.['@value'] === 'Active') {
+            tools.value.push(tool);
+        }
+        else return
+    });
+
     tools.value = tools.value.sort(() => Math.random() - 0.5);
+    
 });
 
 const translateResponse = (response: any) => {
@@ -43,9 +69,10 @@ const translateResponse = (response: any) => {
         contributingRole: item['vivo:contributingRole'] || [],
         timeInterval: item['vivo:dateTimeInterval'] || [],
         subjectArea: item['dcterms:subject'] || [],
-        descriptionText:Array.isArray(item['dcterms:description']) && item['dcterms:description'][0]?.['@value'] || '',
+        descriptionText: item['bibo:shortDescription'] || [],
         image: item['thumbnail_display_urls'] || {},
         links: item['foaf:homepage'] || [],
+        legacy: item['bibo:status'] || [],
     }));
 };
 </script>
