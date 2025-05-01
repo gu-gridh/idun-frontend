@@ -119,7 +119,9 @@
 
 
     .projects-view .project {
-        padding-bottom: 0px !important;
+        padding-bottom: 20px !important;
+        padding-top: 10px !important;
+   
         cursor: pointer;
         break-inside: avoid-column;
 
@@ -163,11 +165,22 @@
     }
 
     .projects-view .metadata-group {
-        font-size: 1.1em;
+        font-size: 1.0em;
         margin-bottom: 0px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 1.2;
         margin-top: 15px;
+    }
+
+    @media screen and (max-width: 900px) {
+
+        .projects-view .project {
+        padding-bottom: 30px !important;
+        margin-top: 40px !important;
+        border-width: 0 0 0.5px 0;
+        border-style: dotted;
+        border-color:black;
+    }
     }
 
 </style>
