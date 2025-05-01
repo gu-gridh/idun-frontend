@@ -69,7 +69,7 @@
         <div class="info-module">
           <div class="info-module-slogan right">
             <div class="text-module-title">University wide support</div>
-            <h1>Transdisciplinary collaborations</h1>
+            <h1>Transdisciplinary collaborations!</h1>
           <h2 v-html="redData2.html"></h2>
           </div>
         </div>

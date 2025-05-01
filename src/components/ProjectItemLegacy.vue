@@ -56,6 +56,7 @@ figure{
     margin: 0;
     overflow: hidden;
     width:150px;
+    min-width:150px;
     height:150px;
 }
 
@@ -63,7 +64,8 @@ img {
   display: block;
   max-width: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit:cover;
+  
 }
 .card-info {
   padding: 0.5rem 1rem;
