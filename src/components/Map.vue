@@ -19,11 +19,12 @@ onMounted(async() => {
 
 const initMap = () => {
     //create a map
-    let map = L.map('map').setView([0, 0], 1);
+    let map = L.map('map').setView([40, -20], 1.5);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
        // attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+    map.scrollWheelZoom.disable();
 
     //add markers to the map
     places.value.forEach((place: any) => {

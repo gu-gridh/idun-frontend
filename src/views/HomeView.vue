@@ -121,21 +121,34 @@
         <!-- Puffs -->
 
         <div class="links">
-          <div class="link-item hoverable">
-            <div class="link-title">
-              ProCURE infrastructure
-            </div>
+
+          <div class="link-item  hoverable">
+            <router-link to="/procure" class="link-item-filler">
+              <div class="link-title">
+                ProCURE infrastructure
+              </div>
+            </router-link>
           </div>
-          <div class="link-item hoverable">
-            <div class="link-title">
-              Resurssida för AI-verktyg
-            </div>
+
+
+          <div class="link-item  hoverable">
+            <router-link to="/procure" class="link-item-filler">
+              <div class="link-title">
+                Resurssida för AI-verktyg
+              </div>
+            </router-link>
           </div>
-          <div class="link-item hoverable">
-            <div class="link-title">
-              Resurssida för teknisk infrastruktur
-            </div>
+
+
+          <div class="link-item  hoverable">
+            <router-link to="/procure" class="link-item-filler">
+              <div class="link-title">
+                Resurssida för teknisk infrastruktur
+              </div>
+            </router-link>
           </div>
+
+
           <div class="link-item hoverable">
             <div class="link-title">
               <a href="https://github.com/gu-gridh" target="_blank">
@@ -150,37 +163,29 @@
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
           <h3>Highlighted Resources</h3>
           <div class="projects">
-            <div class="project-item ocean" style="border-radius:10px 0 0 10px;">
-              <div class="project-image"
-                style="background: linear-gradient(180deg, rgb(253, 149, 242) 0%, rgb(0, 53, 199) 100%), url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg);background-size: cover; background-position: 50%; ">
-              </div>
-              <div class="project-title">
-                Saint Sophia's Inscriptions
-              </div>
+            <div class="project-item" style="border-radius:10px 0 0 10px; background: linear-gradient(180deg, rgb(44, 32, 43) 0%, rgb(149, 243, 123) 100%), url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%; ">
+              <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div>
+              <div class="project-title">Saint Sophia's Inscriptions</div>
             </div>
-            <div class="project-item" style="">
-              <div class="project-image"
-                style="background: linear-gradient(180deg, rgb(105, 188, 148) 0%, rgb(39, 197, 254) 100%), url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);  background-size: cover; background-position: 50%;">
-              </div>
-              <div class="project-title">
-                Dawit Isaak Database of Censorship
-              </div>
-            </div>
-            <div class="project-item" style="border-radius:0px 10px 10px 0px;">
-              <div class="project-image"
-                style="  background: linear-gradient(180deg, rgb(253, 149, 242) 0%, rgb(211, 254, 39) 100%), url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;">
-              </div>
-              <div class="project-title">
-                Etruscan Chamber Tombs
-              </div>
-            </div>
+
+
+      
+          <div class="project-item" style="background: linear-gradient(180deg, rgb(105, 188, 148) 0%, rgb(198, 240, 255) 100%), url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);  background-size: cover; background-position: 50%;">
+         
+            <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div>
+            <div class="project-title">Dawit Isaak Database of Censorship</div>
+          </div>
+          <div class="project-item" style="border-radius:0px 10px 10px 0px;  background: linear-gradient(180deg, rgb(253, 149, 242) 0%, rgb(211, 254, 39) 100%), url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;">
+            <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div>
+            <div class="project-title">Etruscan Chamber Tombs</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="project-button">
-      <div class="text-module-link hoverable"><router-link to="/projects">See all projects</router-link></div>
-    </div>
+  </div>
+  <div class="project-button">
+    <div class="text-module-link hoverable"><router-link to="/projects">See all projects</router-link></div>
+  </div>
   </div>
 </template>
 
@@ -285,8 +290,8 @@
     font-weight: 700;
   }
 
-  h2{
-    margin-top:-15px!important;
+  h2 {
+    margin-top: -15px !important;
   }
 
   @media screen and (max-width: 1100px) {
@@ -296,9 +301,9 @@
     }
   }
 
-  .contact-us{
-    width:250px;
-    margin-top:30px;
+  .contact-us {
+    width: 250px;
+    margin-top: 30px;
   }
 
   .float-tooltip-kap {
@@ -380,7 +385,7 @@
   }
 
   .buffer {
-    padding: 50px 40px;
+    padding: 30px 40px;
 
   }
 
@@ -529,46 +534,77 @@
     align-items: center;
   }
 
+  .link-item-filler {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   .link-title {
     width: 100%;
+  }
+
+
+
+
+
+  .project-image-round {
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top:20px;
+    transition: all 0.2s ease-in-out;
   }
 
   .project-title {
     width: 100%;
     position: relative;
-    color: black;
+bottom:0px;
     font-size: 25px;
     font-weight: 600;
-    margin-top: -150px;
     text-align: center;
     pointer-events: none;
+    height:50px;
+padding-top:30px;
+margin-top:-20px;
+transition: all 0.2s ease-in-out;
   }
 
   .project-item {
-
+    cursor: pointer;
     height: 190px;
     padding: 0px;
-    flex: 1 1 0;
     width: 0;
     overflow: hidden;
+    background-blend-mode:screen;
+    display:flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    align-items: center;
+    justify-content:flex-end;
+
+    color: black;
 
   }
-
-  .project-image {
-    cursor: pointer;
-    background-blend-mode: lighten;
-    filter: blur(0.0rem);
-    width: 120%;
-    height: 120%;
-    margin-top: -5px;
-    margin-left: -20px;
-    opacity: 0.3;
-    transition: all 0.2s ease-in-out;
+  .project-item:hover .project-image-round{
+    transform:scale(1.1);
   }
 
-  .project-image:hover {
-    opacity: 0.8
+  .project-item:hover .project-title {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    color: black;
+    height:50px;
+padding-top:30px;
   }
+
+
+  .project-item:hover {
+    background-blend-mode:screen;
+  }
+
+
 
   .ocean {
     background: linear-gradient(180deg, rgba(00, 200, 250, 0.2) 0%, rgba(255, 240, 255, 1) 100%);
@@ -585,12 +621,12 @@
 
   }
 
-  .project-button{
-    display:flex;
-    margin-top:20px;
+  .project-button {
+    display: flex;
+    margin-top: 20px;
     flex-direction: row;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
   }
 
   .network {
@@ -613,26 +649,26 @@
     .content {
       flex-direction: column;
       justify-content: left;
-      width:auto;
+      width: auto;
     }
 
-    .intro-space{
-      width:calc(100% - 120px);
+    .intro-space {
+      width: calc(100% - 120px);
     }
-   
+
     .text-module-link {
-    width: 100%;
-    text-align: center;
-  }
+      width: 100%;
+      text-align: center;
+    }
 
-  .contact-us{
-    width:100%;
-    margin-top:30px;
-  }
+    .contact-us {
+      width: 100%;
+      margin-top: 30px;
+    }
 
-    .info-module-slogan{
-   width:100%;
-  }
+    .info-module-slogan {
+      width: 100%;
+    }
 
     .data-module {
       width: 100%;
@@ -641,17 +677,17 @@
 
     .info-module {
       width: 80vw;
-      text-align: left!important;
+      text-align: left !important;
       justify-content: left;
-      padding-left:40px;
+      padding-left: 40px;
     }
-   
+
 
     .info-module .left {
       text-align: left;
       padding: 0px 20px 30px 20px;
       align-items: flex-start;
-      width:100%;
+      width: 100%;
     }
 
     .info-module .right {
@@ -661,7 +697,7 @@
 
     .links {
       flex-direction: row;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
       padding: 20px 20px;
     }
 
@@ -672,44 +708,47 @@
 
 
 
-  
+
 
     .buffer {
       padding: 20px 20px;
     }
 
-    .link-item { 
-   min-width:300px;
-  }
+    .link-item {
+      min-width: 300px;
+    }
 
-  .projects {
-    display: block;
-    flex-direction: row;
-    flex-grow: 1;
-    width: 100%;
-    align-items: center;
-    margin-top: 10px;
-    gap: 0px;
+    .projects {
+      display: block;
+      flex-direction: row;
+      flex-grow: 1;
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
+      gap: 0px;
 
-  }
+    }
 
-  .project-item {
-    margin-bottom:20px;
-padding: 0px;
-flex: 1 1 0;
-width: 100%;
-border-radius:15px!important;
-}
-#footer{
-  display:none;
-}
-.gu-logo{
-  display:none;
-}
-.title-space {
+    .project-item {
+      margin-bottom: 20px;
+      padding: 0px;
+      flex: 1 1 0;
+      width: 100%;
+      border-radius: 15px !important;
+    }
 
-    width: calc(90%);
- 
-  }
+    #footer {
+      display: none;
+    }
+
+    .gu-logo {
+      display: none;
+    }
+
+    .title-space {
+
+      width: calc(90%);
+
+    }
   }
 </style>
