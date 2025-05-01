@@ -122,7 +122,7 @@
 
         <div class="links">
 
-          <div class="link-item  hoverable">
+          <div class="link-item hoverable">
             <router-link to="/procure" class="link-item-filler">
               <div class="link-title">
                 ProCURE infrastructure
@@ -163,20 +163,20 @@
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
           <h3>Highlighted Resources</h3>
           <div class="projects">
-            <div class="project-item" style="border-radius:10px 0 0 10px; background: linear-gradient(180deg, rgb(44, 32, 43) 0%, rgb(149, 243, 123) 100%), url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%; ">
-              <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div>
+            <div class="project-item" style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%; ">
+              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Saint Sophia's Inscriptions</div>
             </div>
 
 
       
-          <div class="project-item" style="background: linear-gradient(180deg, rgb(105, 188, 148) 0%, rgb(198, 240, 255) 100%), url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);  background-size: cover; background-position: 50%;">
+          <div class="project-item" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);  background-size: cover; background-position: 50%;">
          
-            <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div>
+            <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
             <div class="project-title">Dawit Isaak Database of Censorship</div>
           </div>
-          <div class="project-item" style="border-radius:0px 10px 10px 0px;  background: linear-gradient(180deg, rgb(253, 149, 242) 0%, rgb(211, 254, 39) 100%), url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;">
-            <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div>
+          <div class="project-item" style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;">
+            <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
             <div class="project-title">Etruscan Chamber Tombs</div>
           </div>
         </div>
@@ -567,9 +567,10 @@ bottom:0px;
     text-align: center;
     pointer-events: none;
     height:50px;
-padding-top:30px;
+padding-top:80px;
 margin-top:-20px;
 transition: all 0.2s ease-in-out;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
   }
 
   .project-item {
@@ -584,8 +585,8 @@ transition: all 0.2s ease-in-out;
     flex: 1 0 0;
     align-items: center;
     justify-content:flex-end;
-
-    color: black;
+    transition: all 0.2s ease-in-out;
+    color: white;
 
   }
   .project-item:hover .project-image-round{
@@ -593,10 +594,7 @@ transition: all 0.2s ease-in-out;
   }
 
   .project-item:hover .project-title {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-    color: black;
-    height:50px;
-padding-top:30px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   }
 
 
