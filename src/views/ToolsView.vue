@@ -3,7 +3,7 @@
     <div class="projects-container">
         <h1>Platforms, Publications, and Tools</h1>
 
-        <masonry-wall v-if="tools && tools.length" :column-width="250" :items="tools" :gutter="0" :responsive="true" :resize="true">
+        <masonry-wall v-if="tools && tools.length" :column-width="220" :items="tools" :gutter="0" :responsive="true" :resize="true">
             <template #default="{ index, item }">
                 <ProjectItem
                 :id="item.id"
@@ -22,7 +22,7 @@
 
     <h2>These resources are not actively developed and maintained.</h2>
 
-        <masonry-wall v-if="legacy && legacy.length" :column-width="500" :items="legacy":gutter="0" :responsive="true" :resize="true">
+        <masonry-wall v-if="legacy && legacy.length" :column-width="440" :items="legacy":gutter="0" :responsive="true" :resize="true">
             <template #default="{ index, item }">
                 <ProjectItemLegacy
                 :id="item.id"
