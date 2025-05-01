@@ -1,5 +1,28 @@
 <template>
+
+  <div class="intro-space" style="">
+    <div class="text-module-title">Cutting Edge Expertise</div>
+    <div class="intro-title">
+      A resource for research!
+    </div>
+    <div class="intro-article">
+      <p> The Gothenburg Research Infrastructure in Digital Humanities (GRIDH) is a research node and infrastructure
+        that offer expertise in <span>deep learning and artificial intelligence</span>, <span>visualisation</span> and
+        <span>visual analysis</span>, <span>spatio-temporal
+          interfaces</span>, and <span>natural language processing</span>. Our mission is to strengthen, renew and
+        enrich research and
+        teaching through digital source material, tools and methods.
+      </p>
+
+      <p>We help researchers to develop research applications and navigate datasets, and is a resource for memory
+        institutions that seek new ways to make their collections and archives available for research and public
+        alike. We publish both human and machine readable interfaces for a number of our research projects.</p>
+    </div>
+  </div>
+
+
   <div class="container">
+    
 
     <!---- will fetch 3 page blocks from Omeka S API -->
     <div class="content">
@@ -119,7 +142,7 @@
         </div>
         <!-- Active projects --> <!-- should be marked out in database -->
         <div class="project-container">
-          <h3>Aktuella projekt</h3>
+          <h3>Highlighted projects</h3>
           <div class="projects">
             <div class="project-item ocean" style="border-radius:10px 0 0 10px">
               <div class="link-title">
@@ -216,6 +239,43 @@
 
 
 <style>
+
+
+.intro-space {
+    width: calc(100% - 140px);
+    padding-left: 60px;
+    margin-top: 50px;
+  }
+
+  .intro-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--theme-heading);
+  }
+
+  .intro-article {
+    columns: 2;
+    column-gap: 70px;
+    column-rule: 1px solid lightgrey;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .intro-article span {
+    color: var(--theme-livedata1);
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .intro-article {
+      columns: 1;
+
+    }
+  }
+
 .float-tooltip-kap {
   position: absolute;
   white-space: nowrap;
@@ -334,7 +394,6 @@ transform:scale(1.03);
     width: 100%;
     min-height: 300px;
     height: 30vh;
-    
   }
 
 
@@ -522,8 +581,6 @@ transform:scale(1.03);
     .buffer {
       padding: 20px 20px;
     }
-
-    
   }
 
 </style>

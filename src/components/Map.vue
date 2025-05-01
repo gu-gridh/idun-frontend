@@ -1,8 +1,5 @@
 <template>
- 
     <div id="map"></div>
-
-
 </template>
 
 <script setup lang="ts">
@@ -64,7 +61,18 @@ const convertCoords = (coords: string) => {
     width: 100%;
     border-radius: 15px;
     z-index: auto;
-    backdrop-filter: hue-rotate(120deg);
+    filter: hue-rotate(90deg);
+    opacity:0.8;
 }
+
+.map-overlay{
+      width:100%;
+      min-height: 300px;
+      height: 30vh;
+      background-color:green;
+      z-index:1;
+      opacity:0.5;
+      position:absolute;
+    }
 
 </style>

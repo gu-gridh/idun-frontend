@@ -1,6 +1,8 @@
 <template>
     <div class="projects">
     <div class="projects-container">
+        <h1>Platforms, Publications, and Tools</h1>
+
         <masonry-wall v-if="tools && tools.length" :column-width="250" :items="tools" :gutter="0" :responsive="true" :resize="true">
             <template #default="{ index, item }">
                 <ProjectItem

@@ -8,8 +8,8 @@
 
   <div class="top-menu">
     <router-link to="/"><div class="menu-item  menu-selected">Home</div></router-link>
-    <router-link to="/tools"><div class="menu-item">Portals and tools</div></router-link>
-    <router-link to="/projects"><div class="menu-item">Projects</div></router-link>
+    <router-link to="/tools"><div class="menu-item">All portals and tools</div></router-link>
+    <router-link to="/projects"><div class="menu-item">All projects</div></router-link>
 </div>
 
   <div class="top">
@@ -28,24 +28,7 @@
       </div>
     </div>
 
-    <div class="intro-space">
-      <div class="text-module-title">Cutting Edge Expertise</div>
-      <div class="intro-title">
-        A resource for research!
-      </div>
-      <div class="intro-article">
-        <p> The Gothenburg Research Infrastructure in Digital Humanities (GRIDH) is a research node and infrastructure
-          that offer expertise in <span>deep learning and artificial intelligence</span>, <span>visualisation</span> and
-          <span>visual analysis</span>, <span>spatio-temporal
-            interfaces</span>, and <span>natural language processing</span>. Our mission is to strengthen, renew and
-          enrich research and
-          teaching through digital source material, tools and methods. </p>
-
-        <p>We help researchers to develop research applications and navigate datasets, and is a resource for memory
-          institutions that seek new ways to make their collections and archives available for research and public
-          alike. We publish both human and machine readable interfaces for a number of our research projects.</p>
-      </div>
-    </div>
+    
   </div>
 
   <div class="container">
@@ -123,42 +106,6 @@
     padding-bottom: 10px;
   }
 
-
-
-  .intro-space {
-    width: calc(100% - 140px);
-    padding-left: 60px;
-    margin-top: 50px;
-  }
-
-  .intro-title {
-    font-size: 50px;
-    font-weight: 600;
-    color: var(--theme-heading);
-  }
-
-  .intro-article {
-    columns: 2;
-    column-gap: 70px;
-    column-rule: 1px solid lightgrey;
-    font-size: 20px;
-    font-weight: 300;
-    text-align: justify;
-    margin-top: -10px;
-  }
-
-  .intro-article span {
-    color: var(--theme-livedata1);
-    font-weight: 700;
-  }
-
-  @media screen and (max-width: 1100px) {
-    .intro-article {
-      columns: 1;
-
-    }
-  }
-
   .livedata-pulse {
 
     /* Standard Syntax */
@@ -211,6 +158,8 @@
     display: flex;
     margin: 0px;
     font-family: "Barlow Condensed", sans-serif !important;
+    display:flex;
+    flex-direction: column;
   }
 
   @media screen and (max-width: 1100px) {

@@ -12,6 +12,10 @@
           {{ Array.isArray(description) && description[0]?.['@value'] || '' }}
         </div>
 
+        <div class="card-links">
+        Go to the resource
+      </div>
+
         <div class="card-tags">
           <span v-for="subject in subjectArea" :key="subject['@id']" class="tag">
             #{{ subject['@value'] }}
@@ -36,8 +40,7 @@ padding:0px;
   overflow: hidden;
   cursor: pointer;
   max-width: 300px;
-  background-color:#ffd7e5;
-  margin-top:0px!important;
+  background-color:#efefef;
 }
 
 .vertical-card:hover {
@@ -51,6 +54,7 @@ padding:0px;
 figure{
   display: flex;
     margin: 0;
+
     overflow: hidden;
 }
 
@@ -59,6 +63,7 @@ img {
   max-width: 100%;
   width: 100%;
   object-fit: cover;
+
 }
 .card-info {
   padding: 0.5rem 1rem;
@@ -71,13 +76,20 @@ img {
   margin-top:10px;
 }
 .card-body {
-  margin-block: 0.8rem;
+  margin-block: 1.4rem;
   font-size: 1.0rem;
   font-weight:300;
   line-height: 1.1;
 }
 .card-links {
   margin-block: 1rem;
+  font-size:20px;
+  font-weight:300;
+  background: url("https://data.dh.gu.se/ui-icons/arrow_link_black_circle.png");
+  background-size: 22px;
+  background-position: 0px 50%;
+  background-repeat: no-repeat;
+  padding-left: 30px;
 }
 .button-link {
   display: block;
