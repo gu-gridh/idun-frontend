@@ -2,7 +2,8 @@
     <div class="Platforms">
         <div class="projects grey-gradient">
             <div class="projects-container ">
-                <h1>Platforms, Publications, and Tools</h1>
+
+                <h1>Resources, Databases, and Archives</h1>
                 <masonry-wall v-if="tools && tools.length" :column-width="220" :items="tools" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
@@ -11,6 +12,11 @@
                             :description="item.descriptionText" />
                     </template>
                 </masonry-wall>
+            </div>
+
+            <div class="projects-container ">
+                <h1>Apps, Tools, and Platforms</h1>
+                
             </div>
         </div>
         <div class="projects">
@@ -48,13 +54,14 @@
     onMounted(async () => {
         const response = await fetchByResourceTemplate(6)
         tools.value = await translateResponse(response)
+     
         //then randomize the order
 
         //set them as either active or legacy tools according to legacy value
         tools.value.forEach((tool) => {
             if (tool.legacy?.[0]?.['@value'] === 'Legacy') {
                 legacy.value.push(tool);
-            } else if (tool.legacy?.[0]?.['@value'] === 'Active') {
+            } else if (tool.legacy?.[1]?.['@value'] === 'Active') {
                 tools.value.push(tool);
             }
             else return
@@ -69,9 +76,9 @@
             id: item['o:id'] || '',
             name: item['o:title'] || 'No title',
             subject: item['dcterms:subject'] || [],
-            funding: item['vivo:hasFundingVehicle'] || [],
-            contributingRole: item['vivo:contributingRole'] || [],
-            timeInterval: item['vivo:dateTimeInterval'] || [],
+            //funding: item['vivo:hasFundingVehicle'] || [],
+            //contributingRole: item['vivo:contributingRole'] || [],
+            //timeInterval: item['vivo:dateTimeInterval'] || [],
             subjectArea: item['dcterms:subject'] || [],
             descriptionText: item['bibo:shortDescription'] || [],
             image: item['thumbnail_display_urls'] || {},

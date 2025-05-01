@@ -55,24 +55,25 @@ const convertCoords = (coords: string) => {
 }
 </script>
 
-<style scoped>
+<style>
 #map {
     height: 100%;
     width: 100%;
     border-radius: 15px;
     z-index: auto;
-    filter: hue-rotate(90deg);
-    opacity:0.8;
+
 }
 
-.map-overlay{
-      width:100%;
-      min-height: 300px;
-      height: 30vh;
-      background-color:green;
-      z-index:1;
-      opacity:0.5;
-      position:absolute;
-    }
+.leaflet-container {
+    filter: hue-rotate(90deg);
+
+    background:transparent;
+}
+
+.leaflet-container .leaflet-control-attribution{
+    filter: hue-rotate(-90deg);
+}
+
+
 
 </style>

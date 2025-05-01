@@ -119,14 +119,15 @@
 
 
     .projects-view .project {
-        padding-bottom: 10px !important;
+        padding-bottom: 0px !important;
         cursor: pointer;
         break-inside: avoid-column;
 
     }
 
     .projects-view .project:hover {
-        color: var(--theme-livedata1);
+        color: var(--theme-livedata1)!important;
+        opacity:0.65;
 
     }
 

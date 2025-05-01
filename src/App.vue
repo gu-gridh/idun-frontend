@@ -162,10 +162,10 @@
     flex-direction: column;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 900px) {
     .container {
       flex-direction: column;
-      align-items: center;
+      align-items: left;
     }
   }
 </style>
