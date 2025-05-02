@@ -57,23 +57,25 @@
     const legacy = ref(<Tool[] > []);
 
     onMounted(async () => {
-        const response = await fetchByResourceTemplate(6)
-        tools.value = await translateResponse(response)
-     
-        //then randomize the order
+        const response = await fetchByResourceTemplate(6);
+        const allTools = await translateResponse(response);
 
-        //set them as either active or legacy tools according to legacy value
-        tools.value.forEach((tool) => {
+        const activeTools: Tool [] = [];
+        const legacyTools: Tool[] = [];
+
+        allTools.forEach((tool: Tool) => {
             if (tool.legacy?.[0]?.['@value'] === 'Legacy') {
-                legacy.value.push(tool);
-            } else if (tool.legacy?.[1]?.['@value'] === 'Active') {
-                tools.value.push(tool);
+                legacyTools.push(tool);
+            } else if (tool.legacy?.[0]?.['@value'] === 'Active') {
+                activeTools.push(tool);
+                console.log('Active tool', tool.name);
+            } else {
+                console.log('Unknown tool', tool.name);
             }
-            else return
         });
 
-        tools.value = tools.value.sort(() => Math.random() - 0.5);
-
+        tools.value = activeTools.sort(() => Math.random() - 0.5);
+        legacy.value = legacyTools;
     });
 
     const translateResponse = (response: any) => {
