@@ -2,22 +2,23 @@
     <div class="Platforms">
         <div class="projects grey-gradient">
             <div class="intro-space" style="">
-                <div class="text-module-title">Cutting Edge Expertise</div>
-                <div class="intro-title">
-                ProCURE: Protection of Cultural Resources
+              
+                <div class="intro-title" style="line-height:0.9; padding-bottom:10px;">
+                ProCURE: <br>Protection of Cultural Resources
                 </div>
                 <div class="intro-article">
-                  <p> The Gothenburg Research Infrastructure in Digital Humanities (GRIDH) is a research node and infrastructure
-                    that offer expertise in <span>deep learning and artificial intelligence</span>, <span>visualisation</span> and
-                    <span>visual analysis</span>, <span>spatio-temporal
-                      interfaces</span>, and <span>natural language processing</span>. Our mission is to strengthen, renew and
-                    enrich research and
-                    teaching through digital source material, tools and methods.
-                  </p>
-            
-                  <p>We help researchers to develop research applications and navigate datasets, and is a resource for memory
-                    institutions that seek new ways to make their collections and archives available for research and public
-                    alike. We publish both human and machine readable interfaces for a number of our research projects.</p>
+                  <p>ProCURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH), 
+                    is a <span>Centre of Excellence</span> dedicated to advancing expertise, developing software solutions, 
+                    and providing both high-end equipment and accessible solutions for digital preservation and access to <span>remote or endangered cultural resources.</span> 
+                    It serves as a global hub for heritage digitization, ensuring that at-risk cultural heritage is documented, 
+                    analyzed, and made accessible for <span>research, education, and public engagement.</span></p>
+
+                  <p>Through strategic collaborations and training programs, 
+                    ProCURE is designed to empower heritage professionals, 
+                    researchers, and institutions with the tools and knowledge 
+                    needed to safeguard cultural assets for future generations. 
+                    To digitize cultural heritage is a monumental task always in need of 
+                    state-of-the-art expertise and broader perspectives.</p>
                 </div>
               </div>
 
