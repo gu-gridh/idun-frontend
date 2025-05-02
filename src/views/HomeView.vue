@@ -384,6 +384,8 @@
     width: 50%;
   }
 
+
+
   .buffer {
     padding: 30px 40px;
 
