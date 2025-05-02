@@ -28,7 +28,12 @@ const router = createRouter({
       path: '/active',
       name: 'active',
       component: () => import('../views/ActiveProjects.vue'),
-    }
+    },
+    {
+      path: '/procure',
+      name: 'procure',
+      component: () => import('../views/Procure.vue'),
+    },
   ],
 })
 

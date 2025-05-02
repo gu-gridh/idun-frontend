@@ -1,8 +1,5 @@
 <template>
- 
     <div id="map"></div>
-
-
 </template>
 
 <script setup lang="ts">
@@ -22,11 +19,12 @@ onMounted(async() => {
 
 const initMap = () => {
     //create a map
-    let map = L.map('map').setView([0, 0], 1);
+    let map = L.map('map').setView([40, -20], 1.5);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
        // attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+    map.scrollWheelZoom.disable();
 
     //add markers to the map
     places.value.forEach((place: any) => {
@@ -58,13 +56,25 @@ const convertCoords = (coords: string) => {
 }
 </script>
 
-<style scoped>
+<style>
 #map {
     height: 100%;
     width: 100%;
     border-radius: 15px;
     z-index: auto;
-    backdrop-filter: hue-rotate(120deg);
+
 }
+
+.leaflet-container {
+    filter: hue-rotate(90deg);
+
+    background:transparent;
+}
+
+.leaflet-container .leaflet-control-attribution{
+    filter: hue-rotate(-90deg);
+}
+
+
 
 </style>

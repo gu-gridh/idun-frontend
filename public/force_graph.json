@@ -5,6 +5,26 @@
       "group": "root"
     },
     {
+      "id": "National Infrastructures",
+      "group": "second"
+    },
+
+    {
+      "id": "Infravis",
+      "group": "third"
+    },
+
+    {
+      "id": "HumInfra",
+      "group": "third"
+    },
+
+    {
+      "id": "Swe-Clarin",
+      "group": "third"
+    },
+
+    {
       "id": "GU",
       "group": "second"
     },
@@ -85,8 +105,8 @@
       "group": "third"
     },
     {
-      "id": "Centrum för kritiska kulturarvsstudier",
-      "group": "fourth"
+      "id": "Centre for Critical Heritage Studies",
+      "group": "third"
     },
     {
       "id": "Statligt",
@@ -113,11 +133,7 @@
       "group": "third"
     },
     {
-      "id": "The Royal Swedish Academy of Letters, History and Antiquities",
-      "group": "third"
-    },
-    {
-      "id": "The Swedish Research Council",
+      "id": "The Royal Swedish Academy",
       "group": "third"
     },
     {
@@ -133,7 +149,7 @@
       "group": "fourth"
     },
     {
-      "id": "Privat sektor",
+      "id": "Private sector",
       "group": "second"
     },
     {
@@ -149,7 +165,7 @@
       "group": "third"
     },
     {
-      "id": "Kultursektor",
+      "id": "Heritage Sector",
       "group": "second"
     },
     {
@@ -295,6 +311,22 @@
       "target": "GU"
     },
     {
+      "source": "GRIDH",
+      "target": "National Infrastructures"
+    },
+    {
+      "source": "National Infrastructures",
+      "target": "Infravis"
+    },
+    {
+      "source": "National Infrastructures",
+      "target": "HumInfra"
+    },
+    {
+      "source": "National Infrastructures",
+      "target": "Swe-Clarin"
+    },
+    {
       "source": "GU",
       "target": "Faculty of Social Sciences"
     },
@@ -367,8 +399,8 @@
       "target": "Department of Cultural Sciences"
     },
     {
-      "source": "Department of Cultural Sciences",
-      "target": "Centrum för kritiska kulturarvsstudier"
+      "source": "GU",
+      "target": "Centre for Critical Heritage Studies"
     },
     {
       "source": "GRIDH",
@@ -396,12 +428,9 @@
     },
     {
       "source": "Statligt",
-      "target": "The Royal Swedish Academy of Letters, History and Antiquities"
+      "target": "The Royal Swedish Academy"
     },
-    {
-      "source": "Statligt",
-      "target": "The Swedish Research Council"
-    },
+    
     {
       "source": "GRIDH",
       "target": "Regioner"
@@ -416,50 +445,50 @@
     },
     {
       "source": "GRIDH",
-      "target": "Privat sektor"
+      "target": "Private sector"
     },
     {
-      "source": "Privat sektor",
+      "source": "Heritage Sector",
       "target": "Insamlingsstiftelsen Södra Råda gamla kyrkplats"
     },
     {
-      "source": "Privat sektor",
+      "source": "Private sector",
       "target": "Göteborg International Organ Academy Association"
     },
     {
-      "source": "Privat sektor",
+      "source": "Private sector",
       "target": "Svenska PEN"
     },
     {
       "source": "GRIDH",
-      "target": "Kultursektor"
+      "target": "Heritage Sector"
     },
     {
-      "source": "Kultursektor",
+      "source": "Heritage Sector",
       "target": "Statens historiska museum"
     },
     {
-      "source": "Kultursektor",
+      "source": "Heritage Sector",
       "target": "Dawit Isaak-biblioteket"
     },
     {
-      "source": "Kultursektor",
+      "source": "Heritage Sector",
       "target": "Svenska barnboksinstitutet"
     },
     {
-      "source": "Kultursektor",
+      "source": "Heritage Sector",
       "target": "Göteborgs konstmuseum"
     },
     {
-      "source": "Kultursektor",
+      "source": "Heritage Sector",
       "target": "Universeum"
     },
     {
-      "source": "Kultursektor",
+      "source": "Heritage Sector",
       "target": "Nationalmuseum"
     },
     {
-      "source": "Kultursektor",
+      "source": "Heritage Sector",
       "target": "Litteraturbanken"
     },
     {

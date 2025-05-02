@@ -1,6 +1,6 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
-    <div class="vertical-card"> <!-- TODO random background color? -->
+    <div class="horizontal-card"> <!-- TODO every other alterntate between two very light grey tones (look at old dh portal) -->
       <figure>
       <img :src="image" alt="Project image" />
     </figure>
@@ -11,10 +11,6 @@
         <div class="card-body">
           {{ Array.isArray(description) && description[0]?.['@value'] || '' }}
         </div>
-
-        <div class="card-links">
-        Go to the resource
-      </div>
 
         <div class="card-tags">
           <span v-for="subject in subjectArea" :key="subject['@id']" class="tag">
@@ -34,16 +30,20 @@ defineProps(["id", "title", "image", "url", "subjectArea", "description" ]);
   a{
 padding:0px;
   }
-.vertical-card {
+.horizontal-card {
   position: relative;
   transition: all 0.1s ease-in-out;
   overflow: hidden;
   cursor: pointer;
-  max-width: 300px;
+  max-width: auto;
+  max-height:150px;
   background-color:#efefef;
+  margin-top:0px!important;
+  display:flex;
+
 }
 
-.vertical-card:hover {
+.horizontal-card:hover {
   transform: scale(1.03);
   filter: brightness(110%);
   z-index: 10;
@@ -54,16 +54,18 @@ padding:0px;
 figure{
   display: flex;
     margin: 0;
-
     overflow: hidden;
+    width:150px;
+    min-width:150px;
+    height:150px;
 }
 
 img {
   display: block;
   max-width: 100%;
   width: 100%;
-  object-fit: cover;
-
+  object-fit:cover;
+  
 }
 .card-info {
   padding: 0.5rem 1rem;
@@ -71,25 +73,19 @@ img {
 .card-title {
   font-size: 1.5rem;
   margin-block: 0 0.5rem;
-  font-weight:300;
+  font-weight:200;
   line-height: 1.0;
   margin-top:10px;
 }
 .card-body {
-  margin-block: 1.4rem;
+  margin-block: 0.8rem;
+  padding-right: 5px;
   font-size: 1.0rem;
   font-weight:300;
   line-height: 1.1;
 }
 .card-links {
   margin-block: 1rem;
-  font-size:20px;
-  font-weight:300;
-  background: url("https://data.dh.gu.se/ui-icons/arrow_link_black_circle.png");
-  background-size: 22px;
-  background-position: 0px 50%;
-  background-repeat: no-repeat;
-  padding-left: 30px;
 }
 .button-link {
   display: block;
@@ -101,7 +97,7 @@ img {
   background: inherit;
 }
 .card-tags {
-  border-top: thin dotted rgba(0 0 0 / 0.5);
+
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   display: flex;
