@@ -32,7 +32,13 @@ export interface Projects {
         {
             '@id': string
         }
-    ]
+    ],
+    funding: [
+        {
+            '@id': string,
+            display_title: string
+        }
+    ],
 }
 
 export interface Project {
