@@ -3,7 +3,7 @@
         <div class="projects grey-gradient">
             <div class="projects-container ">
 
-                <h1>Resources, Databases, and Archives</h1>
+                <h1>Databases, and Archives</h1>
                 <masonry-wall v-if="tools && tools.length" :column-width="220" :items="tools" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
@@ -15,7 +15,12 @@
             </div>
 
             <div class="projects-container ">
-                <h1>Apps, Tools, and Platforms</h1>
+                <h1>Apps and Tools</h1>
+                
+            </div>
+
+            <div class="projects-container ">
+                <h1>Other</h1>
                 
             </div>
         </div>
