@@ -184,7 +184,7 @@
     </div>
   </div>
   <div class="project-button">
-    <div class="text-module-link hoverable"><router-link to="/projects">See all projects</router-link></div>
+    <div class="text-module-link hoverable"><router-link to="/tools">See all resources</router-link></div>
   </div>
   </div>
 </template>
