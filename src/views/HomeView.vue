@@ -281,13 +281,18 @@
     font-size: 20px;
     font-weight: 300;
     text-align: justify;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-bottom: 20px;
+  }
+
+  .intro-article p {
+    break-inside: avoid-column;
   }
 
   .intro-article span {
     color: var(--theme-livedata1);
     font-weight: 700;
+    break-inside: avoid-column;
   }
 
   h2 {

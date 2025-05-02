@@ -5,7 +5,7 @@
                 <div class="intro-space" style="padding-bottom:0px;">
 
                     <div class="intro-title" style="line-height:0.9; padding-bottom:10px;">
-                        ProCURE: <br>Protection of Cultural Resources
+                        ProCURE: <br>Protection of <br>Cultural Resources
                     </div>
                     <div class="intro-article">
                         <p>ProCURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH),
@@ -32,11 +32,11 @@
                     <div class="info-module left" style="padding: 0px 0px 20px 0px; margin-top:0px">
                         <div class="text-module left" style="padding-right:40px;">
                             <div class="text-module-data">
-                                <span>3</span> courses
+                                <span>5</span> courses
                             </div>
                             <div class="text-module-description">Courses info text </div>
 
-                            <div class="text-module-data"><span>6</span> organisations </div>
+                            <div class="text-module-data"><span>26</span> organisations </div>
                             <div class="text-module-description">Portals and tools info text </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                         <div class="info-module">
                             <div class="info-module-slogan right">
                                 <div class="text-module-title">ProCURE: Protection of Cultural Resources</div>
-                                <h1>A Centre of Excellence</h1>
+                                <h1>A Centre of Excellence 1</h1>
                                 <h2></h2>
                             </div>
                         </div>
@@ -93,22 +93,22 @@
                         <div class="info-module">
                             <div class="info-module-slogan left">
                                 <div class="text-module-title">ProCURE: Protection of Cultural Resources</div>
-                                <h1>A Centre of Excellence</h1>
+                                <h1>A Centre of Excellence 2</h1>
                                 <h2></h2>
                             </div>
                         </div>
                         <div class="data-module">
                             <div class="buffer">
                                 <div class="module">
-                                    <div class="image-stack" style="margin-left:-10px; margin-right:0px; ">
+                                    <div class="image-stack" style="margin-left:-40px; margin-right:0px; ">
                                         <div class="image-stack-items-container"
-                                            style=" justify-content: left; margin-left:0px;  margin-right:0px; overflow:hidden;">
+                                            style=" justify-content: left; padding-left:30px;  margin-right:0px; overflow:hidden;">
 
-                                            <div class="image-stack-item"
-                                                style="background-image:url(procure/etruscan2.jpg); background-size: cover;z-index:3;  margin-top:60px; ">
+                                            <div class="image-stack-item-right"
+                                                style="background-image:url(procure/etruscan2.jpg); background-size:cover;z-index:3;  margin-top:60px; width:535px; ">
                                             </div>
-                                            <div class="image-stack-item"
-                                                style="background-image:url(procure/sophia5.jpg); background-size: cover; z-index:2;margin-left:-100px;">
+                                            <div class="image-stack-item-right"
+                                                style="background-image:url(procure/sophia5.jpg); background-size:cover; z-index:2; margin-left:-100px; width:535px;">
                                             </div>
 
                                         </div>
@@ -120,7 +120,7 @@
                 </div>
 
 
-                <div class="row pink-gradient-inverted">
+                <div class="row pink-gradient-inverted" style="padding-top:30px">
                     <div class="data-module">
                         <div class="buffer">
                             <div class="module">
@@ -142,7 +142,7 @@
                     <div class="info-module">
                         <div class="info-module-slogan right">
                             <div class="text-module-title">ProCURE: Protection of Cultural Resources</div>
-                            <h1>A Centre of Excellence</h1>
+                            <h1>A Centre of Excellence 3</h1>
                             <h2></h2>
                         </div>
                     </div>
@@ -220,6 +220,19 @@
 
     .image-stack-item:hover {
         transform: translateX(30px);
+    }
+
+    .image-stack-item-right {
+        flex: none;
+        width: 525px;
+        height: 250px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .image-stack-item-right:hover {
+        transform: translateX(-30px);
     }
 
     h1 {
