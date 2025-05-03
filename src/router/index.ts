@@ -30,9 +30,9 @@ const router = createRouter({
       component: () => import('../views/ActiveProjects.vue'),
     },
     {
-      path: '/procure',
-      name: 'procure',
-      component: () => import('../views/Procure.vue'),
+      path: '/digicure',
+      name: 'digicure',
+      component: () => import('../views/Digicure.vue'),
     },
   ],
 })

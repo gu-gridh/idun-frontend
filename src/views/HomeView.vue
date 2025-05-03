@@ -123,27 +123,27 @@
         <div class="links">
 
           <div class="link-item hoverable">
-            <router-link to="/procure" class="link-item-filler">
+            <router-link to="/digicure" class="link-item-filler">
               <div class="link-title">
-                ProCURE infrastructure
+                DIGICURE
               </div>
             </router-link>
           </div>
 
 
           <div class="link-item  hoverable">
-            <router-link to="/procure" class="link-item-filler">
+            <router-link to="/" class="link-item-filler">
               <div class="link-title">
-                Resurssida för AI-verktyg
+                AI/ML development
               </div>
             </router-link>
           </div>
 
 
           <div class="link-item  hoverable">
-            <router-link to="/procure" class="link-item-filler">
+            <router-link to="/" class="link-item-filler">
               <div class="link-title">
-                Resurssida för teknisk infrastruktur
+                Technical infrastructure
               </div>
             </router-link>
           </div>
@@ -257,6 +257,7 @@
     }
     return parsed;
   };
+
 </script>
 
 
@@ -290,7 +291,7 @@
   }
 
   .intro-article span {
-    color: var(--theme-livedata1);
+    color: var(--theme-livedata1-dark);
     font-weight: 700;
     break-inside: avoid-column;
   }
@@ -418,6 +419,7 @@
   .text-module-description {
     font-size: 20px;
     margin-bottom: 20px;
+    max-width:600px;
   }
 
   .text-module-link {
@@ -428,7 +430,8 @@
   }
 
   .text-module span {
-    color: var(--theme-livedata1);
+    color: var(--theme-livedata1-dark);
+    font-weight:500;
   }
 
   .module {
@@ -550,6 +553,7 @@
 
   .link-title {
     width: 100%;
+    font-size: 25px;
   }
 
 

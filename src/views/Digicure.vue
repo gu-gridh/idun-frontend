@@ -1,26 +1,27 @@
 <template>
     <div class="Platforms">
         <div class="projects">
-            <div class="grey-gradient">
+            <div class="grey-gradient" style="margin-top:-300px;">
                 <div class="intro-space" style="padding-bottom:0px;">
 
-                    <div class="intro-title" style="line-height:0.9; padding-bottom:10px;">
-                        ProCURE: <br>Protection of <br>Cultural Resources
+                    <div class="intro-title" style="">
+                        DIGI<span>CURE</span>
                     </div>
-                    <div class="intro-article">
-                        <p>ProCURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH),
+                        <div class="intro-subtitle" style="">
+                        Digital <br>Cultural <br>Resilience <br> & Protection</div>
+                 
+                    <div class="intro-article" style="padding-left:82px; padding-right:82px;">
+                        <p>DIGICURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH),
                             is a <span>Centre of Excellence</span> dedicated to advancing expertise, developing software
                             solutions,
                             and providing both high-end equipment and accessible solutions for digital preservation and
                             access to <span>remote or endangered cultural resources.</span>
                             It serves as a global hub for heritage digitization, ensuring that at-risk cultural heritage
-                            is
-                            documented,
-                            analyzed, and made accessible for <span>research, education, and public engagement.</span>
+                            is documented, analyzed, and made accessible for <span>research, education, and public engagement.</span>
                         </p>
 
                         <p>Through strategic collaborations and training programs,
-                            ProCURE is designed to empower heritage professionals,
+                            DIGICURE is designed to empower heritage professionals,
                             researchers, and institutions with the tools and knowledge
                             needed to safeguard cultural assets for future generations.
                             To digitize cultural heritage is a monumental task always in need of
@@ -30,14 +31,14 @@
 
                 <div class="row">
                     <div class="info-module left" style="padding: 0px 0px 20px 0px; margin-top:0px">
-                        <div class="text-module left" style="padding-right:40px;">
+                        <div class="text-module left" style="padding-right:45px;">
                             <div class="text-module-data">
-                                <span>5</span> courses
+                                <span class="livedata-pulse">7</span> courses
                             </div>
-                            <div class="text-module-description">Courses info text </div>
+                            <div class="text-module-description">DIGICURE is contributing with expertise for several international courses hosted at <span>Swedish universities</span> and <span>Ukrainian heritage organisations</span>. These range from lectures about digitising sensitive and threatened heritage, to <span>hands-on and in-depth workshops</span> on specific workflows and technologies.</div>
 
-                            <div class="text-module-data"><span>26</span> organisations </div>
-                            <div class="text-module-description">Portals and tools info text </div>
+                            <div class="text-module-data"><span class="livedata-pulse">26</span> organisations </div>
+                            <div class="text-module-description">More than twentyfive organisations in Sweden, Lithuania, and Ukraine have invited experts from DIGICURE to lecture and give workshops in digital contingency planning. Among these are <span>ICOM, Europa Nostra,</span> and <span>the National History Museum of Ukraine.</span></div>
                         </div>
                     </div>
 
@@ -45,7 +46,7 @@
                         <div class="text-module">
                             <div class="text-module-data"><span class="livedata-pulse">6</span>
                                 active projects</div>
-                            <div class="text-module-description">Active projects info text </div>
+                            <div class="text-module-description">DIGICURE supports </div>
 
                             <div class="text-module-data"> <span class="livedata-pulse">1200</span>
                                 users </div>
@@ -67,10 +68,10 @@
                                         <div class="image-stack-items-container">
 
                                             <div class="image-stack-item"
-                                                style="background-image:url(procure/sophia1.jpg); background-size:cover; z-index:2;">
+                                                style="background-image:url(digicure/sophia1.jpg); background-size:cover; z-index:2;">
                                             </div>
                                             <div class="image-stack-item"
-                                                style="background-image:url(procure/etruscan1.jpg); background-size:cover; z-index:2; margin-top:50px; margin-left:-200px;">
+                                                style="background-image:url(digicure/etruscan1.jpg); background-size:cover; z-index:2; margin-top:50px; margin-left:-200px;">
                                             </div>
 
                                         </div>
@@ -80,7 +81,7 @@
                         </div>
                         <div class="info-module">
                             <div class="info-module-slogan right">
-                                <div class="text-module-title">ProCURE: Protection of Cultural Resources</div>
+                                <div class="text-module-title">digicure: Protection of Cultural Resources</div>
                                 <h1>A Centre of Excellence 1</h1>
                                 <h2></h2>
                             </div>
@@ -92,7 +93,7 @@
 
                         <div class="info-module">
                             <div class="info-module-slogan left">
-                                <div class="text-module-title">ProCURE: Protection of Cultural Resources</div>
+                                <div class="text-module-title">digicure: Protection of Cultural Resources</div>
                                 <h1>A Centre of Excellence 2</h1>
                                 <h2></h2>
                             </div>
@@ -105,10 +106,10 @@
                                             style=" justify-content: left; padding-left:30px;  margin-right:0px; overflow:hidden;">
 
                                             <div class="image-stack-item-right"
-                                                style="background-image:url(procure/etruscan2.jpg); background-size:cover;z-index:3;  margin-top:60px; width:535px; ">
+                                                style="background-image:url(digicure/etruscan2.jpg); background-size:cover;z-index:3;  margin-top:60px; width:535px; ">
                                             </div>
                                             <div class="image-stack-item-right"
-                                                style="background-image:url(procure/sophia5.jpg); background-size:cover; z-index:2; margin-left:-100px; width:535px;">
+                                                style="background-image:url(digicure/sophia5.jpg); background-size:cover; z-index:2; margin-left:-100px; width:535px;">
                                             </div>
 
                                         </div>
@@ -128,10 +129,10 @@
                                     <div class="image-stack-items-container">
 
                                         <div class="image-stack-item"
-                                            style="background-image:url(procure/sophia3.jpg); background-size:cover; z-index:2;">
+                                            style="background-image:url(digicure/sophia3.jpg); background-size:cover; z-index:2;">
                                         </div>
                                         <div class="image-stack-item"
-                                            style="background-image:url(procure/sophia6.jpg); background-size:cover; z-index:2; margin-top:50px; margin-left:-200px;">
+                                            style="background-image:url(digicure/sophia6.jpg); background-size:cover; z-index:2; margin-top:50px; margin-left:-200px;">
                                         </div>
 
                                     </div>
@@ -141,7 +142,7 @@
                     </div>
                     <div class="info-module">
                         <div class="info-module-slogan right">
-                            <div class="text-module-title">ProCURE: Protection of Cultural Resources</div>
+                            <div class="text-module-title">digicure: Protection of Cultural Resources</div>
                             <h1>A Centre of Excellence 3</h1>
                             <h2></h2>
                         </div>
@@ -164,7 +165,7 @@
 
 
     onMounted(async () => {
-
+        window.scrollTo(0, 0);
 
         //then randomize the order
 
@@ -181,6 +182,35 @@
 </script>
 
 <style scoped>
+      .grey-gradient {
+    background: linear-gradient(360deg, rgb(230, 230, 230) 0%, rgb(255, 255, 255) 100%);
+  }
+
+  .intro-title{
+    font-family: "Teko", sans-serif !important;
+    font-weight:300;
+    font-size:70px;
+    line-height:0.9;
+    color: var(--theme-heading);
+  }
+
+  .intro-title span{
+
+    font-size:100px;
+    font-weight:300;
+ vertical-align: -17px;
+ color: var(--theme-livedata1-dark);
+  }
+
+  .intro-subtitle{
+    font-family: "Teko", sans-serif !important;
+    font-weight:400;
+    font-size:50px;
+    line-height:0.9;
+    color: var(--theme-heading);
+    padding-left:82px;
+    margin-top:-8px;
+  }
     .module {
         overflow: visible;
     }
