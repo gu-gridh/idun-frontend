@@ -8,7 +8,7 @@
 
   <div class="top-menu">
     <router-link to="/"><div class="menu-item  menu-selected">Home</div></router-link>
-    <router-link to="/tools"><div class="menu-item">All portals and tools</div></router-link>
+    <router-link to="/tools"><div class="menu-item">All resources and tools</div></router-link>
     <router-link to="/projects"><div class="menu-item">All projects</div></router-link>
 </div>
 
