@@ -36,7 +36,7 @@
               than <span>{{ totFunding }} million</span> in funding.</h2>
             <div class="text-module-link hoverable contact-us">Contact us and start a project
             </div>
-            <!-- <span v-html="redData1.html"></span> -->
+
           </div>
         </div>
         <div class="data-module">
@@ -91,7 +91,7 @@
         <div class="data-module">
           <div class="buffer">
             <div class="module hoverable theme-gradient-2">
-
+              <Sunburst />
             </div>
           </div>
         </div>
@@ -195,6 +195,7 @@
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
+import Sunburst from '@/components/Sunburst.vue';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
