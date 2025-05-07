@@ -8,6 +8,10 @@ import { onMounted, ref } from 'vue';
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { fetchByResourceClass } from '@/db';
+// needed for leaflet markers to show up after build
+import markerIconUrl from "leaflet/dist/images/marker-icon.png";
+import markerIconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
+import markerShadowUrl from "leaflet/dist/images/marker-shadow.png";
 
 const places = ref([]);
 
@@ -25,6 +29,12 @@ const initMap = () => {
        // attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     map.scrollWheelZoom.disable();
+
+    L.Icon.Default.prototype.options.iconUrl = markerIconUrl;
+    L.Icon.Default.prototype.options.iconRetinaUrl = markerIconRetinaUrl;
+    L.Icon.Default.prototype.options.shadowUrl = markerShadowUrl;
+    L.Icon.Default.imagePath = ""; // necessary to avoid Leaflet adds some prefix to image path.
+
 
     //add markers to the map
     places.value.forEach((place: any) => {
