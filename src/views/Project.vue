@@ -50,6 +50,7 @@ const translateResponse = (response: any): Project => {
         timeInterval: response['vivo:dateTimeInterval'], // array
         subjectArea: response['vivo:hasSubjectArea'], // array
         subject: response['dcterms:subject'],
+        status: response['vivo:status'] || 'unknown', // default value if missing
     };
 };
 

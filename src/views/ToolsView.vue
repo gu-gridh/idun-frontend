@@ -85,7 +85,6 @@
                 legacyTools.push(tool);
             } else if (tool.legacy?.[0]?.['@value'] === 'Active') {
                 activeTools.push(tool);
-                console.log('Active tool', tool.name);
             } else {
                 console.log('Unknown tool', tool.name);
             }
