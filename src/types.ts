@@ -108,5 +108,10 @@ export interface Tool {
         {
             '@value': string
         }
-    ]
+    ],
+    type: [
+        {
+            '@value': string
+        }
+    ],
 }
