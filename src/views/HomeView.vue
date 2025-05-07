@@ -34,8 +34,7 @@
             <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and
               helped gather more
               than <span>{{ totFunding }} million</span> in funding.</h2>
-            <div class="text-module-link hoverable contact-us">Contact us and start a project
-            </div>
+            <div class="text-module-link hoverable contact-us">Contact us and start a project</div>
 
           </div>
         </div>
@@ -308,10 +307,6 @@ import Sunburst from '@/components/Sunburst.vue';
     }
   }
 
-  .contact-us {
-    width: 250px;
-    margin-top: 30px;
-  }
 
   .float-tooltip-kap {
     position: absolute;
@@ -408,6 +403,12 @@ import Sunburst from '@/components/Sunburst.vue';
     padding-left: 30px
   }
 
+  .text-module a{
+
+    color: var(--theme-heading);
+
+  }
+
   .text-module-title {
     font-size: 18px;
 
@@ -425,7 +426,7 @@ import Sunburst from '@/components/Sunburst.vue';
   }
 
   .text-module-link {
-    color: var(--theme-heading);
+    color: black;
     font-size: 22px;
     width: 150px;
     cursor: pointer;
@@ -435,6 +436,13 @@ import Sunburst from '@/components/Sunburst.vue';
     color: var(--theme-livedata1-dark);
     font-weight:500;
   }
+
+  .contact-us {
+    width: 250px;
+    margin-top: 30px;
+    color: var(--theme-heading);
+  }
+
 
   .module {
     border-radius: 15px;
