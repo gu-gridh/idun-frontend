@@ -316,6 +316,7 @@ import Sunburst from '@/components/Sunburst.vue';
   .float-tooltip-kap {
     position: absolute;
     white-space: nowrap;
+    max-width: max(70%, 150px)!important;
     top: 100px;
     right: 20px;
     font-family: sans-serif !important;
