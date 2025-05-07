@@ -36,7 +36,7 @@
               than <span>{{ totFunding }} million</span> in funding.</h2>
             <div class="text-module-link hoverable contact-us">Contact us and start a project
             </div>
-            <!-- <span v-html="redData1.html"></span> -->
+
           </div>
         </div>
         <div class="data-module">
@@ -91,7 +91,7 @@
         <div class="data-module">
           <div class="buffer">
             <div class="module hoverable theme-gradient-2">
-
+              <Sunburst />
             </div>
           </div>
         </div>
@@ -123,27 +123,27 @@
         <div class="links">
 
           <div class="link-item hoverable">
-            <router-link to="/procure" class="link-item-filler">
+            <router-link to="/digicure" class="link-item-filler">
               <div class="link-title">
-                ProCURE infrastructure
+                DIGICURE
               </div>
             </router-link>
           </div>
 
 
           <div class="link-item  hoverable">
-            <router-link to="/procure" class="link-item-filler">
+            <router-link to="/" class="link-item-filler">
               <div class="link-title">
-                Resurssida för AI-verktyg
+                AI/ML development
               </div>
             </router-link>
           </div>
 
 
           <div class="link-item  hoverable">
-            <router-link to="/procure" class="link-item-filler">
+            <router-link to="/" class="link-item-filler">
               <div class="link-title">
-                Resurssida för teknisk infrastruktur
+                Technical infrastructure
               </div>
             </router-link>
           </div>
@@ -163,19 +163,19 @@
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
           <h3>Highlighted Resources</h3>
           <div class="projects">
-            <div class="project-item" style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%; ">
+            <div class="project-item" style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
               <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Saint Sophia's Inscriptions</div>
             </div>
 
 
       
-          <div class="project-item" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);  background-size: cover; background-position: 50%;">
+          <div class="project-item" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
          
             <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
             <div class="project-title">Dawit Isaak Database of Censorship</div>
           </div>
-          <div class="project-item" style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;">
+          <div class="project-item" style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg);">
             <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
             <div class="project-title">Etruscan Chamber Tombs</div>
           </div>
@@ -195,6 +195,7 @@
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
+import Sunburst from '@/components/Sunburst.vue';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
@@ -257,6 +258,7 @@
     }
     return parsed;
   };
+
 </script>
 
 
@@ -281,13 +283,18 @@
     font-size: 20px;
     font-weight: 300;
     text-align: justify;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-bottom: 20px;
   }
 
+  .intro-article p {
+    break-inside: avoid-column;
+  }
+
   .intro-article span {
-    color: var(--theme-livedata1);
+    color: var(--theme-livedata1-dark);
     font-weight: 700;
+    break-inside: avoid-column;
   }
 
   h2 {
@@ -384,6 +391,8 @@
     width: 50%;
   }
 
+
+
   .buffer {
     padding: 30px 40px;
 
@@ -411,6 +420,7 @@
   .text-module-description {
     font-size: 20px;
     margin-bottom: 20px;
+    max-width:600px;
   }
 
   .text-module-link {
@@ -421,7 +431,8 @@
   }
 
   .text-module span {
-    color: var(--theme-livedata1);
+    color: var(--theme-livedata1-dark);
+    font-weight:500;
   }
 
   .module {
@@ -543,6 +554,7 @@
 
   .link-title {
     width: 100%;
+    font-size: 25px;
   }
 
 
@@ -571,6 +583,7 @@ padding-top:80px;
 margin-top:-20px;
 transition: all 0.2s ease-in-out;
 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+pointer-events:none;
   }
 
   .project-item {
@@ -585,8 +598,10 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%
     flex: 1 0 0;
     align-items: center;
     justify-content:flex-end;
-    transition: all 0.2s ease-in-out;
     color: white;
+    background-size: cover; 
+    background-position: 50%;
+    transition: all 0.5s ease-in-out;
 
   }
   .project-item:hover .project-image-round{
@@ -599,7 +614,7 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%
 
 
   .project-item:hover {
-    background-blend-mode:screen;
+    background-size: 105%;
   }
 
 

@@ -233,9 +233,15 @@
       "group": "third"
     },
     {
-      "id": "Museum of St- Sophia Cathedral",
+      "id": "The National Conservation Area 'St. Sophia of Kyiv'",
       "group": "fourth"
     },
+
+    {
+      "id": "The National Museum of the History of Ukraine",
+      "group": "fourth"
+    },
+
     {
       "id": "Italy",
       "group": "third"
@@ -529,7 +535,11 @@
     },
     {
       "source": "Ukraine",
-      "target": "Museum of St- Sophia Cathedral"
+      "target": "The National Conservation Area 'St. Sophia of Kyiv'"
+    },
+    {
+      "source": "Ukraine",
+      "target": "The National Museum of the History of Ukraine"
     },
     {
       "source": "Internationellt",

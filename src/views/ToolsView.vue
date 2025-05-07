@@ -4,7 +4,7 @@
             <div class="projects-container ">
 
                 <h1>Databases and Archives</h1>
-                <masonry-wall v-if="tools && tools.length" :column-width="220" :items="tools" :gutter="0"
+                <masonry-wall v-if="tools && databases.length" :column-width="220" :items="databases" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
                         <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
@@ -16,12 +16,26 @@
 
             <div class="projects-container ">
                 <h1>Apps and Tools</h1>
-                
+                <masonry-wall v-if="tools && apps.length" :column-width="220" :items="apps" :gutter="0"
+                    :responsive="true" :resize="true">
+                    <template #default="{ index, item }">
+                        <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                            :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
+                            :description="item.descriptionText" />
+                    </template>
+                </masonry-wall>
             </div>
 
             <div class="projects-container ">
                 <h1>Other</h1>
-                
+                <masonry-wall v-if="tools && other.length" :column-width="220" :items="other" :gutter="0"
+                    :responsive="true" :resize="true">
+                    <template #default="{ index, item }">
+                        <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                            :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
+                            :description="item.descriptionText" />
+                    </template>
+                </masonry-wall>
             </div>
         </div>
         <div class="projects">
@@ -54,6 +68,9 @@
 
 
     const tools = ref(<Tool[] > []);
+    const databases = ref(<Tool[] > []);
+    const apps = ref(<Tool[] > []);
+    const other = ref(<Tool[] > []);
     const legacy = ref(<Tool[] > []);
 
     onMounted(async () => {
@@ -76,6 +93,7 @@
 
         tools.value = activeTools.sort(() => Math.random() - 0.5);
         legacy.value = legacyTools;
+        sortByType(tools.value);
     });
 
     const translateResponse = (response: any) => {
@@ -91,7 +109,24 @@
             image: item['thumbnail_display_urls'] || {},
             links: item['foaf:homepage'] || [],
             legacy: item['bibo:status'] || [],
+            type: item['schema:category'] || [],
         }));
+    };
+
+    const sortByType = (tools: Tool[]) => {
+        //sort by type 'Databases and Archives', 'Apps and Tools', 'Other'
+        tools.forEach((tool: Tool) => {
+            if (tool.type?.[0]?.['@value'] === 'Databases and Archives') {
+                databases.value.push(tool);
+            } else if (tool.type?.[0]?.['@value'] === 'Apps and Tools') {
+                apps.value.push(tool);
+            } else if (tool.type?.[0]?.['@value'] === 'Other') {
+                other.value.push(tool);
+            } else {
+                console.log('Unknown type', tool.name, tool.type?.[0]?.['@value']);
+            }
+        });
+        
     };
 </script>
 

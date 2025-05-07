@@ -3,31 +3,29 @@
         <div class="grey-gradient">
             <h1>Active projects</h1>
             <div class="projects-container">
-                <ActiveProjects></ActiveProjects>
+                <ActiveProjects />
             </div>
         </div>
     </div>
+
     <div class="projects-view">
-        <h1>Finished projects </h1>
+        <h1>Finished projects</h1>
         <div class="projects-container">
             <div v-for="project in projects" :key="project.id" class="project">
-                <router-link :to="'/projects/' + project.id">
-                    <h2>{{ project.name }}</h2>
-                    <h3 v-for="description in project.shortDescription">{{ description['@value'] }}</h3>
-                    <!-- <p v-for="subject in project.subject">{{ subject['@value'] }}</p> -->
-                    <!-- <div class="metadata-group">
-                        Project owner:<h4 v-for="owner in project.owner"> {{ owner.display_title}}</h4> 
-                    </div>
-                    <div class="metadata-group">
-                        Funded by: <h4 v-for="funding in project.funding">{{ funding.display_title}}</h4>
-                    </div> -->
+                <router-link :to="'/projects/' + project?.id">
+                    <h2>{{ project?.name || 'Untitled Project' }}</h2>
+                    <h3 v-if="project?.shortDescription?.length">
+                        <span v-for="description in project.shortDescription" :key="description?.['@value']">
+                            {{ description?.['@value'] || 'No short description' }}
+                        </span>
+                    </h3>
+                    <p v-else>No short description available</p>
                 </router-link>
             </div>
-
         </div>
-
     </div>
 </template>
+
 
 <script setup lang="ts">
     import { fetchByResourceClass } from '@/db';
@@ -42,15 +40,13 @@
 
     onMounted(async () => {
         const response = await fetchByResourceClass(projectsId.value);
-        console.log(response);
         projects.value = await translateResponse(response);
-        //console.log(projects.value);
         //sort by name value
         projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
         //loop and keep items with status active
         projects.value = projects.value.filter((item) => {
-            return item.status[0]['@value'] === 'Inactive'
-        });
+    return item.status?.[0]?.['@value']?.toLowerCase() === 'inactive';
+});
     });
 
 
@@ -72,7 +68,7 @@
                 shortDescription: item['bibo:shortDescription'], //array
                 image: item['thumbnail_display_urls'],
                 owner: item['bibo:owner'], //array
-                status: item['schema:status'], //array
+                status: item['schema:status'] || [], //array
             }
         });
     }
