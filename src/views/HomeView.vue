@@ -33,7 +33,7 @@
             <h1>So many projects!</h1>
             <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and
               helped gather more
-              than <span>{{ totFunding }} million</span> in funding.</h2>
+              than <span>{{ totFunding }} million</span> in external funding.</h2>
             <div class="text-module-link hoverable contact-us">Contact us and start a project</div>
 
           </div>
@@ -45,12 +45,12 @@
                 projects</router-link> </div>
             <div class="text-module-description">Active projects info text </div>
 
-            <div class="text-module-data"><router-link to="/tools"> <span class="livedata-pulse">{{ toolsNum }}</span>
+            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ toolsNum }}</span>
                 portals and tools </router-link> </div>
             <div class="text-module-description">Portals and tools info text </div>
 
 
-            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in funding</div>
+            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in external funding</div>
             <div class="text-module-description">Money-maker info text </div>
 
 
