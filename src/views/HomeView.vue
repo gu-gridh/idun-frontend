@@ -31,27 +31,30 @@
           <div class="info-module-slogan left">
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
-            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and
-              helped gather more
-              than <span>{{ totFunding }} million</span> in external funding.</h2>
-            <div class="text-module-link hoverable contact-us">Contact us and start a project</div>
+            <h2 style="margin-top:-20px!important;">GRIDH has to date been involved in more than <span>{{ projectsNum
+                }}</span> research projects, and
+              have helped gather more
+              than <span>{{ totFunding }} million</span> in external funding. We are currently involved in <span>13</span> funded projects, including <span>3</span> national infrastructures and <span>1</span> research school.</h2>
+            <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 
           </div>
         </div>
         <div class="data-module">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><router-link to="/active"> <span class="livedata-pulse">8</span> active
+            <div class="text-module-data"><router-link to="/active"> <span class="livedata-pulse">13</span> active
                 projects</router-link> </div>
-            <div class="text-module-description">Active projects info text </div>
+            <div class="text-module-description"><!-- Active projects info text  --></div>
 
-            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ toolsNum }}</span>
+            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ toolsNum
+                  }}</span>
                 portals and tools </router-link> </div>
-            <div class="text-module-description">Portals and tools info text </div>
+            <div class="text-module-description"><!-- Portals and tools info text --> </div>
 
 
-            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in external funding</div>
-            <div class="text-module-description">Money-maker info text </div>
+            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in external
+              funding</div>
+            <div class="text-module-description"><!-- Money-maker info text  --></div>
 
 
             <div class="text-module-link hoverable"><router-link to="/projects">See all projects</router-link></div>
@@ -121,7 +124,7 @@
 
         <div class="links">
 
-          <div class="link-item hoverable digicure">
+          <div class="link-item  digicure">
             <router-link to="/digicure" class="link-item-filler">
               <div class="link-title" style="">
                 DIGICURE
@@ -130,7 +133,7 @@
           </div>
 
 
-          <div class="link-item  hoverable">
+          <div class="link-item   tools">
             <router-link to="/" class="link-item-filler">
               <div class="link-title">
                 AI/ML development
@@ -139,7 +142,7 @@
           </div>
 
 
-          <div class="link-item  hoverable">
+          <div class="link-item   technical">
             <router-link to="/" class="link-item-filler">
               <div class="link-title">
                 Technical infrastructure
@@ -148,12 +151,16 @@
           </div>
 
 
-          <div class="link-item hoverable">
-            <div class="link-title">
-              <a href="https://github.com/gu-gridh" target="_blank">
-                <img src="@/assets/githubLogo.png" alt="github logo" style="width: 150px;" />
-              </a>
-            </div>
+          <div class="link-item  github">
+            <a href="https://github.com/gu-gridh" target="_blank" class="link-item-filler">
+              <div class="link-title">
+
+                <div class="link-title">
+                  GitHub Repositories
+                </div>
+
+              </div>
+            </a>
           </div>
         </div>
         <!-- Active projects --> <!-- should be marked out in database -->
@@ -162,29 +169,32 @@
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
           <h3>Highlighted Resources</h3>
           <div class="projects">
-            <div class="project-item" style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
+            <div class="project-item"
+              style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
               <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Saint Sophia's Inscriptions</div>
             </div>
 
 
-      
-          <div class="project-item" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
-         
-            <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
-            <div class="project-title">Dawit Isaak Database of Censorship</div>
-          </div>
-          <div class="project-item" style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg);">
-            <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
-            <div class="project-title">Etruscan Chamber Tombs</div>
+
+            <div class="project-item"
+              style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
+
+              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
+              <div class="project-title">Dawit Isaak Database of Censorship</div>
+            </div>
+            <div class="project-item"
+              style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg);">
+              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
+              <div class="project-title">Etruscan Chamber Tombs</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="project-button">
-    <div class="text-module-link hoverable"><router-link to="/resources">See all resources</router-link></div>
-  </div>
+    <div class="project-button">
+      <div class="text-module-link hoverable"><router-link to="/resources">See all resources</router-link></div>
+    </div>
   </div>
 </template>
 
@@ -194,7 +204,7 @@
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
-import Sunburst from '@/components/Sunburst.vue';
+  import Sunburst from '@/components/Sunburst.vue';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
@@ -266,7 +276,7 @@ import Sunburst from '@/components/Sunburst.vue';
   .intro-space {
     width: calc(100% - 140px);
     padding-left: 60px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .intro-title {
@@ -311,7 +321,7 @@ import Sunburst from '@/components/Sunburst.vue';
   .float-tooltip-kap {
     position: absolute;
     white-space: nowrap;
-    max-width: max(70%, 150px)!important;
+    max-width: max(70%, 150px) !important;
     top: 100px;
     right: 20px;
     font-family: sans-serif !important;
@@ -403,7 +413,7 @@ import Sunburst from '@/components/Sunburst.vue';
     padding-left: 30px
   }
 
-  .text-module a{
+  .text-module a {
 
     color: var(--theme-heading);
 
@@ -422,7 +432,7 @@ import Sunburst from '@/components/Sunburst.vue';
   .text-module-description {
     font-size: 20px;
     margin-bottom: 20px;
-    max-width:600px;
+    max-width: 600px;
   }
 
   .text-module-link {
@@ -434,7 +444,7 @@ import Sunburst from '@/components/Sunburst.vue';
 
   .text-module span {
     color: var(--theme-livedata1-dark);
-    font-weight:500;
+    font-weight: 500;
   }
 
   .contact-us {
@@ -496,11 +506,12 @@ import Sunburst from '@/components/Sunburst.vue';
 
   .info-module-slogan h2 {
     color: var(--theme-heading);
-    margin-top: -30px;
+    margin-top: -30px !important;
     max-width: 600px;
     font-weight: 300;
     font-size: 20px;
   }
+
 
 
   .links {
@@ -511,7 +522,7 @@ import Sunburst from '@/components/Sunburst.vue';
     align-items: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    gap: 15px;
+    gap: 1px;
     padding: 40px 40px;
   }
 
@@ -542,29 +553,6 @@ import Sunburst from '@/components/Sunburst.vue';
 
 
 
-  .link-item {
-    background: linear-gradient(180deg, rgba(255, 0, 100, 0.1) 0%, rgba(230, 230, 230, 1) 100%);
-    height: 100px;
-    padding: 10px;
-    flex: 1 1 0;
-    border-radius: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .link-item-filler {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .link-title {
-    width: 100%;
-    font-size: 25px;
-  }
 
 
 
@@ -575,24 +563,24 @@ import Sunburst from '@/components/Sunburst.vue';
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-top:20px;
+    margin-top: 20px;
     transition: all 0.2s ease-in-out;
   }
 
   .project-title {
     width: 100%;
     position: relative;
-bottom:0px;
+    bottom: 0px;
     font-size: 25px;
     font-weight: 600;
     text-align: center;
     pointer-events: none;
-    height:50px;
-padding-top:80px;
-margin-top:-20px;
-transition: all 0.2s ease-in-out;
-background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-pointer-events:none;
+    height: 50px;
+    padding-top: 80px;
+    margin-top: -20px;
+    transition: all 0.2s ease-in-out;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
   }
 
   .project-item {
@@ -601,19 +589,20 @@ pointer-events:none;
     padding: 0px;
     width: 0;
     overflow: hidden;
-    background-blend-mode:screen;
-    display:flex;
+    background-blend-mode: screen;
+    display: flex;
     flex-direction: column;
     flex: 1 0 0;
     align-items: center;
-    justify-content:flex-end;
+    justify-content: flex-end;
     color: white;
-    background-size: cover; 
+    background-size: 100%;
     background-position: 50%;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
-  .project-item:hover .project-image-round{
-    transform:scale(1.1);
+
+  .project-item:hover .project-image-round {
+    transform: scale(1.1);
   }
 
   .project-item:hover .project-title {
@@ -773,12 +762,121 @@ pointer-events:none;
     }
   }
 
-  .digicure{
-    background: 
-    linear-gradient(180deg, rgb(196, 130, 156) 0%, rgb(224, 173, 173) 100%), 
-    url('digicure-link.jpg'); 
-    background-size: cover;
+  .link-item {
+    background: linear-gradient(180deg, rgb(133, 133, 133) 0%, rgb(182, 109, 109) 100%);
+    height: 100px;
+    padding: 10px;
+    flex: 1 1 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-size: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .link-title {
+    width: 100%;
+    color: white !important;
+    font-size: 30px;
+    /*     text-shadow:
+  0 0 1em black; */
+    font-weight: 600;
+  }
+
+  .link-item:hover {
+    background-size: 105%;
+  }
+
+  .link-item:hover .link-title{
+    text-shadow:
+      0 0 2em black;
+  }
+
+
+  .link-item-filler {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+
+
+
+  .digicure {
+    background:
+      linear-gradient(180deg, rgb(133, 133, 133) 0%, rgb(0, 0, 0) 100%),
+      url('digicure-link.jpg');
+    background-blend-mode: soft-light;
+    background-size: 100%;
     background-position: 50%;
-    background-blend-mode:lighten;
+    color: white !important;
+    border-radius: 12px 0px 0px 12px;
+  }
+
+  .tools {
+
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .technical {
+
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .github {
+
+    border-radius: 0px 12px 12px 0px;
+  }
+
+  @media screen and (max-width: 900px) {
+
+    .digicure {
+      border-radius: 12px 0px 0px 0px;
+    }
+
+    .tools {
+
+      border-radius: 0px 12px 0px 0px;
+    }
+
+    .technical {
+
+      border-radius: 0px 0px 0px 12px;
+    }
+
+    .github {
+
+      border-radius: 0px 0px 12px 0px;
+    }
+
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .digicure {
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .tools {
+
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .technical {
+
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .github {
+
+      border-radius: 12px;
+
+    }
+
   }
 </style>
