@@ -121,9 +121,9 @@
 
         <div class="links">
 
-          <div class="link-item hoverable">
+          <div class="link-item hoverable digicure">
             <router-link to="/digicure" class="link-item-filler">
-              <div class="link-title">
+              <div class="link-title" style="">
                 DIGICURE
               </div>
             </router-link>
@@ -372,7 +372,7 @@ import Sunburst from '@/components/Sunburst.vue';
   }
 
   .theme-gradient-map {
-    background: linear-gradient(360deg, rgb(235, 239, 241) 30%, rgb(233, 194, 231) 70%);
+    background: linear-gradient(360deg, rgb(235, 239, 241) 30%, rgb(234, 194, 213) 70%);
   }
 
   .hoverable {
@@ -611,7 +611,6 @@ pointer-events:none;
     background-size: cover; 
     background-position: 50%;
     transition: all 0.5s ease-in-out;
-
   }
   .project-item:hover .project-image-round{
     transform:scale(1.1);
@@ -772,5 +771,14 @@ pointer-events:none;
       width: calc(90%);
 
     }
+  }
+
+  .digicure{
+    background: 
+    linear-gradient(180deg, rgb(196, 130, 156) 0%, rgb(224, 173, 173) 100%), 
+    url('digicure-link.jpg'); 
+    background-size: cover;
+    background-position: 50%;
+    background-blend-mode:lighten;
   }
 </style>

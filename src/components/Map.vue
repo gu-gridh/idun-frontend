@@ -76,13 +76,13 @@ const convertCoords = (coords: string) => {
 }
 
 .leaflet-container {
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(130deg);
 
     background:transparent;
 }
 
 .leaflet-container .leaflet-control-attribution{
-    filter: hue-rotate(-90deg);
+    filter: hue-rotate(-130deg);
 }
 
 
