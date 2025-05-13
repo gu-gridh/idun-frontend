@@ -42,7 +42,7 @@
         <div class="data-module">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><router-link to="/active"> <span class="livedata-pulse">13</span> active
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">13</span> active
                 projects</router-link> </div>
             <div class="text-module-description"><!-- Active projects info text  --></div>
 

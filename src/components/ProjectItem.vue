@@ -75,10 +75,10 @@ img {
   line-height: 1.0;
   margin-top:10px;
 
-  -webkit-hyphens: auto;
+/*   -webkit-hyphens: auto;
    -moz-hyphens: auto;
     -ms-hyphens: auto;
-        hyphens: auto;
+        hyphens: auto; */
 }
 .card-body {
   margin-block: 1.4rem;

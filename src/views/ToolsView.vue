@@ -74,6 +74,7 @@
     const legacy = ref(<Tool[] > []);
 
     onMounted(async () => {
+        window.scrollTo(0, 0);
         const response = await fetchByResourceTemplate(6);
         const allTools = await translateResponse(response);
 

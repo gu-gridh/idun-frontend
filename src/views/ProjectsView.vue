@@ -39,6 +39,7 @@
     const numItems = ref(50) //this is the number of items to fetch
 
     onMounted(async () => {
+        window.scrollTo(0, 0);
         const response = await fetchByResourceClass(projectsId.value);
         projects.value = await translateResponse(response);
         //sort by name value
