@@ -5,7 +5,7 @@
                 <div class="intro-space" style="padding-bottom:0px;">
 
                     <div class="intro-title" style="">
-                        DIGI<span>CURE</span>
+                        DIGI<span class="livedata-pulse">CURE</span>
                     </div>
                     <div class="intro-subtitle" style="">
                         Digital <br>Cultural <br>Resilience <br> & Protection</div>
@@ -13,18 +13,18 @@
                     <div class="intro-article" style="padding-left:82px; padding-right:82px; padding-top:30px;">
 
                         DIGICURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH),
-                        is designed to safeguard endangered cultural heritage while advancing digitally
+                        is designed to <span>safeguard endangered cultural heritage</span> while advancing digitally
                         supported research across a wide range of disciplines in the humanities and beyond. Through
                         strategic collaborations and training programs,
                         DIGICURE is designed to empower heritage professionals,
                         researchers, and institutions with the tools and knowledge
                         needed to safeguard cultural assets for future generations.
                         To digitize cultural heritage is a monumental task always in need of
-                        state-of-the-art expertise and broader perspectives.
+                    <span>state-of-the-art expertise</span> and broader perspectives.
                         Crucially, DigiCURE is designed to meet both preservation needs and
                         the evolving requirements of scholarly research,
-                        offering tools, expertise, and workflows that ensure accessibility,
-                        interoperability, and analytical depth.
+                        offering tools, expertise, and workflows that ensure <span>accessibility,
+                        interoperability, and analytical depth</span>.
 
                     </div>
                 </div>
@@ -50,8 +50,8 @@
                             <div class="text-module-data"><span class="livedata-pulse">26</span> organisations </div>
                             <div class="text-module-description">More than twentyfive organisations in Sweden,
                                 Lithuania, and Ukraine have invited experts from DIGICURE to lecture and give workshops
-                                in digital contingency planning. Among these are <span>ICOM, Europa Nostra,</span> and
-                                <span>the National History Museum of Ukraine.</span></div>
+                                in digital contingency planning. Among these are <span>ICOM, Europa Nostra,</span>
+                                <span>the National History Museum of Ukraine, and the Swedish Institute in Rome</span></div>
 
                         </div>
                     </div>
@@ -86,10 +86,10 @@
                                 <h1>Multimodal Platform</h1>
                                 <h2>DIGICURE develops and maintain a robust multimodal platform that facilitates digital
                                     preservation and remote access of endangered cultural assets. The platform
-                                    integrates various data types – including high-resolution images, 3D models, and
-                                    metadata – to ensure comprehensive documentation and accessibility for research
+                                    integrates various data types – <span>including high-resolution images, 3D models, and
+                                    metadata</span> – to ensure comprehensive documentation and accessibility for research
                                     purposes and public engagement.
-                                    The platform supports a number of projects and make available include heritage sites
+                                    The platform supports a number of projects and make available data from heritage sites
                                     in the Arctics, Antarctica, Faroe Islands, Italy, Spain, Sweden and Ukraine.</h2>
                             </div>
                         </div>
@@ -102,8 +102,8 @@
                             <div class="info-module-slogan left">
                                 <div class="text-module-title">digicure: Protection of Cultural Resources</div>
                                 <h1>Multimodal digitisation</h1>
-                                <h2>DigiCURE provides cutting-edge software solutions for digitisation, metadata
-                                    structuring, and secure archiving. DigiCURE also equips researchers with
+                                <h2>DigiCURE provides cutting-edge software solutions for <span>digitisation, metadata
+                                    structuring, and secure archiving</span>. DigiCURE also equips researchers with
                                     high-resolution imaging, 3D scanning, and digital reconstruction tools to support
                                     detailed documentation and analysis of heritage materials.
                                 </h2>
@@ -155,16 +155,16 @@
                         <div class="info-module-slogan right">
                             <div class="text-module-title">digicure: Protection of Cultural Resources</div>
                             <h1>Multimodal expertise</h1>
-                            <h2>DigiCURE facilitates expert consultation services, and open-source resources to build
-                                capacity in digital preservation practices. DigiCURE ensures adherence to best practices
+                            <h2>DigiCURE facilitates expert <span>consultation services, and open-source resources to build
+                                capacity in digital preservation practices</span>. DigiCURE ensures adherence to best practices
                                 and standards, promoting responsible and sustainable stewardship of cultural heritage.
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="row pink-gradient-inverted" style="padding-top:30px">
-                    <div class="projects-container" style="width:calc(100% - 120px); padding:20px 60px 20px 60px">
+                <div class="row pink-gradient-inverted" style="padding-top:30px; display:flex; flex-direction: column; align-items:flex-start; justify-content: center;">
+                    <div class="projects-container" style="width:calc(100% - 120px); padding-left: 60px;">
                     <h1>Portals and tools that are using DigiCURE resources</h1>
 
                     <masonry-wall v-if="tools && databases.length" :column-width="220" :items="databases" :gutter="0"
