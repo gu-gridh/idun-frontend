@@ -344,11 +344,11 @@
     }
 
     h1 {
-        font-weight: 200;
+        font-weight: 600;
     }
 
     h2 {
-        font-weight: 200;
+        font-weight: 300;
     }
 
     .projects {
