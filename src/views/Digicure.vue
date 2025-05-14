@@ -164,8 +164,19 @@
                 </div>
 
                 <div class="row pink-gradient-inverted" style="padding-top:30px">
-                    <h1>Portals that are using DigiCURE resources</h1>
+                    <div class="projects-container" style="width:calc(100% - 120px); padding:20px 60px 20px 60px">
+                    <h1>Portals and tools that are using DigiCURE resources</h1>
+
+                    <masonry-wall v-if="tools && databases.length" :column-width="220" :items="databases" :gutter="0"
+                    :responsive="true" :resize="true">
+                    <template #default="{ index, item }">
+                        <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                            :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
+                            :description="item.descriptionText" />
+                    </template>
+                </masonry-wall>
                 </div>
+            </div>
 
             </div>
         </div>
@@ -181,23 +192,67 @@
     import ProjectItem from '@/components/ProjectItem.vue';
 
 
-
+    const tools = ref(<Tool[] > []);
+    const databases = ref(<Tool[] > []);
+    const apps = ref(<Tool[] > []);
+    const other = ref(<Tool[] > []);
+    const legacy = ref(<Tool[] > []);
 
 
     onMounted(async () => {
         window.scrollTo(0, 0);
+        const response = await fetchByResourceTemplate(6);
+        const allTools = await translateResponse(response);
 
-        //then randomize the order
+        const activeTools: Tool [] = [];
+        const legacyTools: Tool[] = [];
 
-        //set them as either active or legacy tools according to legacy value
+        allTools.forEach((tool: Tool) => {
+            if (tool.legacy?.[0]?.['@value'] === 'Legacy') {
+                legacyTools.push(tool);
+            } else if (tool.legacy?.[0]?.['@value'] === 'Active') {
+                activeTools.push(tool);
+            } else {
+                console.log('Unknown tool', tool.name);
+            }
+        });
 
-
-
-
+        tools.value = activeTools.sort(() => Math.random() - 0.5);
+        legacy.value = legacyTools;
+        sortByType(tools.value);
     });
 
     const translateResponse = (response: any) => {
+        return response.map((item: any) => ({
+            id: item['o:id'] || '',
+            name: item['o:title'] || 'No title',
+            subject: item['dcterms:subject'] || [],
+            //funding: item['vivo:hasFundingVehicle'] || [],
+            //contributingRole: item['vivo:contributingRole'] || [],
+            //timeInterval: item['vivo:dateTimeInterval'] || [],
+            subjectArea: item['dcterms:subject'] || [],
+            descriptionText: item['bibo:shortDescription'] || [],
+            image: item['thumbnail_display_urls'] || {},
+            links: item['foaf:homepage'] || [],
+            legacy: item['bibo:status'] || [],
+            type: item['schema:category'] || [],
+        }));
+    };
 
+    const sortByType = (tools: Tool[]) => {
+        //sort by type 'Databases and Archives', 'Apps and Tools', 'Other'
+        tools.forEach((tool: Tool) => {
+            if (tool.type?.[0]?.['@value'] === 'Databases and Archives') {
+                databases.value.push(tool);
+            } else if (tool.type?.[0]?.['@value'] === 'Apps and Tools') {
+                apps.value.push(tool);
+            } else if (tool.type?.[0]?.['@value'] === 'Other') {
+                other.value.push(tool);
+            } else {
+                console.log('Unknown type', tool.name, tool.type?.[0]?.['@value']);
+            }
+        });
+        
     };
 </script>
 
