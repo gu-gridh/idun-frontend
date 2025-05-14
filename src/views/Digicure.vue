@@ -7,24 +7,25 @@
                     <div class="intro-title" style="">
                         DIGI<span>CURE</span>
                     </div>
-                        <div class="intro-subtitle" style="">
+                    <div class="intro-subtitle" style="">
                         Digital <br>Cultural <br>Resilience <br> & Protection</div>
-                 
+
                     <div class="intro-article" style="padding-left:82px; padding-right:82px; padding-top:30px;">
-              
-                        DIGICURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH), 
-                        is designed to safeguard endangered cultural heritage while advancing digitally 
-                        supported research across a wide range of disciplines in the humanities and beyond. Through strategic collaborations and training programs,
+
+                        DIGICURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH),
+                        is designed to safeguard endangered cultural heritage while advancing digitally
+                        supported research across a wide range of disciplines in the humanities and beyond. Through
+                        strategic collaborations and training programs,
                         DIGICURE is designed to empower heritage professionals,
                         researchers, and institutions with the tools and knowledge
                         needed to safeguard cultural assets for future generations.
                         To digitize cultural heritage is a monumental task always in need of
-                        state-of-the-art expertise and broader perspectives. 
-                        Crucially, DigiCURE is designed to meet both preservation needs and 
-                        the evolving requirements of scholarly research, 
-                        offering tools, expertise, and workflows that ensure accessibility, 
-                        interoperability, and analytical depth. 
-                    
+                        state-of-the-art expertise and broader perspectives.
+                        Crucially, DigiCURE is designed to meet both preservation needs and
+                        the evolving requirements of scholarly research,
+                        offering tools, expertise, and workflows that ensure accessibility,
+                        interoperability, and analytical depth.
+
                     </div>
                 </div>
 
@@ -34,17 +35,24 @@
                             <div class="text-module-data">
                                 <span class="livedata-pulse">7</span> courses
                             </div>
-                            <div class="text-module-description">DIGICURE is contributing with expertise for several international courses hosted at <span>Swedish universities</span> and <span>Ukrainian heritage organisations</span>. These range from lectures about digitising sensitive and threatened heritage, to <span>hands-on and in-depth workshops</span> on specific workflows and technologies.</div>
+                            <div class="text-module-description">DIGICURE is contributing with expertise for several
+                                international courses hosted at <span>Swedish universities</span> and <span>Ukrainian
+                                    heritage organisations</span>. These range from lectures about digitising sensitive
+                                and threatened heritage, to <span>hands-on and in-depth workshops</span> on specific
+                                workflows and technologies.</div>
 
                         </div>
                     </div>
 
                     <div class="data-module">
                         <div class="text-module">
-                            
+
                             <div class="text-module-data"><span class="livedata-pulse">26</span> organisations </div>
-                            <div class="text-module-description">More than twentyfive organisations in Sweden, Lithuania, and Ukraine have invited experts from DIGICURE to lecture and give workshops in digital contingency planning. Among these are <span>ICOM, Europa Nostra,</span> and <span>the National History Museum of Ukraine.</span></div>
-                            
+                            <div class="text-module-description">More than twentyfive organisations in Sweden,
+                                Lithuania, and Ukraine have invited experts from DIGICURE to lecture and give workshops
+                                in digital contingency planning. Among these are <span>ICOM, Europa Nostra,</span> and
+                                <span>the National History Museum of Ukraine.</span></div>
+
                         </div>
                     </div>
                 </div>
@@ -75,8 +83,14 @@
                         <div class="info-module">
                             <div class="info-module-slogan right">
                                 <div class="text-module-title">digicure: Protection of Cultural Resources</div>
-                                <h1>Project infrastructure</h1>
-                                <h2>DIGICURE supports a number of projects, either through expertise or through technical solutions for making data accessible. The data these projects make available include heritage sites in the Arctics, Antarctica, Faroe Islands, Italy, Spain, Sweden and Ukraine.</h2>
+                                <h1>Multimodal Platform</h1>
+                                <h2>DIGICURE develops and maintain a robust multimodal platform that facilitates digital
+                                    preservation and remote access of endangered cultural assets. The platform
+                                    integrates various data types – including high-resolution images, 3D models, and
+                                    metadata – to ensure comprehensive documentation and accessibility for research
+                                    purposes and public engagement.
+                                    The platform supports a number of projects and make available include heritage sites
+                                    in the Arctics, Antarctica, Faroe Islands, Italy, Spain, Sweden and Ukraine.</h2>
                             </div>
                         </div>
                     </div>
@@ -87,8 +101,12 @@
                         <div class="info-module">
                             <div class="info-module-slogan left">
                                 <div class="text-module-title">digicure: Protection of Cultural Resources</div>
-                                <h1>A Centre of Excellence 2</h1>
-                                <h2></h2>
+                                <h1>Multimodal digitisation</h1>
+                                <h2>DigiCURE provides cutting-edge software solutions for digitisation, metadata
+                                    structuring, and secure archiving. DigiCURE also equips researchers with
+                                    high-resolution imaging, 3D scanning, and digital reconstruction tools to support
+                                    detailed documentation and analysis of heritage materials.
+                                </h2>
                             </div>
                         </div>
                         <div class="data-module">
@@ -114,7 +132,7 @@
                 </div>
 
 
-                <div class="row pink-gradient-inverted" style="padding-top:30px">
+                <div class="row" style="padding-top:30px">
                     <div class="data-module">
                         <div class="buffer">
                             <div class="module">
@@ -136,10 +154,17 @@
                     <div class="info-module">
                         <div class="info-module-slogan right">
                             <div class="text-module-title">digicure: Protection of Cultural Resources</div>
-                            <h1>A Centre of Excellence 3</h1>
-                            <h2></h2>
+                            <h1>Multimodal expertise</h1>
+                            <h2>DigiCURE facilitates expert consultation services, and open-source resources to build
+                                capacity in digital preservation practices. DigiCURE ensures adherence to best practices
+                                and standards, promoting responsible and sustainable stewardship of cultural heritage.
+                            </h2>
                         </div>
                     </div>
+                </div>
+
+                <div class="row pink-gradient-inverted" style="padding-top:30px">
+                    <h1>Portals that are using DigiCURE resources</h1>
                 </div>
 
             </div>
@@ -152,6 +177,8 @@
     import { fetchByResourceTemplate } from '@/db';
     import type { Tool } from '@/types';
     import { onMounted, ref } from 'vue';
+    import MasonryWall from '@yeger/vue-masonry-wall';
+    import ProjectItem from '@/components/ProjectItem.vue';
 
 
 
@@ -175,37 +202,38 @@
 </script>
 
 <style scoped>
-      .grey-gradient {
-    background: linear-gradient(360deg, rgb(230, 230, 230) 0%, rgb(255, 255, 255) 100%);
-  }
+    .grey-gradient {
+        background: linear-gradient(360deg, rgb(230, 230, 230) 0%, rgb(255, 255, 255) 100%);
+    }
 
 
-  .intro-title{
-    font-family: "Teko", sans-serif !important;
-    font-weight:300;
-    font-size:70px;
-    line-height:0.9;
-    color: var(--theme-heading);
-    margin-top:50px;
-  }
+    .intro-title {
+        font-family: "Teko", sans-serif !important;
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 0.9;
+        color: var(--theme-heading);
+        margin-top: 50px;
+    }
 
-  .intro-title span{
+    .intro-title span {
 
-    font-size:100px;
-    font-weight:300;
- vertical-align: -17px;
- color: var(--theme-livedata1-dark);
-  }
+        font-size: 100px;
+        font-weight: 300;
+        vertical-align: -17px;
+        color: var(--theme-livedata1-dark);
+    }
 
-  .intro-subtitle{
-    font-family: "Teko", sans-serif !important;
-    font-weight:400;
-    font-size:50px;
-    line-height:0.9;
-    color: var(--theme-heading);
-    padding-left:82px;
-    margin-top:-8px;
-  }
+    .intro-subtitle {
+        font-family: "Teko", sans-serif !important;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 0.9;
+        color: var(--theme-heading);
+        padding-left: 82px;
+        margin-top: -8px;
+    }
+
     .module {
         overflow: visible;
     }
@@ -292,8 +320,7 @@
 
     .masonry-item {}
 
-    .text-module .left{
-    font-size: 25px!important;
-  }
-
+    .text-module .left {
+        font-size: 25px !important;
+    }
 </style>
