@@ -226,11 +226,15 @@ import type { Project } from '@/types';
         projectsNum.value = data.total
       });
       //fetch active projects
-    const resp = await fetchByResourceClass(99);
-    const active = resp.value.filter((item: Project) =>
-      item.status?.[0]?.['@value']?.toLowerCase() === 'active'
-    );
-    activeNum.value = active.length;
+    const resp = await fetchByResourceClass(99)
+    // count those with status "active"
+    activeNum.value = resp.reduce((count: number, item: Project) => {
+      const status = item['schema:status']?.[0]?.['@value']?.toLowerCase() ?? '';
+      return status === 'active' ? count + 1 : count;
+    }, 0);
+
+
+    
     await fetchCount('items?resource_template_id=6')
       .then(data => {
         toolsNum.value = data.total

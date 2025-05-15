@@ -82,7 +82,12 @@ export interface Project {
         {
             '@value': string
         }
-    ]
+    ],
+    'schema:status': [
+        {
+            '@value': string
+        }
+    ],
     
 }   
 
