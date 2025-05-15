@@ -84,7 +84,7 @@
                         </div>
                         <div class="info-module">
                             <div class="info-module-slogan right">
-                                <div class="text-module-title">digicure: Protection of Cultural Resources</div>
+                                <div class="text-module-title">Remote research</div>
                                 <h1>Multimodal Platform</h1>
                                 <h2>DIGICURE develops and maintain a robust multimodal platform that facilitates digital
                                     preservation and remote access of endangered cultural assets. The platform
@@ -102,7 +102,7 @@
 
                         <div class="info-module">
                             <div class="info-module-slogan left">
-                                <div class="text-module-title">digicure: Protection of Cultural Resources</div>
+                                <div class="text-module-title">Deep data</div>
                                 <h1>Multimodal digitisation</h1>
                                 <h2>DigiCURE provides cutting-edge software solutions for <span>digitisation, metadata
                                     structuring, and secure archiving</span>. DigiCURE also equips researchers with
@@ -155,7 +155,7 @@
                     </div>
                     <div class="info-module">
                         <div class="info-module-slogan right">
-                            <div class="text-module-title">digicure: Protection of Cultural Resources</div>
+                            <div class="text-module-title">Best practices</div>
                             <h1>Multimodal expertise</h1>
                             <h2>DigiCURE facilitates expert <span>consultation services, and open-source resources to build
                                 capacity in digital preservation practices</span>. DigiCURE ensures adherence to best practices
@@ -359,6 +359,7 @@
 
     h2 {
         font-weight: 300;
+        margin-top:-10px!important;
     }
 
     .projects {
