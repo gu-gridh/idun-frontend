@@ -10,7 +10,7 @@
                     <div class="intro-subtitle" style="">
                         Digital <br>Cultural <br>Resilience <br> & Protection</div>
 
-                    <div class="intro-article" style="padding-left:82px; padding-right:82px; padding-top:30px;">
+                    <div class="intro-article" style="">
 
                         DIGICURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH),
                         is designed to <span>safeguard endangered cultural heritage</span> while advancing digitally
@@ -30,8 +30,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="info-module left" style="padding: 0px 0px 20px 0px; margin-top:0px">
-                        <div class="text-module left" style="padding-right:45px; font-size:20px;">
+                    <div class="info-module" style="">
+                        <div class="text-module left">
                             <div class="text-module-data">
                                 <span class="livedata-pulse">7</span> courses
                             </div>
@@ -262,6 +262,7 @@
     }
 
 
+
     .intro-title {
         font-family: "Teko", sans-serif !important;
         font-weight: 300;
@@ -269,6 +270,7 @@
         line-height: 0.9;
         color: var(--theme-heading);
         margin-top: 50px;
+       
     }
 
     .intro-title span {
@@ -287,6 +289,12 @@
         color: var(--theme-heading);
         padding-left: 82px;
         margin-top: -8px;
+    }
+
+    .intro-article { 
+        padding-left:82px; 
+        padding-right:82px; 
+        padding-top:30px;
     }
 
     .module {
@@ -378,4 +386,28 @@
     .text-module .left {
         font-size: 25px !important;
     }
+
+    @media screen and (max-width: 900px) {
+    .intro-article { 
+        padding-left:0px; 
+        padding-right:0px; 
+        padding-top:30px;
+    }
+
+    .data-module {
+      width: 100%;
+      text-align: left;
+      justify-content: center;
+      padding-left: 30px;
+      margin-left:0px;
+    }
+
+    .text-module {
+      width: calc(100% - 60px);
+      text-align: left;
+      justify-content: center;
+      padding-left: 30px;
+      margin-left:0px;
+    }
+}
 </style>

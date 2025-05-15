@@ -39,7 +39,7 @@
 
           </div>
         </div>
-        <div class="data-module">
+        <div class="data-module text">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
             <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">13</span> active
@@ -65,7 +65,7 @@
 
 
       <div class="row">
-        <div class="data-module">
+        <div class="data-module visualisation">
           <div class="buffer">
             <div class="module theme-gradient-1 graph-wrapper">
               <Graph />
@@ -90,7 +90,7 @@
             <h2 v-html="redData1.html"></h2>
           </div>
         </div>
-        <div class="data-module">
+        <div class="data-module visualisation">
           <div class="buffer">
             <div class="module hoverable theme-gradient-2">
               <Sunburst />
@@ -100,7 +100,7 @@
       </div>
 
       <div class="row">
-        <div class="data-module">
+        <div class="data-module visualisation">
           <div class="buffer">
             <div class="module hoverable theme-gradient-map">
               <Map />
@@ -676,28 +676,63 @@
       margin-top: 30px;
     }
 
-    .info-module-slogan {
-      width: 100%;
-    }
+    .info-module-slogan h2 {
+    color: var(--theme-heading);
+    margin-top: -30px !important;
+    max-width: calc(100% - 80px);
+    font-weight: 300;
+    font-size: 20px;
+  }
 
-    .data-module {
+  .data-module{
       width: 100%;
       text-align: center;
+      justify-content: center;
+      padding-left: 30px;
+      margin-left:0px;
     }
 
-    .info-module {
-      width: 80vw;
-      text-align: left !important;
-      justify-content: left;
-      padding-left: 40px;
+    .visualisation{
+      width: calc(100% - 60px);
+
+      padding-left: 30px;
+      margin-left:0px;
+ 
     }
+
+  
+
+    .info-module {
+      width: calc(100% - 30px);
+      text-align: left;
+      justify-content: left;
+      padding-left: 30px;
+    }
+
+    .info-module h1{
+   
+    }
+
+
+  .text-module-description {
+    width: 100%;
+  }
 
 
     .info-module .left {
+
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: left;
+    padding: 0px 0px 0px 0px;
       text-align: left;
-      padding: 0px 20px 30px 20px;
+      padding-left:20px;
       align-items: flex-start;
-      width: 100%;
+      width: calc(100% - 20px);
+
     }
 
     .info-module .right {
