@@ -34,7 +34,9 @@
             <h2 style="margin-top:-20px!important;">GRIDH has to date been involved in more than <span>{{ projectsNum
                 }}</span> research projects, and
               have helped gather more
-              than <span>{{ totFunding }} million</span> in external funding. We are currently involved in <span>13</span> funded projects, including <span>3</span> national infrastructures and <span>1</span> research school.</h2>
+              than <span>{{ totFunding }} million</span> in external funding. We are currently involved in
+              <span>13</span> funded projects, including <span>3</span> national infrastructures and <span>1</span>
+              research school.</h2>
             <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 
           </div>
@@ -64,7 +66,7 @@
       </div>
 
 
-      <div class="row">
+      <div class="row-left">
         <div class="data-module visualisation">
           <div class="buffer">
             <div class="module theme-gradient-1 graph-wrapper">
@@ -81,7 +83,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row-right">
         <!-- some kind of vizualisation -->
         <div class="info-module">
           <div class="info-module-slogan left">
@@ -99,7 +101,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row-left">
         <div class="data-module visualisation">
           <div class="buffer">
             <div class="module hoverable theme-gradient-map">
@@ -357,9 +359,54 @@ import type { Project } from '@/types';
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    align-items:center;
+    gap: 0px;
+    margin: 0;
+  }
+
+  .row-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     align-items: center;
     gap: 0px;
     margin: 0;
+    padding:0px;
+  }
+
+
+
+
+  .row-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    gap: 0px;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    .row-left {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      align-items: flex-end;
+      gap: 0px;
+      margin-top: 30px;
+    }
+
+    .row-right {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      gap: 0px;
+      margin-top: 30px;
+    }
   }
 
   .pink-gradient {
@@ -644,14 +691,6 @@ import type { Project } from '@/types';
     justify-content: center;
   }
 
-  .network {
-    background-image: url(https://cylynx.imgix.net/uploads/graphvis_visjs.jpg?auto=format,compress);
-    background-size: cover;
-    background-position: 50%;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-  }
 
   .graph-wrapper {
     width: 100%;
@@ -682,30 +721,31 @@ import type { Project } from '@/types';
     }
 
     .info-module-slogan h2 {
-    color: var(--theme-heading);
-    margin-top: -30px !important;
-    max-width: calc(100% - 80px);
-    font-weight: 300;
-    font-size: 20px;
-  }
+      color: var(--theme-heading);
+      margin-top: -30px !important;
+      max-width: calc(100% - 80px);
+      font-weight: 300;
+      font-size: 20px;
+    }
 
-  .data-module{
+    .data-module {
       width: 100%;
       text-align: center;
       justify-content: center;
-      padding-left: 30px;
-      margin-left:0px;
+      padding-left: 0px;
+      margin-left: 0px;
+
+
     }
 
-    .visualisation{
-      width: calc(100% - 60px);
-
-      padding-left: 30px;
-      margin-left:0px;
- 
+    .visualisation {
+      width: calc(100% - 40px);
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: 0px;
     }
 
-  
+
 
     .info-module {
       width: calc(100% - 30px);
@@ -714,35 +754,31 @@ import type { Project } from '@/types';
       padding-left: 30px;
     }
 
-    .info-module h1{
-   
+    .info-module h1 {}
+
+
+    .text-module-description {
+      width: 100%;
     }
 
 
-  .text-module-description {
-    width: 100%;
-  }
-
-
     .info-module .left {
-
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: left;
-    padding: 0px 0px 0px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: left;
+      padding: 0px 0px 0px 0px;
       text-align: left;
-      padding-left:20px;
+      padding-left: 20px;
       align-items: flex-start;
       width: calc(100% - 20px);
+      
 
     }
 
     .info-module .right {
       text-align: left;
-      padding: 0px 20px 30px 20px;
+      padding: 0px 20px 0px 20px;
     }
 
     .links {
@@ -761,7 +797,8 @@ import type { Project } from '@/types';
 
 
     .buffer {
-      padding: 20px 20px;
+      padding: 0px 0px;
+      margin-bottom:40px;
     }
 
     .link-item {
@@ -828,7 +865,7 @@ import type { Project } from '@/types';
     background-size: 105%;
   }
 
-  .link-item:hover .link-title{
+  .link-item:hover .link-title {
     text-shadow:
       0 0 2em black;
   }
