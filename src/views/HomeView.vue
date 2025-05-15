@@ -35,7 +35,7 @@
                 }}</span> research projects, and
               have helped gather more
               than <span>{{ totFunding }} million</span> in external funding. We are currently involved in
-              <span>13</span> funded projects, including <span>3</span> national infrastructures and <span>1</span>
+              <span>{{ activeNum }}</span> funded projects, as well as <span>3</span> national infrastructures and <span>1</span>
               research school.</h2>
             <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 
