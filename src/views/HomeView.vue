@@ -34,7 +34,7 @@
             <h2 style="margin-top:-20px!important;">GRIDH has to date been involved in more than <span>{{ projectsNum
                 }}</span> research projects, and
               have helped gather more
-              than <span>{{ totFunding }} million</span> in external funding. We are currently involved in
+              than <span>{{ totFunding }} million</span> in external funding. We are cur rently involved in
               <span>{{ activeNum }}</span> funded projects, as well as <span>3</span> national infrastructures and <span>1</span>
               research school.</h2>
             <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
@@ -362,6 +362,7 @@ import type { Project } from '@/types';
     align-items:center;
     gap: 0px;
     margin: 0;
+    overflow:hidden;
   }
 
   .row-left {
@@ -373,6 +374,7 @@ import type { Project } from '@/types';
     gap: 0px;
     margin: 0;
     padding:0px;
+    overflow:hidden;
   }
 
 
@@ -386,6 +388,7 @@ import type { Project } from '@/types';
     align-items: center;
     gap: 0px;
     margin: 0;
+    overflow:hidden;
   }
 
   @media screen and (max-width: 900px) {

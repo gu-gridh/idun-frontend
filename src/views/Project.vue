@@ -127,6 +127,15 @@
         text-align:justify;
     }
 
+    @media screen and (max-width: 900px) {
+        .project-description {
+
+        columns:1;
+        text-align: left;
+ 
+    }
+    }
+
     .site {
         margin-top: 20px;
         font-size: 20px;
