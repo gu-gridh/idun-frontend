@@ -42,7 +42,7 @@
         <div class="data-module text">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">13</span> active
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ activeNum }}</span> active
                 projects</router-link> </div>
             <div class="text-module-description"><!-- Active projects info text  --></div>
 
@@ -205,6 +205,7 @@
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
   import Sunburst from '@/components/Sunburst.vue';
+import type { Project } from '@/types';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
@@ -212,6 +213,7 @@
   const projectsNum = ref(0);
   const toolsNum = ref(0);
   const totFunding = ref(0);
+  const activeNum = ref(0);
 
   onMounted(async () => {
     //fetch html data from Omeka pages
@@ -221,6 +223,12 @@
       .then(data => {
         projectsNum.value = data.total
       });
+      //fetch active projects
+    const resp = await fetchByResourceClass(99);
+    const active = resp.value.filter((item: Project) =>
+      item.status?.[0]?.['@value']?.toLowerCase() === 'active'
+    );
+    activeNum.value = active.length;
     await fetchCount('items?resource_template_id=6')
       .then(data => {
         toolsNum.value = data.total
@@ -253,9 +261,6 @@
         redData1.value = convertToJson(response[1])
         redData2.value = convertToJson(response[2])
         redData3.value = convertToJson(response[3])
-        console.log('redData1', redData1.value)
-        console.log('redData2', redData2.value)
-        console.log('redData3', redData3.value)
       })
 
   };
