@@ -29,30 +29,32 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" style="align-items: flex-start; padding-bottom:20px;">
                     <div class="info-module" style="">
                         <div class="text-module left">
                             <div class="text-module-data">
                                 <span class="livedata-pulse">7</span> courses
                             </div>
-                            <div class="text-module-description">DIGICURE is contributing with expertise for several
+                            <div class="text-module-description">
+                                DIGICURE is contributing with expertise for several
                                 international courses hosted at <span>Swedish universities</span> and <span>Ukrainian
                                     heritage organisations</span>. These range from lectures about digitising sensitive
                                 and threatened heritage, to <span>hands-on and in-depth workshops</span> on specific
-                                workflows and technologies.</div>
-
+                                workflows and technologies.
+                            </div>
                         </div>
                     </div>
 
-                    <div class="data-module">
-                        <div class="text-module">
-
-                            <div class="text-module-data"><span class="livedata-pulse">26</span> organisations </div>
-                            <div class="text-module-description">More than twentyfive organisations in Sweden,
+                    <div class="info-module" style="">
+                        <div class="text-module right">
+                            <div class="text-module-data"><span class="livedata-pulse">26</span> organisations 
+                            </div>
+                            <div class="text-module-description">
+                                More than twentyfive organisations in Sweden,
                                 Lithuania, and Ukraine have invited experts from DIGICURE to lecture and give workshops
                                 in digital contingency planning. Among these are <span>ICOM, Europa Nostra,</span>
-                                <span>the National History Museum of Ukraine, and the Swedish Institute in Rome</span></div>
-
+                                <span>the National History Museum of Ukraine, and the Swedish Institute in Rome</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,7 +63,7 @@
             <div class="projects-container">
 
                 <div class="row">
-                    <div class="row">
+                    <div class="row-left">
                         <div class="data-module">
                             <div class="buffer">
                                 <div class="module">
@@ -96,7 +98,7 @@
                     </div>
 
 
-                    <div class="row">
+                    <div class="row-right">
 
                         <div class="info-module">
                             <div class="info-module-slogan left">
@@ -132,7 +134,7 @@
                 </div>
 
 
-                <div class="row" style="padding-top:30px">
+                <div class="row-left" style="padding-top:30px">
                     <div class="data-module">
                         <div class="buffer">
                             <div class="module">
@@ -408,6 +410,14 @@
       justify-content: center;
       padding-left: 30px;
       margin-left:0px;
+    }
+
+    .image-stack {
+        width: calc(100% + 0px);
+        margin-left: -50px;
+        margin-top: 20px;
+        height: auto;
+        padding: 0px 0px;
     }
 }
 </style>
