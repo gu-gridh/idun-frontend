@@ -312,7 +312,8 @@
         margin-left: -50px;
         margin-top: -20px;
         height: auto;
-        padding: 0px 0px;
+        padding: 15px 15px;
+   
     }
 
     .image-stack-items-container {

@@ -187,13 +187,22 @@
 <style scoped>
   .sunburst-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
     justify-content: center;
     align-items: center;
     gap: 4rem;
     padding: 0rem;
     height: 100%;
     width: 100%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .sunburst-grid {
+  
+    gap: 0.5rem;
+   
+  }
+
   }
 
   .sunburst-group{
@@ -210,5 +219,55 @@
   .sunburst-chart {
     width: 200px;
     height: 200px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .sunburst-chart:hover {
+transform:scale(1.05);
+  }
+
+  @media screen and (max-width: 1100px) {
+    .sunburst-grid {
+  
+    gap: 1rem;
+   
+  }
+
+  .sunburst-chart {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+  @media screen and (max-width: 900px) {
+    .sunburst-grid {
+  
+    gap: 2rem;
+   
+  }
+
+  .sunburst-chart {
+    width: 200px;
+    height: 200px;
+  }
+
+
+
+  }
+
+  @media screen and (max-width: 500px) {
+    .sunburst-grid {
+  
+    gap: 1rem;
+   
+  }
+
+  .sunburst-chart {
+    width: 120px;
+    height: 120px;
+  }
+
+
+
   }
 </style>

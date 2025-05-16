@@ -100,7 +100,7 @@
         </div>
         <div class="data-module visualisation">
           <div class="buffer">
-            <div class="module hoverable theme-gradient-2">
+            <div class="module theme-gradient-2">
               <Sunburst />
             </div>
           </div>
@@ -300,6 +300,8 @@ import type { Project } from '@/types';
     font-size: 50px;
     font-weight: 600;
     color: var(--theme-heading);
+    line-height:0.9;
+    margin-top:10px;
   }
 
   .intro-article {
@@ -330,7 +332,7 @@ import type { Project } from '@/types';
   @media screen and (max-width: 1100px) {
     .intro-article {
       columns: 1;
-
+      text-align: left;
     }
   }
 
@@ -366,6 +368,7 @@ import type { Project } from '@/types';
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+ 
   }
 
   .row {
@@ -724,7 +727,7 @@ import type { Project } from '@/types';
     }
 
     .intro-space {
-      width: calc(100% - 120px);
+      width: calc(100% - 50px);
     }
 
     .text-module-link {
@@ -971,6 +974,26 @@ import type { Project } from '@/types';
       border-radius: 12px;
 
     }
+  }
+
+    @media screen and (max-width: 600px) {
+    .intro-space {
+
+    padding-left: 30px;
+
+  }
+
+  .info-module .left {
+    padding-left: 0px;
+width:100%;
+
+  }
+
+  .info-module .right {
+    padding-left: 0px;
+
+
+  }
 
   }
 </style>

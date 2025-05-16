@@ -18,7 +18,7 @@
         </div>
 
         <div class="card-links">
-        Go to the resource
+        To the resource
       </div>
 
         <div class="card-tags">
@@ -74,9 +74,9 @@ img {
   padding: 0.5rem 1rem;
 }
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-block: 0 0.5rem;
-  font-weight:300;
+  font-weight:400;
   line-height: 1.0;
   margin-top:10px;
 
@@ -86,7 +86,7 @@ img {
         hyphens: auto; */
 }
 .card-body {
-  margin-block: 1.4rem;
+  margin-block: 0.8rem;
   font-size: 1.0rem;
   font-weight:300;
   line-height: 1.1;
