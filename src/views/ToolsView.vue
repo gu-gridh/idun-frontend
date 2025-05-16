@@ -22,7 +22,8 @@
                     <template #default="{ index, item }">
                         <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
-                            :description="item.descriptionText" />
+                            :description="item.descriptionText"
+                            :color="item.color?.[0]?.['@value'] || ''"/>
                     </template>
                 </masonry-wall>
             </div>
@@ -34,7 +35,8 @@
                     <template #default="{ index, item }">
                         <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
-                            :description="item.descriptionText" />
+                            :description="item.descriptionText"
+                            :color="item.color?.[0]?.['@value'] || ''"/>
                     </template>
                 </masonry-wall>
             </div>
@@ -50,7 +52,8 @@
                     <template #default="{ index, item }">
                         <ProjectItemLegacy :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
-                            :description="item.descriptionText" />
+                            :description="item.descriptionText" 
+                            :color="item.color?.[0]?.['@value'] || ''"/>
                     </template>
                 </masonry-wall>
             </div>
