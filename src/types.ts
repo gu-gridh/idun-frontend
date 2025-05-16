@@ -119,4 +119,9 @@ export interface Tool {
             '@value': string
         }
     ],
+    color: [
+        {
+            '@value': string
+        }
+    ],
 }

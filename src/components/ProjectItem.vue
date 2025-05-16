@@ -1,10 +1,15 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
-    <div class="vertical-card"> <!-- TODO random background color? -->
+    <div class="vertical-card" >
       <figure>
       <img :src="image" alt="Project image" />
     </figure>
-      <div class="card-info">
+      <div class="card-info" :style="{
+    backgroundColor:
+      typeof color === 'string' && color.length === 6
+        ? '#' + color
+        : '#efefef'
+  }">
         <h3 class="card-title">
           {{ title }}
         </h3>
@@ -27,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps(["id", "title", "image", "url", "subjectArea", "description" ]);
+defineProps(["id", "title", "image", "url", "subjectArea", "description", "color" ]);
 </script>
 
 <style scoped>
@@ -40,7 +45,7 @@ padding:0px;
   overflow: hidden;
   cursor: pointer;
   max-width: 300px;
-  background-color:#efefef;
+  /* background-color:#efefef; */
 }
 
 .vertical-card:hover {
