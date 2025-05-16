@@ -541,6 +541,10 @@ import type { Project } from '@/types';
     height: 100%;
   }
 
+  .info-module b, strong {
+    color: var(--theme-livedata1-dark);
+   }
+
   .info-module .left {
     text-align: right;
     padding: 0px 40px 0px 60px;
