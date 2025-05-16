@@ -334,7 +334,7 @@ import type { Project } from '@/types';
     }
   }
 
-  a{
+  .info-module a{
     color: var(--theme-livedata1-dark);
   }
 
