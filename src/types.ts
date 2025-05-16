@@ -88,6 +88,11 @@ export interface Project {
             '@value': string
         }
     ],
+    image: {
+        small: string,
+        medium: string,
+        large: string
+    }
     
 }   
 

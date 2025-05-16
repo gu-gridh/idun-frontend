@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="project-image"><img :src="image" alt="" /></div>
+        <div class="project-image"><img :src="project.image?.medium || ''" alt="" />{{ project.image }}</div>
         <div class="text-module-title">Project</div>
         <h1>{{ project.name }}</h1>
         <!-- <p>Identifier: <span v-for="id in project.identifier">{{ id['@value'] }}</span> </p> -->
@@ -59,7 +59,8 @@
 
     const route = useRoute();
 
-    defineProps(["id", "title", "url", "subjectArea", "description", "image" ]);
+    defineProps(["id", "title", "url", "subjectArea", "description"
+     ]);
 
 
     onMounted(async () => {
@@ -88,6 +89,7 @@
             subject: response['dcterms:subject'],
             status: response['vivo:status'] || 'unknown', // default value if missing
             ['schema:status']: response['schema:status'] || 'unknown', // add schema:status property
+            image: response['thumbnail_display_urls'] || {}, // object
         };
     };
 
