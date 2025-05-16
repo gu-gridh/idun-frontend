@@ -85,6 +85,64 @@ const convertCoords = (coords: string) => {
     filter: hue-rotate(-130deg);
 }
 
+/* Overides the settings in ui_modules.css */
+#app .ol-zoom-in {
+    display: none !important;
+}
+
+#app .ol-zoom-out {
+    display: none !important;
+}
+
+#map .leaflet-control-zoom-in {
+ left: calc(25vw - 87px);
+  top: calc(240px) !important;
+  position: absolute;
+  border-radius: 8px 0px 0px 8px !important;
+  height: 25px;
+  border-bottom: none;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  width: 35px;
+  font-size:16px;
+  line-height: 1.4;
+}
+
+#map .leaflet-control-zoom-in:hover {
+  background-color: black;
+}
+
+#map .leaflet-control-zoom-out {
+  left: calc(25vw - 48px);
+  top: calc(240px) !important;
+  position: absolute;
+  border-radius: 0px 8px 8px 0px !important;
+  height: 25px;
+  border-bottom: none;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  width: 35px;
+  font-size:16px;
+  line-height: 1.4;
+}
+
+#map .leaflet-control-zoom-out:hover {
+  background-color: black;
+}
+
+@media screen and (max-width: 900px) {
+
+    #map .leaflet-control-zoom-in {
+ left: calc(50vw - 67px);
+}
+
+#map .leaflet-control-zoom-out {
+  left: calc(50vw - 28px);
+  
+}
+
+}
+
 
 
 </style>
