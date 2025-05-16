@@ -1,15 +1,15 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
-    <div class="horizontal-card"> <!-- TODO every other alterntate between two very light grey tones (look at old dh portal) -->
+    <div class="horizontal-card" :style="{
+      backgroundColor:
+        typeof color === 'string' && color.length === 6
+          ? '#' + color
+          : '#efefef'
+    }">
       <figure>
       <img :src="image" alt="Project image" />
     </figure>
-      <div class="card-info" :style="{
-    backgroundColor:
-      typeof color === 'string' && color.length === 6
-        ? '#' + color
-        : '#efefef'
-  }">
+      <div class="card-info" >
         <h3 class="card-title">
           {{ title }}
         </h3>
