@@ -33,10 +33,9 @@
             <h1>So many projects!</h1>
             <h2 style="margin-top:-20px!important;">GRIDH has to date been involved in more than <span>{{ projectsNum
                 }}</span> research projects, and
-              have helped gather more
-              than <span>{{ totFunding }} million</span> in external funding. We are cur rently involved in
-              <span>{{ activeNum }}</span> funded projects, as well as <span>3</span> national infrastructures and <span>1</span>
-              research school.</h2>
+              have helped raise in excess of <span>{{ totFunding }} million</span> in external funding for these. We are currently involved in
+              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is an active memeber in <span>3</span> national research infrastructures and <span>1</span>
+              research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a href="http://www.swe-clarin.se">Swe-Clarin</a></span>, <span><a href="https://infravis.se">Infravis</a></span>, and <span><a href="http://www.dash-doctoralschool.se">DASH</a></span>.</h2>
             <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 
           </div>
@@ -58,8 +57,15 @@
               funding</div>
             <div class="text-module-description"><!-- Money-maker info text  --></div>
 
+            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px;"><router-link to="/projects">See all projects</router-link></div>
 
-            <div class="text-module-link hoverable"><router-link to="/projects">See all projects</router-link></div>
+            <div class="text-module-title">Infrastructures </div>
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">3</span> National
+                infrastructures</router-link> </div>
+            <div class="text-module-description"></div>
+
+            
+            
 
           </div>
         </div>
@@ -326,6 +332,10 @@ import type { Project } from '@/types';
       columns: 1;
 
     }
+  }
+
+  a{
+    color: var(--theme-livedata1-dark);
   }
 
 
