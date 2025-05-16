@@ -59,7 +59,7 @@
 
     const route = useRoute();
 
-    defineProps(["id", "title", "url", "subjectArea", "description" ]);
+    defineProps(["id", "title", "url", "subjectArea", "description", "image" ]);
 
 
     onMounted(async () => {
@@ -87,6 +87,7 @@
             subjectArea: response['vivo:hasSubjectArea'], // array
             subject: response['dcterms:subject'],
             status: response['vivo:status'] || 'unknown', // default value if missing
+            ['schema:status']: response['schema:status'] || 'unknown', // add schema:status property
         };
     };
 

@@ -5,11 +5,11 @@
   <script setup>
   import { ref, onMounted, onUnmounted } from 'vue';
   import * as d3 from 'd3';
-  import { fetchByResourceTemplate } from '@/db';
+  import { fetchByResourceTemplate, fetchByResourceClass } from '@/db';
   
-  // Refs
   const chartContainer = ref(null);
   const items = ref([]);
+  const projects = ref([]);
   
   // Track container size
   const size = ref({ width: 0, height: 0 });
@@ -134,6 +134,12 @@
   }
   
   onMounted(async () => {
+    //fetch all projects
+    const resp = await fetchByResourceClass(99);
+    projects.value = resp.map(item => ({
+      subjectArea: item['dcterms:subject'] || []
+    }));
+    console.log('Projects:', projects.value);
     // Observe container size
     resizeObserver = new ResizeObserver(entries => {
       for (let entry of entries) {
