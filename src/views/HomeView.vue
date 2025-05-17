@@ -31,10 +31,9 @@
           <div class="info-module-slogan left">
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
-            <h2 style="margin-top:-20px!important;">GRIDH has to date been involved in more than <span>{{ projectsNum
-                }}</span> research projects, and
-              have helped raise in excess of <span>{{ totFunding }} million</span> in external funding for these. We are currently involved in
-              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is an active memeber in <span>3</span> national research infrastructures and <span>1</span>
+            <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>{{ projectsNum
+                }}</span> funded research projects, and have helped raise in excess of <span>{{ totFunding }} million</span> in external funding for these. We are currently involved in
+              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of <span>3</span> national research infrastructures and <span>1</span>
               research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a href="http://www.swe-clarin.se">Swe-Clarin</a></span>, <span><a href="https://infravis.se">Infravis</a></span>, and <span><a href="http://www.dash-doctoralschool.se">DASH</a></span>.</h2>
             <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 

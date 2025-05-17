@@ -72,12 +72,10 @@ const convertCoords = (coords: string) => {
     width: 100%;
     border-radius: 15px;
     z-index: auto;
-
 }
 
 .leaflet-container {
     filter: hue-rotate(130deg);
-
     background:transparent;
 }
 

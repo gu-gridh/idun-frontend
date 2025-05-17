@@ -7,7 +7,7 @@
 
 
   <div class="top-menu">
-    <router-link to="/"><div class="menu-item  menu-selected">Home</div></router-link>
+    <router-link to="/"><div class="menu-item">Home</div></router-link>
     <router-link to="/resources"><div class="menu-item">All resources</div></router-link>
     <router-link to="/projects"><div class="menu-item">All projects</div></router-link>
 </div>
@@ -45,31 +45,35 @@
     color:white;
     margin-left:60px;
     font-family: "Barlow Condensed", sans-serif !important;
-
   }
 
   .menu-item{
-    color:black ;
     background-color:none;
     padding:20px 20px;
     cursor:pointer;
-    margin-right:0.0px;
+    margin-right:0px;
+    margin-left:0px;
+  }
+
+
+  .top-menu a{
+
+    padding:0px;
   }
 
   .menu-item:hover{
+    background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
+
+  color:white;
+  }
+
+  .top-menu .router-link-exact-active{
+
     background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
     color:white;
 
   }
 
-  .menu-item:visited{
-    color:black !important;
-  }
-
-.menu-selected {
-  background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
-  color:white;
-  }
 
   .top {
     font-family: "Barlow Condensed", sans-serif !important;
