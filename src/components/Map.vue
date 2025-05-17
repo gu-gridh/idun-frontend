@@ -83,6 +83,11 @@ const convertCoords = (coords: string) => {
     filter: hue-rotate(-130deg);
 }
 
+.leaflet-popup-content {
+    font-family: "Barlow Condensed", sans-serif !important;
+    font-size:18px;
+}
+
 /* Overides the settings in ui_modules.css */
 #app .ol-zoom-in {
     display: none !important;
