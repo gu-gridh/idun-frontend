@@ -346,7 +346,7 @@ import type { Project } from '@/types';
     max-width: max(70%, 150px) !important;
     top: 100px;
     right: 20px;
-    font-family: sans-serif !important;
+    font-family: "Barlow Condensed", sans-serif !important;
     font-size: 16px !important;
     font-weight: 100;
     padding: 5px 8px 5px 8px !important;
