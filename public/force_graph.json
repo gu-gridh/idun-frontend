@@ -388,6 +388,12 @@
       "source": "Faculty of Science and Technology",
       "target": "Dept. of Conservation"
     },
+
+    {
+      "source": "Dept. of Conservation",
+      "target": "The craft laboratory/Hantverslaboratoriet"
+    },
+
     {
       "source": "Faculty of Science and Technology",
       "target": "Dept. of Earth Sciences"
