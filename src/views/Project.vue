@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="project-image"><img :src="project.image?.medium || ''" alt="" />{{ project.image }}</div>
+        <div class="project-image"><img :src="project.image?.medium || ''" alt="" /></div>
         <div class="text-module-title">Project</div>
         <h1>{{ project.name }}</h1>
         <!-- <p>Identifier: <span v-for="id in project.identifier">{{ id['@value'] }}</span> </p> -->
@@ -121,6 +121,11 @@
         margin-left:-10px;
         overflow:hidden;
 
+    }
+
+    .project-image img{
+        width:auto;
+        height:100px;
     }
 
     .project-description {
