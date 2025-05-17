@@ -197,9 +197,8 @@
 
     const tools = ref(<Tool[] > []);
     const resources = ref(<Tool[] > []);
-    const apps = ref(<Tool[] > []);
-    const other = ref(<Tool[] > []);
-    const legacy = ref(<Tool[] > []);
+
+
 
 
     onMounted(async () => {
@@ -208,20 +207,14 @@
         const allTools = await translateResponse(response);
 
         const activeTools: Tool [] = [];
-        const legacyTools: Tool[] = [];
+
 
         allTools.forEach((tool: Tool) => {
-            if (tool.legacy?.[0]?.['@value'] === 'Legacy') {
-                legacyTools.push(tool);
-            } else if (tool.legacy?.[0]?.['@value'] === 'Active') {
-                activeTools.push(tool);
-            } else {
-                console.log('Unknown tool', tool.name);
-            }
+                activeTools.push(tool);   
         });
 
         tools.value = activeTools.sort(() => Math.random() - 0.5);
-        legacy.value = legacyTools;
+    
         sortByType(tools.value);
     });
 
@@ -240,26 +233,22 @@
             family: item['dcterms:isPartOf'] || [],
         }));
     };
-
+    const digicure = "https://idun.dh.gu.se/api/items/372";
 
     const sortByType = (tools: Tool[]) => {
-       // please make it prettier
         tools.forEach((tool: Tool) => {
-            if (tool.family?.[0]?.['@id'] === 'https://idun.dh.gu.se/api/items/372') {
+            if (tool.family?.[0]?.['@id'] === digicure) {
                 resources.value.push(tool);
             } 
-            if (tool.family?.[1]?.['@id'] === 'https://idun.dh.gu.se/api/items/372') {
+            if (tool.family?.[1]?.['@id'] === digicure) {
                 resources.value.push(tool);
             }
-            if (tool.family?.[2]?.['@id'] === 'https://idun.dh.gu.se/api/items/372') {
+            if (tool.family?.[2]?.['@id'] === digicure) {
                 resources.value.push(tool);
             }
-            else {
-                console.log('Unknown type', tool.name, tool.family?.[0]?.['@id']);
-            }
-        });
-        
+        });     
     };
+    
 </script>
 
 <style scoped>
