@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps(["id", "title", "image", "url", "subjectArea", "description", "color" ]);
+defineProps(["id", "title", "image", "url", "subjectArea", "description", "isPartOf", "color" ]);
 </script>
 
 <style scoped>

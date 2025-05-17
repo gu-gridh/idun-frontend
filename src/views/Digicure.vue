@@ -140,14 +140,14 @@
                             <div class="module">
                                 <div class="image-stack">
                                     <div class="image-stack-items-container">
-
-                                        <div class="image-stack-item"
-                                            style="background-image:url(digicure/sophia3.jpg); background-size:cover; z-index:2;">
+                                        <a href="https://saintsophia.dh.gu.se/viewer/?q=113-07b/rti" target="_blank">
+                                        <div class="image-stack-item" style="background-image:url(digicure/sophia3.jpg); background-size:cover; z-index:1; margin-top:50px;">
                                         </div>
-                                        <div class="image-stack-item"
-                                            style="background-image:url(digicure/sophia6.jpg); background-size:cover; z-index:2; margin-top:50px; margin-left:-200px;">
+                                    </a>
+                                        <a href="https://digicure.dh.gu.se/ukraine" target="_blank">
+                                        <div class="image-stack-item" style="background-image:url(digicure/digicure1.jpg); background-size:cover; z-index:3; margin-top:0px; margin-left:-200px;">
                                         </div>
-
+                                    </a>
                                     </div>
                                 </div>
                             </div>
@@ -159,22 +159,23 @@
                             <h1>Multimodal expertise</h1>
                             <h2>DigiCURE facilitates expert <span>consultation services, and open-source resources to build
                                 capacity in digital preservation practices</span>. DigiCURE ensures adherence to best practices
-                                and standards, promoting responsible and sustainable stewardship of cultural heritage.
+                                and standards, promoting responsible and sustainable stewardship of cultural heritage. Sharing this expertise, DigiCURE is the foundation of <span>DIGICURE:Ukraine</span>, a project that aids the Ukrainian heritage sector with training, sotware solutions and consultation.
                             </h2>
                         </div>
                     </div>
                 </div>
 
                 <div class="row pink-gradient-inverted" style="padding-top:30px; display:flex; flex-direction: column; align-items:flex-start; justify-content: center;">
-                    <div class="projects-container" style="width:calc(100% - 120px); padding-left: 60px;">
+                <div class="tools-container" style="">
                     <h1>Portals and tools that are using DigiCURE resources</h1>
 
-                    <masonry-wall v-if="tools && databases.length" :column-width="220" :items="databases" :gutter="0"
+                    <masonry-wall v-if="resources.length" :column-width="220" :items="resources" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
                         <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
-                            :description="item.descriptionText" />
+                            :description="item.descriptionText" 
+                            :color="item.color?.[0]?.['@value'] || ''"/>
                     </template>
                 </masonry-wall>
                 </div>
@@ -195,7 +196,7 @@
 
 
     const tools = ref(<Tool[] > []);
-    const databases = ref(<Tool[] > []);
+    const resources = ref(<Tool[] > []);
     const apps = ref(<Tool[] > []);
     const other = ref(<Tool[] > []);
     const legacy = ref(<Tool[] > []);
@@ -229,29 +230,32 @@
             id: item['o:id'] || '',
             name: item['o:title'] || 'No title',
             subject: item['dcterms:subject'] || [],
-            //funding: item['vivo:hasFundingVehicle'] || [],
-            //contributingRole: item['vivo:contributingRole'] || [],
-            //timeInterval: item['vivo:dateTimeInterval'] || [],
             subjectArea: item['dcterms:subject'] || [],
             descriptionText: item['bibo:shortDescription'] || [],
             image: item['thumbnail_display_urls'] || {},
             links: item['foaf:homepage'] || [],
             legacy: item['bibo:status'] || [],
             type: item['schema:category'] || [],
+            color: item['schema:color'] || [],
+            family: item['dcterms:isPartOf'] || [],
         }));
     };
 
+
     const sortByType = (tools: Tool[]) => {
-        //sort by type 'Databases and Archives', 'Apps and Tools', 'Other'
+       // please make it prettier
         tools.forEach((tool: Tool) => {
-            if (tool.type?.[0]?.['@value'] === 'Databases and Archives') {
-                databases.value.push(tool);
-            } else if (tool.type?.[0]?.['@value'] === 'Apps and Tools') {
-                apps.value.push(tool);
-            } else if (tool.type?.[0]?.['@value'] === 'Other') {
-                other.value.push(tool);
-            } else {
-                console.log('Unknown type', tool.name, tool.type?.[0]?.['@value']);
+            if (tool.family?.[0]?.['@id'] === 'https://idun.dh.gu.se/api/items/372') {
+                resources.value.push(tool);
+            } 
+            if (tool.family?.[1]?.['@id'] === 'https://idun.dh.gu.se/api/items/372') {
+                resources.value.push(tool);
+            }
+            if (tool.family?.[2]?.['@id'] === 'https://idun.dh.gu.se/api/items/372') {
+                resources.value.push(tool);
+            }
+            else {
+                console.log('Unknown type', tool.name, tool.family?.[0]?.['@id']);
             }
         });
         
@@ -312,7 +316,7 @@
         margin-left: -50px;
         margin-top: -20px;
         height: auto;
-        padding: 15px 15px;
+        padding: 10px 10px;
    
     }
 
@@ -370,9 +374,20 @@
 
     }
 
+    .tools-container{
+
+        width:calc(100% - 120px); 
+padding-left: 60px;
+padding-right: 60px; 
+padding-bottom:30px; 
+
+
+}
+
 
     .projects-container li {
         list-style: none;
+      
     }
 
     .legacy {
@@ -421,5 +436,15 @@
         height: auto;
         padding: 0px 0px;
     }
+
+    .tools-container{
+
+width:calc(100% - 40px); 
+padding-left: 20px;
+padding-right: 20px; 
+padding-bottom:30px; 
+
+
+}
 }
 </style>
