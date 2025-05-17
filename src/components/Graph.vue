@@ -42,7 +42,7 @@
       .nodeId('id')
       .nodeLabel(node => node.id)
       .nodeColor(node => groupColors[node.group] || '#cccccc')
-      .nodeRelSize(6)
+      .nodeRelSize(8)
       .enableNodeDrag(true)
       .onNodeDragEnd(node => {
         node.fx = node.x;
