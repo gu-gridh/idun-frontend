@@ -47,7 +47,6 @@ const initMap = () => {
 const fetchCoordinates = async () => {
     //fetch coordinates from the database
     const response = await fetchByResourceClass(185);
-    console.log(response);
     places.value = translateResponse(response);
 }
 

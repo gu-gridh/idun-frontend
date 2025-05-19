@@ -5,269 +5,177 @@
       <div ref="chartContainerSubjects" class="sunburst-chart"></div>
     </div>
 
-
     <div class="sunburst-group">
       <div class="sunburst-title">Tech stack</div>
       <div ref="chartContainerTools" class="sunburst-chart"></div>
     </div>
-
   </div>
 </template>
 
 <script setup>
-  import { ref, onMounted, onUnmounted } from 'vue';
-  import * as d3 from 'd3';
-  import { fetchByResourceTemplate, fetchByResourceClass } from '@/db';
+import { ref, onMounted, onUnmounted } from 'vue';
+import * as d3 from 'd3';
+import { fetchByResourceTemplate, fetchByResourceClass } from '@/db';
 
-  const chartContainerTools = ref(null);
-  const chartContainerSubjects = ref(null);
+const chartContainerTools = ref(null);
+const chartContainerSubjects = ref(null);
 
-  const items = ref([]);
-  const projects = ref([]);
+const projects = ref([]);
+const items = ref([]);
+const size = ref({ width: 0, height: 0 });
+let resizeObserver;
 
-  const size = ref({ width: 0, height: 0 });
-  let resizeObserver;
+function drawPieChart(data, containerEl) {
+  if (!containerEl || size.value.width === 0) return;
+  d3.select(containerEl).selectAll('*').remove();
+  const width = size.value.width;
+  const height = size.value.height;
+  const radius = Math.min(width, height) / 2;
 
-  const frontendTools = new Set(['Vue', 'WordPress', 'Openlayers', 'Openseadragon', 'Annotorious', '3DHOP', 'Pottree']);
-  const backendTools = new Set(['Django', 'FlaskAPI', 'FastAPI', 'Strapi', 'Node', 'Express']);
+  const svg = d3.select(containerEl)
+    .append('svg')
+    .attr('viewBox', [-width / 2, -height / 2, width, height])
+    .style('font', '10px sans-serif');
 
-  function buildHierarchy(dataItems) {
-    const hierarchyMap = {};
-    dataItems.forEach(item => {
-      const types = item['dcterms:type'] || [];
-      const toolsList = types.map(t => t['@value']);
-      toolsList.forEach(primary => {
-        const isFrontend = frontendTools.has(primary);
-        const isBackend = backendTools.has(primary);
-        if (!isFrontend && !isBackend) return;
-        const category = isFrontend ? 'Frontend' : 'Backend';
-        if (!hierarchyMap[category]) hierarchyMap[category] = {};
-        if (!hierarchyMap[category][primary]) hierarchyMap[category][primary] = { count: 0, seconds: {} };
-        hierarchyMap[category][primary].count++;
-        let secList = toolsList.filter(sec => sec !== primary);
-        if (isFrontend) secList = secList.filter(sec => frontendTools.has(sec));
-        if (isBackend) secList = secList.filter(sec => backendTools.has(sec));
-        secList.forEach(secondary => {
-          const entry = hierarchyMap[category][primary].seconds;
-          entry[secondary] = (entry[secondary] || 0) + 1;
-        });
-      });
-    });
-    return {
-      name: 'Tools',
-      children: Object.entries(hierarchyMap).map(([category, primaries]) => ({
-        name: category,
-        children: Object.entries(primaries).map(([primary, data]) => {
-          const children = Object.entries(data.seconds).map(([sec, count]) => ({ name: sec, value: count }));
-          return children.length === 0
-            ? { name: primary, value: data.count }
-            : { name: primary, children };
-        })
-      }))
-    };
-  }
+  const pie = d3.pie().value(d => d.value);
+  const arc = d3.arc().innerRadius(0).outerRadius(radius);
 
-  // Reusable sunburst drawing function, accepts a container element
-  function drawSunburst(rootData, containerEl) {
-    if (!containerEl || size.value.width === 0) return;
-    const w = size.value.width;
-    const h = size.value.height;
-    d3.select(containerEl).selectAll('*').remove();
-    const radius = Math.min(w, h) / 2;
+  const pastelPalette = [
+  '#fbb4ae', '#b3cde3', '#ccebc5', '#decbe4', '#fed9a6',
+  '#ffffcc', '#e5d8bd', '#fddaec', '#f2f2f2'
+];
 
-    const svg = d3.select(containerEl)
-      .append('svg')
-      .attr('viewBox', [-w / 2, -h / 2, w, h])
-      .style('font', '10px sans-serif');
+const color = d3.scaleOrdinal(pastelPalette);
 
-    const rootNode = d3.hierarchy(rootData)
-      .sum(d => d.value || 0)
-      .sort((a, b) => (b.value || 0) - (a.value || 0));
-    d3.partition().size([2 * Math.PI, rootNode.height + 1])(rootNode);
 
-    const categories = rootData.children?.map(c => c.name) || [];
-    const categoryColor = d3.scaleOrdinal(d3.schemeSet2).domain(categories);
-    const primaries = rootData.children?.flatMap(c => c.children?.map(p => p.name)) || [];
-    const primaryColor = d3.scaleOrdinal(d3.schemeCategory10).domain(primaries);
+  const arcs = pie(data);
 
-    const arc = d3.arc()
-      .startAngle(d => d.x0)
-      .endAngle(d => d.x1)
-      .innerRadius(d => (d.y0 * radius) / (rootNode.height + 1))
-      .outerRadius(d => (d.y1 * radius) / (rootNode.height + 1));
+  svg.selectAll('path')
+    .data(arcs)
+    .enter()
+    .append('path')
+    .attr('d', arc)
+    .attr('fill', d => color(d.data.name))
+    .append('title')
+    .text(d => `${d.data.name}: ${d.data.value}`);
+}
 
-    const g = svg.append('g');
-    const nodes = rootNode.descendants().slice(1);
+onMounted(async () => {
+  // Subject areas
+  const resp = await fetchByResourceClass(99);
+  projects.value = resp.map(item => ({
+    subjectArea: item['dcterms:subject'] || []
+  }));
 
-    g.selectAll('path')
-      .data(nodes)
-      .join('path')
-      .attr('fill', d => {
-        if (d.depth === 1) return categoryColor(d.data.name);
-        if (d.depth === 2) return primaryColor(d.data.name);
-        if (d.depth === 3) {
-          const parentName = d.parent.data.name;
-          return d3.color(primaryColor(parentName)).brighter(0.7).formatHex();
-        }
-        return '#ccc';
-      })
-      .attr('d', arc)
-      .on('click', (event, p) => {
-        rootNode.each(d => {
-          d.target = {
-            x0: ((d.x0 - p.x0) / (p.x1 - p.x0)) * 2 * Math.PI,
-            x1: ((d.x1 - p.x0) / (p.x1 - p.x0)) * 2 * Math.PI,
-            y0: Math.max(0, d.y0 - p.depth),
-            y1: Math.max(0, d.y1 - p.depth)
-          };
-        });
-        const t = g.transition().duration(750);
-        g.selectAll('path').transition(t).attrTween('d', d => () => arc(d.target));
-      });
+  const allSubjects = projects.value.flatMap(item =>
+    item.subjectArea.filter(sub => sub['@value']).map(sub => sub['@value'])
+  );
 
-    g.selectAll('path').append('title')
-      .text(d => `${d.data.name}: ${d.value}`);
-  }
-
-  onMounted(async () => {
-    // Fetch dcterms:subject data
-    const resp = await fetchByResourceClass(99);
-    projects.value = resp.map(item => ({
-      subjectArea: item['dcterms:subject'] || []
-    }));
-
-    const allSubjects = projects.value.flatMap(item =>
-      item.subjectArea
-        .filter(sub => sub['@value'])
-        .map(sub => sub['@value'])
-    );
-
-    const subjectCounts = {};
-    allSubjects.forEach(subject => {
-      subjectCounts[subject] = (subjectCounts[subject] || 0) + 1;
-    });
-
-    const sunburstSubjects = {
-      name: "Subjects",
-      children: Object.entries(subjectCounts).map(([name, count]) => ({
-        name,
-        value: count
-      }))
-    };
-
-    // Observe container
-    resizeObserver = new ResizeObserver(() => {
-      size.value.width = chartContainerTools.value?.clientWidth || 0;
-      size.value.height = chartContainerTools.value?.clientHeight || 0;
-
-      if (items.value.length && chartContainerTools.value)
-        drawSunburst(buildHierarchy(items.value), chartContainerTools.value);
-
-      if (chartContainerSubjects.value)
-        drawSunburst(sunburstSubjects, chartContainerSubjects.value);
-    });
-
-    if (chartContainerTools.value) resizeObserver.observe(chartContainerTools.value);
-    if (chartContainerSubjects.value) resizeObserver.observe(chartContainerSubjects.value);
-
-    items.value = await fetchByResourceTemplate(6);
-
-    drawSunburst(buildHierarchy(items.value), chartContainerTools.value);
-    drawSunburst(sunburstSubjects, chartContainerSubjects.value);
+  const subjectCounts = {};
+  allSubjects.forEach(subject => {
+    subjectCounts[subject] = (subjectCounts[subject] || 0) + 1;
   });
 
-  onUnmounted(() => {
-    if (resizeObserver) {
-      if (chartContainerTools.value) resizeObserver.unobserve(chartContainerTools.value);
-      if (chartContainerSubjects.value) resizeObserver.unobserve(chartContainerSubjects.value);
-    }
+  const subjectData = Object.entries(subjectCounts).map(([name, value]) => ({ name, value }));
+
+  // Tech stack (from schema:category)
+  const techItems = await fetchByResourceTemplate(6);
+  const allCategories = techItems.flatMap(item =>
+    (item['dcterms:type'] || []).filter(cat => cat['@value']).map(cat => cat['@value'])
+  );
+
+  const techCounts = {};
+  allCategories.forEach(cat => {
+    techCounts[cat] = (techCounts[cat] || 0) + 1;
   });
+
+  const techData = Object.entries(techCounts).map(([name, value]) => ({ name, value }));
+
+  // Resize observer
+  resizeObserver = new ResizeObserver(() => {
+    size.value.width = chartContainerTools.value?.clientWidth || 0;
+    size.value.height = chartContainerTools.value?.clientHeight || 0;
+
+    drawPieChart(subjectData, chartContainerSubjects.value);
+    drawPieChart(techData, chartContainerTools.value);
+  });
+
+  if (chartContainerTools.value) resizeObserver.observe(chartContainerTools.value);
+  if (chartContainerSubjects.value) resizeObserver.observe(chartContainerSubjects.value);
+
+  // Initial draw
+  drawPieChart(subjectData, chartContainerSubjects.value);
+  drawPieChart(techData, chartContainerTools.value);
+});
+
+onUnmounted(() => {
+  if (resizeObserver) {
+    if (chartContainerTools.value) resizeObserver.unobserve(chartContainerTools.value);
+    if (chartContainerSubjects.value) resizeObserver.unobserve(chartContainerSubjects.value);
+  }
+});
 </script>
 
 <style scoped>
+.sunburst-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 0rem;
+  height: 100%;
+  width: 100%;
+}
+
+.sunburst-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunburst-title {
+  margin-bottom: 10px;
+}
+
+.sunburst-chart {
+  width: 200px;
+  height: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sunburst-chart:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1100px) {
   .sunburst-grid {
-    display: flex;
-    flex-wrap:nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    padding: 0rem;
-    height: 100%;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 1100px) {
-    .sunburst-grid {
-  
-    gap: 0.5rem;
-   
-  }
-
-  }
-
-  .sunburst-group{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .sunburst-title{
-    margin-bottom:10px;
-  }
-
-  .sunburst-chart {
-    width: 200px;
-    height: 200px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .sunburst-chart:hover {
-transform:scale(1.05);
-  }
-
-  @media screen and (max-width: 1100px) {
-    .sunburst-grid {
-  
     gap: 1rem;
-   
   }
-
   .sunburst-chart {
     width: 170px;
     height: 170px;
   }
 }
 
-  @media screen and (max-width: 900px) {
-    .sunburst-grid {
-  
+@media screen and (max-width: 900px) {
+  .sunburst-grid {
     gap: 2rem;
-   
   }
-
   .sunburst-chart {
     width: 200px;
     height: 200px;
   }
+}
 
-
-
-  }
-
-  @media screen and (max-width: 500px) {
-    .sunburst-grid {
-  
+@media screen and (max-width: 500px) {
+  .sunburst-grid {
     gap: 1rem;
-   
   }
-
   .sunburst-chart {
     width: 120px;
     height: 120px;
   }
-
-
-
-  }
+}
 </style>
