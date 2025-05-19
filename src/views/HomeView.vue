@@ -26,7 +26,7 @@
 
     <!---- will fetch 3 page blocks from Omeka S API -->
     <div class="content">
-      <div class="row grey-gradient">
+      <div class="row grey-gradient" style="">
         <div class="info-module">
           <div class="info-module-slogan left">
             <div class="text-module-title">Application Experts</div>
@@ -311,7 +311,7 @@ import type { Project } from '@/types';
     font-weight: 300;
     text-align: justify;
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .intro-article p {
@@ -408,6 +408,11 @@ import type { Project } from '@/types';
   }
 
   @media screen and (max-width: 900px) {
+    .intro-space {
+
+   
+  }
+
     .row-left {
       display: flex;
       flex-direction: column-reverse;
@@ -730,7 +735,7 @@ import type { Project } from '@/types';
     }
 
     .intro-space {
-      width: calc(100% - 50px);
+      width: calc(100% - 120px);
     }
 
     .text-module-link {
@@ -742,6 +747,8 @@ import type { Project } from '@/types';
       width: 100%;
       margin-top: 30px;
     }
+
+   
 
     .info-module-slogan h2 {
       color: var(--theme-heading);
@@ -774,7 +781,7 @@ import type { Project } from '@/types';
       width: calc(100% - 30px);
       text-align: left;
       justify-content: left;
-      padding-left: 30px;
+      padding-left: 40px;
     }
 
     .info-module h1 {}
@@ -985,6 +992,11 @@ import type { Project } from '@/types';
     padding-left: 30px;
 
   }
+
+  .info-module {
+
+      padding-left: 30px;
+    }
 
   .info-module .left {
     padding-left: 0px;

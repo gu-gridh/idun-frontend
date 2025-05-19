@@ -67,7 +67,7 @@
                         <div class="data-module">
                             <div class="buffer">
                                 <div class="module">
-                                    <div class="image-stack">
+                                    <div class="image-stack left">
                                         <div class="image-stack-items-container">
 
                                             <div class="image-stack-item"
@@ -114,9 +114,9 @@
                         <div class="data-module">
                             <div class="buffer">
                                 <div class="module">
-                                    <div class="image-stack" style="margin-left:-40px; margin-right:0px; ">
+                                    <div class="image-stack right">
                                         <div class="image-stack-items-container"
-                                            style=" justify-content: left; padding-left:30px;  margin-right:0px; overflow:hidden;">
+                                            style=" justify-content: left; padding-left:30px;  margin-right:0px;">
 
                                             <div class="image-stack-item-right"
                                                 style="background-image:url(digicure/etruscan2.jpg); background-size:cover;z-index:3;  margin-top:60px; width:535px; ">
@@ -138,7 +138,7 @@
                     <div class="data-module">
                         <div class="buffer">
                             <div class="module">
-                                <div class="image-stack">
+                                <div class="image-stack left">
                                     <div class="image-stack-items-container">
                                         <a href="https://saintsophia.dh.gu.se/viewer/?q=113-07b/rti" target="_blank">
                                         <div class="image-stack-item" style="background-image:url(digicure/sophia3.jpg); background-size:cover; z-index:1; margin-top:50px;">
@@ -402,6 +402,11 @@ padding-bottom:30px;
         padding-top:30px;
     }
 
+    .info-module {
+
+padding-left: 30px;
+}
+
     .data-module {
       width: 100%;
       text-align: left;
@@ -435,5 +440,34 @@ padding-bottom:30px;
 
 
 }
+}
+
+@media screen and (max-width: 600px) {
+    .text-module {
+        padding-left:10px; 
+    }
+
+    .intro-article{
+        padding-left:10px; 
+       
+    }
+
+    .data-module {
+      width: 100%;
+      text-align: left;
+      justify-content: center;
+      padding-left: 0px;
+      margin-left:10px;
+    }
+
+    .image-stack.left {
+        margin-left: 100px;
+    }
+
+    .image-stack.right {
+        margin-left: -180px;
+    }
+
+   
 }
 </style>
