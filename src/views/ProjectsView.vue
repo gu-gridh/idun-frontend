@@ -14,12 +14,15 @@
             <div v-for="project in projects" :key="project.id" class="project">
                 <router-link :to="'/projects/' + project?.id">
                     <h2>{{ project?.name || 'Untitled Project' }}</h2>
-                    <h3 v-if="project?.shortDescription?.length">
+                    <!-- <h3 v-if="project?.shortDescription?.length">
                         <span v-for="description in project.shortDescription" :key="description?.['@value']">
                             {{ description?.['@value'] || 'No short description' }}
                         </span>
                     </h3>
-                    <p v-else>No short description available</p>
+                    <p v-else>No short description available</p> -->
+                    <h4 v-if="project.owner?.length" v-for="(owner, i) in project.owner" :key="i">
+                        {{ owner?.display_title || 'Unnamed owner' }}
+                    </h4>
                 </router-link>
             </div>
         </div>
@@ -39,6 +42,7 @@
     const numItems = ref(50) //this is the number of items to fetch
 
     onMounted(async () => {
+        window.scrollTo(0, 0);
         const response = await fetchByResourceClass(projectsId.value);
         projects.value = await translateResponse(response);
         //sort by name value

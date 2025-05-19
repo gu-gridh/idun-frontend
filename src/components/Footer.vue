@@ -5,10 +5,15 @@
         <a class="site-link link" href="https://www.gu.se/digital-humaniora" target="_blank">GRIDH home</a>
         <a class="site-link link" href="https://github.com/gu-gridh/" target="_blank">GitHub repository</a>
       </div>
+      <div class="links-stack">
+        <a class="site-link link" href="https://www.gu.se/digital-humaniora/om-oss/kontakt#accordion=be36559a-f62b-4d9c-9e31-16b35444922f" target="_blank">Personell</a>
+        <a class="site-link link" href="https://www.gu.se/digital-humaniora/om-oss/kontakt" target="_blank">Contact</a>
+      </div>
      <div class="links-stack border-style">
       Address: Box 100, 405 30 Gothenburg <br>
       Telephone: +46 (0) 31-786 0000
     </div> 
+ 
     </div>
     <div class="partners">
       <a href="https://dh.gu.se/">
@@ -40,6 +45,10 @@
   z-index: 3000;
   bottom: -2px;;
   font-family: "Barlow Condensed", sans-serif;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+
 }
 
 #footer a {
@@ -89,9 +98,9 @@
 
 #developer-info {
   display: flex; 
-  align-items: flex-end; 
+  align-items:flex-end; 
   margin-left: 40px;
-  margin-top: 10px;
+  margin-top: 0px;
   font-size: 1.5em;
   line-height: 1.4;
   font-weight: 200;
@@ -138,6 +147,10 @@ opacity:0.8;
 
 .links-stack {
   margin-right: 20px; 
+  display:flex;
+  flex-direction: column;
+height:50px;
+  justify-content: center;
 }
 
 .links-stack a {

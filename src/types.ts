@@ -82,7 +82,12 @@ export interface Project {
         {
             '@value': string
         }
-    ]
+    ],
+    'schema:status': [
+        {
+            '@value': string
+        }
+    ],
     
 }   
 
@@ -110,6 +115,16 @@ export interface Tool {
         }
     ],
     type: [
+        {
+            '@value': string
+        }
+    ],
+    family: [
+        {
+            '@value': string
+        }
+    ],
+    color: [
         {
             '@value': string
         }

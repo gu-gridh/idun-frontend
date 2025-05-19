@@ -20,8 +20,8 @@ const router = createRouter({
       component: () => import('../views/Project.vue'),
     },
     {
-      path: '/tools',
-      name: 'tools',
+      path: '/resources',
+      name: 'resources',
       component: () => import('../views/ToolsView.vue'),
     },
     {

@@ -47,7 +47,6 @@ const projectsId = ref(99) //this is the id for resource class 'Projects'
 onMounted (async () => {
     const response = await fetchByResourceClass(projectsId.value);
     projects.value = await translateResponse(response);
-    //loop and keep items with status active
     projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
     //loop and keep items with status active
     projects.value = projects.value.filter((item) =>

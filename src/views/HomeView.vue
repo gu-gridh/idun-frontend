@@ -31,39 +31,48 @@
           <div class="info-module-slogan left">
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
-            <h2>GRIDH has to date been involved in more than <span>{{ projectsNum }}</span> research projects, and
-              helped gather more
-              than <span>{{ totFunding }} million</span> in funding.</h2>
-            <div class="text-module-link hoverable contact-us">Contact us and start a project
-            </div>
+            <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>{{ projectsNum
+                }}</span> funded research projects, and have helped raise in excess of <span>{{ totFunding }} million</span> in external funding for these. We are currently involved in
+              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of <span>3</span> national research infrastructures and <span>1</span>
+              research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a href="http://www.swe-clarin.se">Swe-Clarin</a></span>, <span><a href="https://infravis.se">Infravis</a></span>, and <span><a href="http://www.dash-doctoralschool.se">DASH</a></span>.</h2>
+            <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 
           </div>
         </div>
-        <div class="data-module">
+        <div class="data-module text">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><router-link to="/active"> <span class="livedata-pulse">8</span> active
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ activeNum }}</span> active
                 projects</router-link> </div>
-            <div class="text-module-description">Active projects info text </div>
+            <div class="text-module-description"><!-- Active projects info text  --></div>
 
-            <div class="text-module-data"><router-link to="/tools"> <span class="livedata-pulse">{{ toolsNum }}</span>
+            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ toolsNum
+                  }}</span>
                 portals and tools </router-link> </div>
-            <div class="text-module-description">Portals and tools info text </div>
+            <div class="text-module-description"><!-- Portals and tools info text --> </div>
 
 
-            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in funding</div>
-            <div class="text-module-description">Money-maker info text </div>
+            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in external
+              funding</div>
+            <div class="text-module-description"><!-- Money-maker info text  --></div>
 
+            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px;"><router-link to="/projects">See all projects</router-link></div>
 
-            <div class="text-module-link hoverable"><router-link to="/projects">See all projects</router-link></div>
+            <div class="text-module-title">Infrastructures </div>
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">3</span> National
+                infrastructures</router-link> </div>
+            <div class="text-module-description"></div>
+
+            
+            
 
           </div>
         </div>
       </div>
 
 
-      <div class="row">
-        <div class="data-module">
+      <div class="row-left">
+        <div class="data-module visualisation">
           <div class="buffer">
             <div class="module theme-gradient-1 graph-wrapper">
               <Graph />
@@ -79,7 +88,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row-right">
         <!-- some kind of vizualisation -->
         <div class="info-module">
           <div class="info-module-slogan left">
@@ -88,17 +97,17 @@
             <h2 v-html="redData1.html"></h2>
           </div>
         </div>
-        <div class="data-module">
+        <div class="data-module visualisation">
           <div class="buffer">
-            <div class="module hoverable theme-gradient-2">
+            <div class="module theme-gradient-2">
               <Sunburst />
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="data-module">
+      <div class="row-left">
+        <div class="data-module visualisation">
           <div class="buffer">
             <div class="module hoverable theme-gradient-map">
               <Map />
@@ -122,16 +131,16 @@
 
         <div class="links">
 
-          <div class="link-item hoverable">
+          <div class="link-item  digicure">
             <router-link to="/digicure" class="link-item-filler">
-              <div class="link-title">
+              <div class="link-title" style="">
                 DIGICURE
               </div>
             </router-link>
           </div>
 
 
-          <div class="link-item  hoverable">
+          <div class="link-item   tools">
             <router-link to="/" class="link-item-filler">
               <div class="link-title">
                 AI/ML development
@@ -140,7 +149,7 @@
           </div>
 
 
-          <div class="link-item  hoverable">
+          <div class="link-item   technical">
             <router-link to="/" class="link-item-filler">
               <div class="link-title">
                 Technical infrastructure
@@ -149,12 +158,16 @@
           </div>
 
 
-          <div class="link-item hoverable">
-            <div class="link-title">
-              <a href="https://github.com/gu-gridh" target="_blank">
-                <img src="@/assets/githubLogo.png" alt="github logo" style="width: 150px;" />
-              </a>
-            </div>
+          <div class="link-item  github">
+            <a href="https://github.com/gu-gridh" target="_blank" class="link-item-filler">
+              <div class="link-title">
+
+                <div class="link-title">
+                  GitHub Repositories
+                </div>
+
+              </div>
+            </a>
           </div>
         </div>
         <!-- Active projects --> <!-- should be marked out in database -->
@@ -163,29 +176,32 @@
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
           <h3>Highlighted Resources</h3>
           <div class="projects">
-            <div class="project-item" style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
+            <div class="project-item"
+              style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
               <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Saint Sophia's Inscriptions</div>
             </div>
 
 
-      
-          <div class="project-item" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
-         
-            <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
-            <div class="project-title">Dawit Isaak Database of Censorship</div>
-          </div>
-          <div class="project-item" style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg);">
-            <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
-            <div class="project-title">Etruscan Chamber Tombs</div>
+
+            <div class="project-item"
+              style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
+
+              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
+              <div class="project-title">Dawit Isaak Database of Censorship</div>
+            </div>
+            <div class="project-item"
+              style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg);">
+              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
+              <div class="project-title">Etruscan Chamber Tombs</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="project-button">
-    <div class="text-module-link hoverable"><router-link to="/tools">See all resources</router-link></div>
-  </div>
+    <div class="project-button">
+      <div class="text-module-link hoverable"><router-link to="/resources">See all resources</router-link></div>
+    </div>
   </div>
 </template>
 
@@ -195,7 +211,8 @@
   import { onMounted, ref } from 'vue';
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
-import Sunburst from '@/components/Sunburst.vue';
+  import Sunburst from '@/components/Sunburst.vue';
+import type { Project } from '@/types';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
@@ -203,6 +220,7 @@ import Sunburst from '@/components/Sunburst.vue';
   const projectsNum = ref(0);
   const toolsNum = ref(0);
   const totFunding = ref(0);
+  const activeNum = ref(0);
 
   onMounted(async () => {
     //fetch html data from Omeka pages
@@ -212,6 +230,16 @@ import Sunburst from '@/components/Sunburst.vue';
       .then(data => {
         projectsNum.value = data.total
       });
+      //fetch active projects
+    const resp = await fetchByResourceClass(99)
+    // count those with status "active"
+    activeNum.value = resp.reduce((count: number, item: Project) => {
+      const status = item['schema:status']?.[0]?.['@value']?.toLowerCase() ?? '';
+      return status === 'active' ? count + 1 : count;
+    }, 0);
+
+
+    
     await fetchCount('items?resource_template_id=6')
       .then(data => {
         toolsNum.value = data.total
@@ -244,9 +272,6 @@ import Sunburst from '@/components/Sunburst.vue';
         redData1.value = convertToJson(response[1])
         redData2.value = convertToJson(response[2])
         redData3.value = convertToJson(response[3])
-        console.log('redData1', redData1.value)
-        console.log('redData2', redData2.value)
-        console.log('redData3', redData3.value)
       })
 
   };
@@ -267,13 +292,15 @@ import Sunburst from '@/components/Sunburst.vue';
   .intro-space {
     width: calc(100% - 140px);
     padding-left: 60px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .intro-title {
     font-size: 50px;
     font-weight: 600;
     color: var(--theme-heading);
+    line-height:0.9;
+    margin-top:10px;
   }
 
   .intro-article {
@@ -304,21 +331,22 @@ import Sunburst from '@/components/Sunburst.vue';
   @media screen and (max-width: 1100px) {
     .intro-article {
       columns: 1;
-
+      text-align: left;
     }
   }
 
-  .contact-us {
-    width: 250px;
-    margin-top: 30px;
+  .info-module a{
+    color: var(--theme-livedata1-dark);
   }
+
 
   .float-tooltip-kap {
     position: absolute;
     white-space: nowrap;
+    max-width: max(70%, 150px) !important;
     top: 100px;
     right: 20px;
-    font-family: sans-serif !important;
+    font-family: "Barlow Condensed", sans-serif !important;
     font-size: 16px !important;
     font-weight: 100;
     padding: 5px 8px 5px 8px !important;
@@ -339,6 +367,7 @@ import Sunburst from '@/components/Sunburst.vue';
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+ 
   }
 
   .row {
@@ -346,9 +375,57 @@ import Sunburst from '@/components/Sunburst.vue';
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    align-items:center;
+    gap: 0px;
+    margin: 0;
+    overflow:hidden;
+  }
+
+  .row-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     align-items: center;
     gap: 0px;
     margin: 0;
+    padding:0px;
+    overflow:hidden;
+  }
+
+
+
+
+  .row-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    gap: 0px;
+    margin: 0;
+    overflow:hidden;
+  }
+
+  @media screen and (max-width: 900px) {
+    .row-left {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      align-items: flex-end;
+      gap: 0px;
+      margin-top: 30px;
+    }
+
+    .row-right {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      gap: 0px;
+      margin-top: 30px;
+    }
   }
 
   .pink-gradient {
@@ -376,7 +453,7 @@ import Sunburst from '@/components/Sunburst.vue';
   }
 
   .theme-gradient-map {
-    background: linear-gradient(360deg, rgb(235, 239, 241) 30%, rgb(233, 194, 231) 70%);
+    background: linear-gradient(360deg, rgb(235, 239, 241) 30%, rgb(234, 194, 213) 70%);
   }
 
   .hoverable {
@@ -407,6 +484,12 @@ import Sunburst from '@/components/Sunburst.vue';
     padding-left: 30px
   }
 
+  .text-module a {
+
+    color: var(--theme-heading);
+
+  }
+
   .text-module-title {
     font-size: 18px;
 
@@ -420,11 +503,11 @@ import Sunburst from '@/components/Sunburst.vue';
   .text-module-description {
     font-size: 20px;
     margin-bottom: 20px;
-    max-width:600px;
+    max-width: 600px;
   }
 
   .text-module-link {
-    color: var(--theme-heading);
+    color: black;
     font-size: 22px;
     width: 150px;
     cursor: pointer;
@@ -432,8 +515,15 @@ import Sunburst from '@/components/Sunburst.vue';
 
   .text-module span {
     color: var(--theme-livedata1-dark);
-    font-weight:500;
+    font-weight: 500;
   }
+
+  .contact-us {
+    width: 250px;
+    margin-top: 30px;
+    color: var(--theme-heading);
+  }
+
 
   .module {
     border-radius: 15px;
@@ -449,6 +539,10 @@ import Sunburst from '@/components/Sunburst.vue';
     width: 50%;
     height: 100%;
   }
+
+  .info-module b, strong {
+    color: var(--theme-livedata1-dark);
+   }
 
   .info-module .left {
     text-align: right;
@@ -487,11 +581,12 @@ import Sunburst from '@/components/Sunburst.vue';
 
   .info-module-slogan h2 {
     color: var(--theme-heading);
-    margin-top: -30px;
+    margin-top: -30px !important;
     max-width: 600px;
     font-weight: 300;
     font-size: 20px;
   }
+
 
 
   .links {
@@ -502,7 +597,7 @@ import Sunburst from '@/components/Sunburst.vue';
     align-items: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    gap: 15px;
+    gap: 1px;
     padding: 40px 40px;
   }
 
@@ -533,29 +628,6 @@ import Sunburst from '@/components/Sunburst.vue';
 
 
 
-  .link-item {
-    background: linear-gradient(180deg, rgba(255, 0, 100, 0.1) 0%, rgba(230, 230, 230, 1) 100%);
-    height: 100px;
-    padding: 10px;
-    flex: 1 1 0;
-    border-radius: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .link-item-filler {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .link-title {
-    width: 100%;
-    font-size: 25px;
-  }
 
 
 
@@ -566,24 +638,24 @@ import Sunburst from '@/components/Sunburst.vue';
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-top:20px;
+    margin-top: 20px;
     transition: all 0.2s ease-in-out;
   }
 
   .project-title {
     width: 100%;
     position: relative;
-bottom:0px;
+    bottom: 0px;
     font-size: 25px;
     font-weight: 600;
     text-align: center;
     pointer-events: none;
-    height:50px;
-padding-top:80px;
-margin-top:-20px;
-transition: all 0.2s ease-in-out;
-background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-pointer-events:none;
+    height: 50px;
+    padding-top: 80px;
+    margin-top: -20px;
+    transition: all 0.2s ease-in-out;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
   }
 
   .project-item {
@@ -592,20 +664,20 @@ pointer-events:none;
     padding: 0px;
     width: 0;
     overflow: hidden;
-    background-blend-mode:screen;
-    display:flex;
+    background-blend-mode: screen;
+    display: flex;
     flex-direction: column;
     flex: 1 0 0;
     align-items: center;
-    justify-content:flex-end;
+    justify-content: flex-end;
     color: white;
-    background-size: cover; 
+    background-size: 100%;
     background-position: 50%;
-    transition: all 0.5s ease-in-out;
-
+    transition: all 0.2s ease-in-out;
   }
-  .project-item:hover .project-image-round{
-    transform:scale(1.1);
+
+  .project-item:hover .project-image-round {
+    transform: scale(1.1);
   }
 
   .project-item:hover .project-title {
@@ -642,14 +714,6 @@ pointer-events:none;
     justify-content: center;
   }
 
-  .network {
-    background-image: url(https://cylynx.imgix.net/uploads/graphvis_visjs.jpg?auto=format,compress);
-    background-size: cover;
-    background-position: 50%;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-  }
 
   .graph-wrapper {
     width: 100%;
@@ -666,7 +730,7 @@ pointer-events:none;
     }
 
     .intro-space {
-      width: calc(100% - 120px);
+      width: calc(100% - 50px);
     }
 
     .text-module-link {
@@ -679,33 +743,65 @@ pointer-events:none;
       margin-top: 30px;
     }
 
-    .info-module-slogan {
-      width: 100%;
+    .info-module-slogan h2 {
+      color: var(--theme-heading);
+      margin-top: -30px !important;
+      max-width: calc(100% - 80px);
+      font-weight: 300;
+      font-size: 20px;
     }
 
     .data-module {
       width: 100%;
       text-align: center;
+      justify-content: center;
+      padding-left: 0px;
+      margin-left: 0px;
+
+
     }
 
+    .visualisation {
+      width: calc(100% - 40px);
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: 0px;
+    }
+
+
+
     .info-module {
-      width: 80vw;
-      text-align: left !important;
+      width: calc(100% - 30px);
+      text-align: left;
       justify-content: left;
-      padding-left: 40px;
+      padding-left: 30px;
+    }
+
+    .info-module h1 {}
+
+
+    .text-module-description {
+      width: 100%;
     }
 
 
     .info-module .left {
-      text-align: left;
-      padding: 0px 20px 30px 20px;
+      display: flex;
+      flex-direction: column;
       align-items: flex-start;
-      width: 100%;
+      justify-content: left;
+      padding: 0px 0px 0px 0px;
+      text-align: left;
+      padding-left: 20px;
+      align-items: flex-start;
+      width: calc(100% - 20px);
+      
+
     }
 
     .info-module .right {
       text-align: left;
-      padding: 0px 20px 30px 20px;
+      padding: 0px 20px 0px 20px;
     }
 
     .links {
@@ -724,7 +820,8 @@ pointer-events:none;
 
 
     .buffer {
-      padding: 20px 20px;
+      padding: 0px 0px;
+      margin-bottom:40px;
     }
 
     .link-item {
@@ -763,5 +860,143 @@ pointer-events:none;
       width: calc(90%);
 
     }
+  }
+
+  .link-item {
+    background: linear-gradient(180deg, rgb(133, 133, 133) 0%, rgb(182, 109, 109) 100%);
+    height: 100px;
+    padding: 10px;
+    flex: 1 1 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-size: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .link-title {
+    width: 100%;
+    color: white !important;
+    font-size: 30px;
+    /*     text-shadow:
+  0 0 1em black; */
+    font-weight: 600;
+  }
+
+  .link-item:hover {
+    background-size: 105%;
+  }
+
+  .link-item:hover .link-title {
+    text-shadow:
+      0 0 2em black;
+  }
+
+
+  .link-item-filler {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+
+
+
+  .digicure {
+    background:
+      linear-gradient(180deg, rgb(133, 133, 133) 0%, rgb(0, 0, 0) 100%),
+      url('digicure-link.jpg');
+    background-blend-mode: soft-light;
+    background-size: 100%;
+    background-position: 50%;
+    color: white !important;
+    border-radius: 12px 0px 0px 12px;
+  }
+
+  .tools {
+
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .technical {
+
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .github {
+
+    border-radius: 0px 12px 12px 0px;
+  }
+
+  @media screen and (max-width: 900px) {
+
+    .digicure {
+      border-radius: 12px 0px 0px 0px;
+    }
+
+    .tools {
+
+      border-radius: 0px 12px 0px 0px;
+    }
+
+    .technical {
+
+      border-radius: 0px 0px 0px 12px;
+    }
+
+    .github {
+
+      border-radius: 0px 0px 12px 0px;
+    }
+
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .digicure {
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .tools {
+
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .technical {
+
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .github {
+
+      border-radius: 12px;
+
+    }
+  }
+
+    @media screen and (max-width: 600px) {
+    .intro-space {
+
+    padding-left: 30px;
+
+  }
+
+  .info-module .left {
+    padding-left: 0px;
+width:100%;
+
+  }
+
+  .info-module .right {
+    padding-left: 0px;
+
+
+  }
+
   }
 </style>

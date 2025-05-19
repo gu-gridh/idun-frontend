@@ -1,14 +1,19 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
-    <div class="horizontal-card"> <!-- TODO every other alterntate between two very light grey tones (look at old dh portal) -->
+    <div class="horizontal-card" :style="{
+      backgroundColor:
+        typeof color === 'string' && color.length === 6
+          ? '#' + color
+          : '#efefef'
+    }">
       <figure>
       <img :src="image" alt="Project image" />
     </figure>
-      <div class="card-info">
+      <div class="card-info" >
         <h3 class="card-title">
           {{ title }}
         </h3>
-        <div class="card-body">
+        <div class="card-body" >
           {{ Array.isArray(description) && description[0]?.['@value'] || '' }}
         </div>
 
@@ -23,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps(["id", "title", "image", "url", "subjectArea", "description" ]);
+defineProps(["id", "title", "image", "url", "subjectArea", "description", "color" ]);
 </script>
 
 <style scoped>

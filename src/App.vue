@@ -7,8 +7,8 @@
 
 
   <div class="top-menu">
-    <router-link to="/"><div class="menu-item  menu-selected">Home</div></router-link>
-    <router-link to="/tools"><div class="menu-item">All resources and tools</div></router-link>
+    <router-link to="/"><div class="menu-item">Home</div></router-link>
+    <router-link to="/resources"><div class="menu-item">All resources</div></router-link>
     <router-link to="/projects"><div class="menu-item">All projects</div></router-link>
 </div>
 
@@ -41,34 +41,39 @@
   .top-menu {
     display: flex;
     flex-direction: row;
-    width: 500px;
+    width: 320px;
     color:white;
     margin-left:60px;
     font-family: "Barlow Condensed", sans-serif !important;
   }
 
   .menu-item{
-    color:black ;
     background-color:none;
     padding:20px 20px;
     cursor:pointer;
-    margin-right:0.5px;
+    margin-right:0px;
+    margin-left:0px;
+  }
+
+
+  .top-menu a{
+
+    padding:0px;
   }
 
   .menu-item:hover{
+    background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
+
+  color:white;
+  }
+
+  .top-menu .router-link-exact-active{
+
     background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
     color:white;
 
   }
 
-  .menu-item:visited{
-    color:black !important;
-  }
-
-.menu-selected {
-  background: linear-gradient(360deg, #fdb1ce 0%, #bbafff 100%);
-  color:white;
-  }
 
   .top {
     font-family: "Barlow Condensed", sans-serif !important;
@@ -76,6 +81,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding-top: 30px;
+ 
   }
 
   .title-space {
@@ -146,7 +152,7 @@
   .logo {
     width: 120px;
     height: 120px;
-    /* background: url(gu_logo.png); */
+    background: url(gu_logo.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -160,6 +166,7 @@
     font-family: "Barlow Condensed", sans-serif !important;
     display:flex;
     flex-direction: column;
+
   }
 
   @media screen and (max-width: 900px) {
@@ -167,5 +174,29 @@
       flex-direction: column;
       align-items: left;
     }
+
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .title-space {
+
+    margin-left: 30px;
+
+  }
+
+    .title-gridh{
+font-size:60px;
+    }
+    .subtitle-gridh{
+      font-size:40px;
+      min-width:auto;
+    }
+
+    .top-menu {
+    margin-left:30px;
+
+
+  }
   }
 </style>

@@ -1,10 +1,15 @@
 <template>
   <a :href="url" target="_blank" rel="noopener noreferrer">
-    <div class="vertical-card"> <!-- TODO random background color? -->
+    <div class="vertical-card" >
       <figure>
       <img :src="image" alt="Project image" />
     </figure>
-      <div class="card-info">
+      <div class="card-info" :style="{
+    backgroundColor:
+      typeof color === 'string' && color.length === 6
+        ? '#' + color
+        : '#efefef'
+  }">
         <h3 class="card-title">
           {{ title }}
         </h3>
@@ -13,7 +18,7 @@
         </div>
 
         <div class="card-links">
-        Go to the resource
+        To the resource
       </div>
 
         <div class="card-tags">
@@ -27,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps(["id", "title", "image", "url", "subjectArea", "description" ]);
+defineProps(["id", "title", "image", "url", "subjectArea", "description", "isPartOf", "color" ]);
 </script>
 
 <style scoped>
@@ -40,7 +45,7 @@ padding:0px;
   overflow: hidden;
   cursor: pointer;
   max-width: 300px;
-  background-color:#efefef;
+  /* background-color:#efefef; */
 }
 
 .vertical-card:hover {
@@ -69,14 +74,19 @@ img {
   padding: 0.5rem 1rem;
 }
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-block: 0 0.5rem;
-  font-weight:300;
+  font-weight:400;
   line-height: 1.0;
   margin-top:10px;
+
+/*   -webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto; */
 }
 .card-body {
-  margin-block: 1.4rem;
+  margin-block: 0.8rem;
   font-size: 1.0rem;
   font-weight:300;
   line-height: 1.1;
