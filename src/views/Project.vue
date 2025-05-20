@@ -118,13 +118,15 @@
         border-radius:50%;
         background-color: var(--theme-livedata1-dark);
         margin-bottom:20px;
-        margin-left:-10px;
+        margin-left:-25px;
         overflow:hidden;
 
     }
 
     .project-image img{
         width:auto;
+        min-width:100px;
+        height:100px;
         height:100px;
     }
 
