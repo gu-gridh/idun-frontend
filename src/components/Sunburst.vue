@@ -38,14 +38,21 @@ function drawPieChart(data, containerEl) {
     .style('font', '10px sans-serif');
 
   const pie = d3.pie().value(d => d.value);
-  const arc = d3.arc().innerRadius(0).outerRadius(radius);
+  const arc = d3.arc().innerRadius(radius - 50).outerRadius(radius);
 
   const pastelPalette = [
+
   '#fbb4ae', '#b3cde3', '#ccebc5', '#decbe4', '#fed9a6',
   '#ffffcc', '#e5d8bd', '#fddaec', '#f2f2f2'
 ];
 
-const color = d3.scaleOrdinal(pastelPalette);
+const alternativePalette1 = [
+    '#9b5de5', '#c65ccd','#f15bb5','#f8a07b','#fee440',
+    '#7fd09d','#00bbf9','#00d8e7','#00f5d4'
+
+];
+
+const color = d3.scaleOrdinal(alternativePalette1);
 
 
   const arcs = pie(data);
