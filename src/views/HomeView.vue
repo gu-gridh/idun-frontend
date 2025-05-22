@@ -54,8 +54,7 @@
             <div class="text-module-description"><!-- Active projects info text  --></div>
 
             <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ rollingToolsNum
-                  ?? toolsNum
-                  }}</span>
+                  ?? toolsNum }}</span>
                 portals and tools </router-link> </div>
             <div class="text-module-description"><!-- Portals and tools info text --> </div>
 
@@ -245,10 +244,13 @@
   //rolling numbers
   const startRollingNumbers = () => {
     rollingIntervals.push(setInterval(() => {
-      rollingToolsNum.value = Math.floor(Math.random() * 50);
+    /*   rollingToolsNum.value = Math.floor(Math.random(1) * 50);
       rollingActiveNum.value = Math.floor(Math.random() * 25);
-      rollingTotFunding.value = Math.floor(Math.random() * 250);
-    }, 80));
+      rollingTotFunding.value = Math.floor(Math.random() * 250); */
+      rollingToolsNum.value += 1;
+      rollingActiveNum.value += 2;
+      rollingTotFunding.value += 5;
+    }, 120));
   };
 
   const stopRollingNumbers = () => {
