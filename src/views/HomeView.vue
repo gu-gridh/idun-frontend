@@ -31,8 +31,7 @@
           <div class="info-module-slogan left">
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
-            <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>{{ projectsNum
-                }}</span> funded research projects, and have helped raise in excess of <span>{{ totFunding }}
+            <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>40</span> funded research projects, and have helped raise in excess of <span>200
                 million</span> in external funding for these. We are currently involved in
               <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of
               <span>3</span> national research infrastructures and <span>1</span>
@@ -247,10 +246,10 @@
     /*   rollingToolsNum.value = Math.floor(Math.random(1) * 50);
       rollingActiveNum.value = Math.floor(Math.random() * 25);
       rollingTotFunding.value = Math.floor(Math.random() * 250); */
-      rollingToolsNum.value += 1;
-      rollingActiveNum.value += 2;
-      rollingTotFunding.value += 5;
-    }, 120));
+      rollingActiveNum.value += 1;
+      rollingToolsNum.value += 2;
+      rollingTotFunding.value += 3;
+    }, 500));
   };
 
   const stopRollingNumbers = () => {
