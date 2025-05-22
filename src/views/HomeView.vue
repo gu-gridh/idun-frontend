@@ -42,17 +42,17 @@
         <div class="data-module text">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ activeNum }}</span> active
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ rollingActiveNum ?? activeNum }}</span> active
                 projects</router-link> </div>
             <div class="text-module-description"><!-- Active projects info text  --></div>
 
-            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ toolsNum
+            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ rollingToolsNum ?? toolsNum
                   }}</span>
                 portals and tools </router-link> </div>
             <div class="text-module-description"><!-- Portals and tools info text --> </div>
 
 
-            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in external
+            <div class="text-module-data"><span class="livedata-pulse">{{ rollingTotFunding ?? totFunding }}</span> million in external
               funding</div>
             <div class="text-module-description"><!-- Money-maker info text  --></div>
 
@@ -208,7 +208,7 @@
 <script setup lang="ts">
 
   import { fetchAllPages, fetchCount, fetchByResourceClass } from '@/db';
-  import { onMounted, ref } from 'vue';
+  import { onMounted, ref, nextTick } from 'vue';
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
   import Sunburst from '@/components/Sunburst.vue';
@@ -221,49 +221,68 @@ import type { Project } from '@/types';
   const toolsNum = ref(0);
   const totFunding = ref(0);
   const activeNum = ref(0);
+  const rollingIntervals: number[] = [];
+  const rollingToolsNum = ref<number | null>(null);
+  const rollingActiveNum = ref<number | null>(null);
+  const rollingTotFunding = ref<number | null>(null);
 
-  onMounted(async () => {
-    //fetch html data from Omeka pages
-    await fetchPageData();
-    //fetch number of projects
-    await fetchCount('items?resource_class_id=99')
-      .then(data => {
-        projectsNum.value = data.total
+  //rolling numbers
+  const startRollingNumbers = () => {
+  rollingIntervals.push(setInterval(() => {
+    rollingToolsNum.value = Math.floor(Math.random() * 50);
+    rollingActiveNum.value = Math.floor(Math.random() * 25);
+    rollingTotFunding.value = Math.floor(Math.random() * 250);
+  }, 80));
+};
+
+const stopRollingNumbers = () => {
+  rollingIntervals.forEach(clearInterval);
+  rollingToolsNum.value = null;
+  rollingActiveNum.value = null;
+  rollingTotFunding.value = null;
+};
+
+onMounted(async () => {
+  // Start animated placeholders
+  startRollingNumbers();
+
+  // Fetch live data
+  await fetchPageData();
+
+  await fetchCount('items?resource_class_id=99')
+    .then(data => {
+      projectsNum.value = data.total;
+    });
+
+  const resp = await fetchByResourceClass(99);
+  activeNum.value = resp.reduce((count: number, item: Project) => {
+    const status = item['schema:status']?.[0]?.['@value']?.toLowerCase() ?? '';
+    return status === 'active' ? count + 1 : count;
+  }, 0);
+
+  await fetchCount('items?resource_template_id=6')
+    .then(data => {
+      toolsNum.value = data.total;
+    });
+
+  const response = await fetchByResourceClass(99);
+  totFunding.value = 0;
+  response.forEach((item: any) => {
+    if (item['schema:funding']) {
+      item['schema:funding'].forEach((funding: any) => {
+        const amount = Number(funding['@value']);
+        if (!isNaN(amount)) {
+          totFunding.value += amount;
+        }
       });
-      //fetch active projects
-    const resp = await fetchByResourceClass(99)
-    // count those with status "active"
-    activeNum.value = resp.reduce((count: number, item: Project) => {
-      const status = item['schema:status']?.[0]?.['@value']?.toLowerCase() ?? '';
-      return status === 'active' ? count + 1 : count;
-    }, 0);
-
-
-    
-    await fetchCount('items?resource_template_id=6')
-      .then(data => {
-        toolsNum.value = data.total
-      });
-    //fetch projects funding
-    const response = await fetchByResourceClass(99)
-    //for each item, get the funding array and sum it
-    totFunding.value = 0
-    response.forEach((item: any) => {
-      if (item['schema:funding']) {
-        item['schema:funding'].forEach((funding: any) => {
-          const amount = Number(funding['@value'])
-          if (!isNaN(amount)) {
-            totFunding.value += amount
-          } else {
-            console.log('not a number', funding['@value'])
-          }
-        })
-      }
-    })
-    totFunding.value = totFunding.value / 1000000
-    //do not show decimals
-    totFunding.value = Math.round(totFunding.value)
+    }
   });
+  totFunding.value = Math.round(totFunding.value / 1_000_000);
+
+  // Stop animated placeholders
+  stopRollingNumbers();
+});
+
 
   const fetchPageData = async () => {
     //fetch html text data
