@@ -32,9 +32,15 @@
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
             <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>{{ projectsNum
-                }}</span> funded research projects, and have helped raise in excess of <span>{{ totFunding }} million</span> in external funding for these. We are currently involved in
-              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of <span>3</span> national research infrastructures and <span>1</span>
-              research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a href="http://www.swe-clarin.se">Swe-Clarin</a></span>, <span><a href="https://infravis.se">Infravis</a></span>, and <span><a href="http://www.dash-doctoralschool.se">DASH</a></span>.</h2>
+                }}</span> funded research projects, and have helped raise in excess of <span>{{ totFunding }}
+                million</span> in external funding for these. We are currently involved in
+              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of
+              <span>3</span> national research infrastructures and <span>1</span>
+              research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a
+                  href="http://www.swe-clarin.se">Swe-Clarin</a></span>, <span><a
+                  href="https://infravis.se">Infravis</a></span>, and <span><a
+                  href="http://www.dash-doctoralschool.se">DASH</a></span>.
+            </h2>
             <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 
           </div>
@@ -42,29 +48,33 @@
         <div class="data-module text">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ rollingActiveNum ?? activeNum }}</span> active
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ rollingActiveNum
+                  ?? activeNum }}</span> active
                 projects</router-link> </div>
             <div class="text-module-description"><!-- Active projects info text  --></div>
 
-            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ rollingToolsNum ?? toolsNum
+            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ rollingToolsNum
+                  ?? toolsNum
                   }}</span>
                 portals and tools </router-link> </div>
             <div class="text-module-description"><!-- Portals and tools info text --> </div>
 
 
-            <div class="text-module-data"><span class="livedata-pulse">{{ rollingTotFunding ?? totFunding }}</span> million in external
+            <div class="text-module-data"><span class="livedata-pulse">{{ rollingTotFunding ?? totFunding }}</span>
+              million in external
               funding</div>
             <div class="text-module-description"><!-- Money-maker info text  --></div>
 
-            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px;"><router-link to="/projects">See all projects</router-link></div>
+            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px;"><router-link
+                to="/projects">See all projects</router-link></div>
 
             <div class="text-module-title">Infrastructures </div>
             <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">3</span> National
                 infrastructures</router-link> </div>
             <div class="text-module-description"></div>
 
-            
-            
+
+
 
           </div>
         </div>
@@ -158,7 +168,7 @@
           </div>
 
 
-          <div class="link-item  github">
+          <div class="link-item github">
             <a href="https://github.com/gu-gridh" target="_blank" class="link-item-filler">
               <div class="link-title">
 
@@ -176,25 +186,31 @@
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
           <h3>Highlighted Resources</h3>
           <div class="projects">
-            <div class="project-item"
+            <a href="https://saintsophia.dh.gu.se" class="project-item"
               style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
               <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Saint Sophia's Inscriptions</div>
-            </div>
+          </a>
 
 
 
-            <div class="project-item"
+            <a href="https://didoc.dh.gu.se" class="project-item"
               style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
 
               <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Dawit Isaak Database of Censorship</div>
-            </div>
-            <div class="project-item"
+        </a>
+
+            <a href="https://etruscan.dh.gu.se" class="project-item"
               style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg);">
-              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
-              <div class="project-title">Etruscan Chamber Tombs</div>
-            </div>
+       
+               
+                  <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
+                  <div class="project-title">Etruscan Chamber Tombs</div>
+            
+        
+          </a>
+
           </div>
         </div>
       </div>
@@ -212,7 +228,7 @@
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
   import Sunburst from '@/components/Sunburst.vue';
-import type { Project } from '@/types';
+  import type { Project } from '@/types';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
@@ -222,66 +238,66 @@ import type { Project } from '@/types';
   const totFunding = ref(0);
   const activeNum = ref(0);
   const rollingIntervals: number[] = [];
-  const rollingToolsNum = ref<number | null>(null);
-  const rollingActiveNum = ref<number | null>(null);
-  const rollingTotFunding = ref<number | null>(null);
+  const rollingToolsNum = ref < number | null > (null);
+  const rollingActiveNum = ref < number | null > (null);
+  const rollingTotFunding = ref < number | null > (null);
 
   //rolling numbers
   const startRollingNumbers = () => {
-  rollingIntervals.push(setInterval(() => {
-    rollingToolsNum.value = Math.floor(Math.random() * 50);
-    rollingActiveNum.value = Math.floor(Math.random() * 25);
-    rollingTotFunding.value = Math.floor(Math.random() * 250);
-  }, 80));
-};
+    rollingIntervals.push(setInterval(() => {
+      rollingToolsNum.value = Math.floor(Math.random() * 50);
+      rollingActiveNum.value = Math.floor(Math.random() * 25);
+      rollingTotFunding.value = Math.floor(Math.random() * 250);
+    }, 80));
+  };
 
-const stopRollingNumbers = () => {
-  rollingIntervals.forEach(clearInterval);
-  rollingToolsNum.value = null;
-  rollingActiveNum.value = null;
-  rollingTotFunding.value = null;
-};
+  const stopRollingNumbers = () => {
+    rollingIntervals.forEach(clearInterval);
+    rollingToolsNum.value = null;
+    rollingActiveNum.value = null;
+    rollingTotFunding.value = null;
+  };
 
-onMounted(async () => {
-  // Start animated placeholders
-  startRollingNumbers();
+  onMounted(async () => {
+    // Start animated placeholders
+    startRollingNumbers();
 
-  // Fetch live data
-  await fetchPageData();
+    // Fetch live data
+    await fetchPageData();
 
-  await fetchCount('items?resource_class_id=99')
-    .then(data => {
-      projectsNum.value = data.total;
-    });
-
-  const resp = await fetchByResourceClass(99);
-  activeNum.value = resp.reduce((count: number, item: Project) => {
-    const status = item['schema:status']?.[0]?.['@value']?.toLowerCase() ?? '';
-    return status === 'active' ? count + 1 : count;
-  }, 0);
-
-  await fetchCount('items?resource_template_id=6')
-    .then(data => {
-      toolsNum.value = data.total;
-    });
-
-  const response = await fetchByResourceClass(99);
-  totFunding.value = 0;
-  response.forEach((item: any) => {
-    if (item['schema:funding']) {
-      item['schema:funding'].forEach((funding: any) => {
-        const amount = Number(funding['@value']);
-        if (!isNaN(amount)) {
-          totFunding.value += amount;
-        }
+    await fetchCount('items?resource_class_id=99')
+      .then(data => {
+        projectsNum.value = data.total;
       });
-    }
-  });
-  totFunding.value = Math.round(totFunding.value / 1_000_000);
 
-  // Stop animated placeholders
-  stopRollingNumbers();
-});
+    const resp = await fetchByResourceClass(99);
+    activeNum.value = resp.reduce((count: number, item: Project) => {
+      const status = item['schema:status']?.[0]?.['@value']?.toLowerCase() ?? '';
+      return status === 'active' ? count + 1 : count;
+    }, 0);
+
+    await fetchCount('items?resource_template_id=6')
+      .then(data => {
+        toolsNum.value = data.total;
+      });
+
+    const response = await fetchByResourceClass(99);
+    totFunding.value = 0;
+    response.forEach((item: any) => {
+      if (item['schema:funding']) {
+        item['schema:funding'].forEach((funding: any) => {
+          const amount = Number(funding['@value']);
+          if (!isNaN(amount)) {
+            totFunding.value += amount;
+          }
+        });
+      }
+    });
+    totFunding.value = Math.round(totFunding.value / 1_000_000);
+
+    // Stop animated placeholders
+    stopRollingNumbers();
+  });
 
 
   const fetchPageData = async () => {
@@ -318,8 +334,8 @@ onMounted(async () => {
     font-size: 50px;
     font-weight: 600;
     color: var(--theme-heading);
-    line-height:0.9;
-    margin-top:10px;
+    line-height: 0.9;
+    margin-top: 10px;
   }
 
   .intro-article {
@@ -354,7 +370,7 @@ onMounted(async () => {
     }
   }
 
-  .info-module a{
+  .info-module a {
     color: var(--theme-livedata1-dark);
   }
 
@@ -386,7 +402,7 @@ onMounted(async () => {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
- 
+
   }
 
   .row {
@@ -394,10 +410,10 @@ onMounted(async () => {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    align-items:center;
+    align-items: center;
     gap: 0px;
     margin: 0;
-    overflow:hidden;
+    overflow: hidden;
   }
 
   .row-left {
@@ -408,8 +424,8 @@ onMounted(async () => {
     align-items: center;
     gap: 0px;
     margin: 0;
-    padding:0px;
-    overflow:hidden;
+    padding: 0px;
+    overflow: hidden;
   }
 
 
@@ -423,14 +439,11 @@ onMounted(async () => {
     align-items: center;
     gap: 0px;
     margin: 0;
-    overflow:hidden;
+    overflow: hidden;
   }
 
   @media screen and (max-width: 900px) {
-    .intro-space {
-
-   
-  }
+    .intro-space {}
 
     .row-left {
       display: flex;
@@ -564,9 +577,10 @@ onMounted(async () => {
     height: 100%;
   }
 
-  .info-module b, strong {
+  .info-module b,
+  strong {
     color: var(--theme-livedata1-dark);
-   }
+  }
 
   .info-module .left {
     text-align: right;
@@ -713,8 +727,6 @@ onMounted(async () => {
     background-size: 105%;
   }
 
-
-
   .ocean {
     background: linear-gradient(180deg, rgba(00, 200, 250, 0.2) 0%, rgba(255, 240, 255, 1) 100%);
 
@@ -767,7 +779,7 @@ onMounted(async () => {
       margin-top: 30px;
     }
 
-   
+
 
     .info-module-slogan h2 {
       color: var(--theme-heading);
@@ -821,7 +833,7 @@ onMounted(async () => {
       padding-left: 20px;
       align-items: flex-start;
       width: calc(100% - 20px);
-      
+
 
     }
 
@@ -847,7 +859,7 @@ onMounted(async () => {
 
     .buffer {
       padding: 0px 0px;
-      margin-bottom:40px;
+      margin-bottom: 40px;
     }
 
     .link-item {
@@ -1005,29 +1017,29 @@ onMounted(async () => {
     }
   }
 
-    @media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .intro-space {
 
-    padding-left: 30px;
+      padding-left: 30px;
 
-  }
+    }
 
-  .info-module {
+    .info-module {
 
       padding-left: 30px;
     }
 
-  .info-module .left {
-    padding-left: 0px;
-width:100%;
+    .info-module .left {
+      padding-left: 0px;
+      width: 100%;
 
-  }
+    }
 
-  .info-module .right {
-    padding-left: 0px;
+    .info-module .right {
+      padding-left: 0px;
 
 
-  }
+    }
 
   }
 </style>
