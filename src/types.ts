@@ -55,7 +55,11 @@ export interface Project {
         }
     ]
     description: []
-    homepage: string
+    homepage: [
+        {
+            '@id': string
+        }
+    ]
     contributor: [
         {
             display_title: string
@@ -88,6 +92,11 @@ export interface Project {
             '@value': string
         }
     ],
+    image: {
+        small: string,
+        medium: string,
+        large: string
+    }
     
 }   
 

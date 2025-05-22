@@ -150,11 +150,11 @@
 
 
           <div class="link-item   technical">
-            <router-link to="/" class="link-item-filler">
+            <a href="https://github.com/gu-gridh/documentation" target="_blank" class="link-item-filler">
               <div class="link-title">
                 Technical infrastructure
               </div>
-            </router-link>
+            </a>
           </div>
 
 

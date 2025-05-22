@@ -49,27 +49,32 @@ onMounted (async () => {
     projects.value = await translateResponse(response);
     projects.value.sort((a, b) => (a.name > b.name) ? 1 : -1);
     //loop and keep items with status active
-    projects.value = projects.value.filter((item) =>
-    item.status?.[0]?.['@value']?.toLowerCase() === 'active'
-    
-);
+    projects.value = projects.value.filter((item) => {
+        const statusVal = item.status?.[0]?.['@value']?.toLowerCase();
+        return statusVal === 'active';
+        });
 });
 
 const translateResponse = (response: any) => {
-    return response.map((item: any) => {
-        return {
-            id: item['o:id'],
-            name: item['o:title'] || 'Untitled Project',
-            subject: item['dcterms:subject'] || [],
-            funding: item['vivo:hasFundingVehicle'] || [],
-            subjectArea: item['vivo:hasSubjectArea'] || [],
-            shortDescription: item['bibo:shortDescription'] || [],
-            image: item['thumbnail_display_urls'] || null,
-            owner: item['bibo:owner'] || [],
-            status: item['schema:status'] || [],
-        };
-    });
+  return response.map((item: any) => {
+    return {
+      id: item['o:id'],
+      name: item['o:title'] || 'Untitled Project',
+      subject: item['dcterms:subject'] || [],
+      funding: item['vivo:hasFundingVehicle'] || [],
+      subjectArea: item['vivo:hasSubjectArea'] || [],
+      shortDescription: item['bibo:shortDescription'] || [],
+      image: item['thumbnail_display_urls'] || {},
+      owner: item['bibo:owner'] || [],
+      status: Array.isArray(item['schema:status'])
+        ? item['schema:status']
+        : item['schema:status']
+          ? [item['schema:status']]
+          : [],
+    };
+  });
 };
+
 </script>
 
 <style scoped>

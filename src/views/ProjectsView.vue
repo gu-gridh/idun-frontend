@@ -11,7 +11,7 @@
     <div class="projects-view">
         <h1>Finished projects</h1>
         <div class="projects-container">
-            <div v-for="project in projects" :key="project.id" class="project">
+            <div v-for="project in projects" :key="project?.id" class="project">
                 <router-link :to="'/projects/' + project?.id">
                     <h2>{{ project?.name || 'Untitled Project' }}</h2>
                     <!-- <h3 v-if="project?.shortDescription?.length">
@@ -34,12 +34,10 @@
     import { fetchByResourceClass } from '@/db';
     import { onMounted, ref } from 'vue';
     import type { Projects } from '@/types';
-    import { useRoute } from 'vue-router';
     import ActiveProjects from '@/views/ActiveProjects.vue';
 
     const projects = ref < Projects[] > ([]);
     const projectsId = ref(99) //this is the id for resource class 'Projects'
-    const numItems = ref(50) //this is the number of items to fetch
 
     onMounted(async () => {
         window.scrollTo(0, 0);
