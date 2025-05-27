@@ -26,15 +26,20 @@
 
     <!---- will fetch 3 page blocks from Omeka S API -->
     <div class="content">
-      <div class="row grey-gradient">
+      <div class="row grey-gradient" style="">
         <div class="info-module">
           <div class="info-module-slogan left">
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
-            <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>{{ projectsNum
-                }}</span> funded research projects, and have helped raise in excess of <span>{{ totFunding }} million</span> in external funding for these. We are currently involved in
-              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of <span>3</span> national research infrastructures and <span>1</span>
-              research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a href="http://www.swe-clarin.se">Swe-Clarin</a></span>, <span><a href="https://infravis.se">Infravis</a></span>, and <span><a href="http://www.dash-doctoralschool.se">DASH</a></span>.</h2>
+            <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>45</span> funded research projects, and have helped raise in excess of <span>200
+                million</span> in external funding for these. We are currently involved in
+              <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of
+              <span>3</span> national research infrastructures and <span>1</span>
+              research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a
+                  href="http://www.swe-clarin.se">Swe-Clarin</a></span>, <span><a
+                  href="https://infravis.se">Infravis</a></span>, and <span><a
+                  href="http://www.dash-doctoralschool.se">DASH</a></span>.
+            </h2>
             <!-- <div class="text-module-link hoverable contact-us">Contact us and start a project</div> -->
 
           </div>
@@ -42,29 +47,32 @@
         <div class="data-module text">
           <div class="text-module">
             <div class="text-module-title">Projects </div>
-            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ activeNum }}</span> active
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">{{ rollingActiveNum
+                  ?? activeNum }}</span> active
                 projects</router-link> </div>
             <div class="text-module-description"><!-- Active projects info text  --></div>
 
-            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ toolsNum
-                  }}</span>
+            <div class="text-module-data"><router-link to="/resources"> <span class="livedata-pulse">{{ rollingToolsNum
+                  ?? toolsNum }}</span>
                 portals and tools </router-link> </div>
             <div class="text-module-description"><!-- Portals and tools info text --> </div>
 
 
-            <div class="text-module-data"><span class="livedata-pulse">{{ totFunding }}</span> million in external
+            <div class="text-module-data"><span class="livedata-pulse">{{ rollingTotFunding ?? totFunding }}</span>
+              million in external
               funding</div>
             <div class="text-module-description"><!-- Money-maker info text  --></div>
 
-            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px;"><router-link to="/projects">See all projects</router-link></div>
+            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px;"><router-link
+                to="/projects">See all projects</router-link></div>
 
             <div class="text-module-title">Infrastructures </div>
             <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">3</span> National
                 infrastructures</router-link> </div>
             <div class="text-module-description"></div>
 
-            
-            
+
+
 
           </div>
         </div>
@@ -141,24 +149,24 @@
 
 
           <div class="link-item   tools">
-            <router-link to="/" class="link-item-filler">
+            <a href="https://github.com/gu-gridh/documentation/blob/main/gridh-ai-ml/GRIDH_AI_ML.md" target="_blank" class="link-item-filler">
               <div class="link-title">
                 AI/ML development
               </div>
-            </router-link>
+            </a>
           </div>
 
 
           <div class="link-item   technical">
-            <router-link to="/" class="link-item-filler">
+            <a href="https://github.com/gu-gridh/documentation" target="_blank" class="link-item-filler">
               <div class="link-title">
                 Technical infrastructure
               </div>
-            </router-link>
+            </a>
           </div>
 
 
-          <div class="link-item  github">
+          <div class="link-item github">
             <a href="https://github.com/gu-gridh" target="_blank" class="link-item-filler">
               <div class="link-title">
 
@@ -176,25 +184,31 @@
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
           <h3>Highlighted Resources</h3>
           <div class="projects">
-            <div class="project-item"
+            <a href="https://saintsophia.dh.gu.se" class="project-item"
               style="border-radius:10px 0 0 10px; background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
               <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Saint Sophia's Inscriptions</div>
-            </div>
+          </a>
 
 
 
-            <div class="project-item"
+            <a href="https://didoc.dh.gu.se" class="project-item"
               style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
 
               <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Dawit Isaak Database of Censorship</div>
-            </div>
-            <div class="project-item"
+        </a>
+
+            <a href="https://etruscan.dh.gu.se" class="project-item"
               style="border-radius:0px 10px 10px 0px;  background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg);">
-              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
-              <div class="project-title">Etruscan Chamber Tombs</div>
-            </div>
+       
+               
+                  <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/f64a8a5f8606fd201d3a6706172468169f1b150f.jpg); background-size: cover; background-position: 50%;"></div> -->
+                  <div class="project-title">Etruscan Chamber Tombs</div>
+            
+        
+          </a>
+
           </div>
         </div>
       </div>
@@ -208,11 +222,11 @@
 <script setup lang="ts">
 
   import { fetchAllPages, fetchCount, fetchByResourceClass } from '@/db';
-  import { onMounted, ref } from 'vue';
+  import { onMounted, ref, nextTick } from 'vue';
   import Map from '@/components/Map.vue';
   import Graph from '@/components/Graph.vue';
   import Sunburst from '@/components/Sunburst.vue';
-import type { Project } from '@/types';
+  import type { Project } from '@/types';
 
   const redData1 = ref({ html: '' });
   const redData2 = ref({ html: '' });
@@ -221,49 +235,77 @@ import type { Project } from '@/types';
   const toolsNum = ref(0);
   const totFunding = ref(0);
   const activeNum = ref(0);
+  const rollingIntervals: number[] = [];
+  const rollingToolsNum = ref < number | null > (null);
+  const rollingActiveNum = ref < number | null > (null);
+  const rollingTotFunding = ref < number | null > (null);
+
+  //rolling numbers
+  const startRollingNumbers = () => {
+    rollingIntervals.push(setInterval(() => {
+    /*   rollingToolsNum.value = Math.floor(Math.random(1) * 50);
+      rollingActiveNum.value = Math.floor(Math.random() * 25);
+      rollingTotFunding.value = Math.floor(Math.random() * 250); */
+      if (rollingActiveNum.value !== null) {
+        rollingActiveNum.value += 1;
+      }
+      if (rollingToolsNum.value !== null) {
+        rollingToolsNum.value += 2;
+      }
+      if (rollingTotFunding.value !== null) {
+        rollingTotFunding.value += 3;
+      }
+    }, 500));
+  };
+
+  const stopRollingNumbers = () => {
+    rollingIntervals.forEach(clearInterval);
+    rollingToolsNum.value = null;
+    rollingActiveNum.value = null;
+    rollingTotFunding.value = null;
+  };
 
   onMounted(async () => {
-    //fetch html data from Omeka pages
+    // Start animated placeholders
+    startRollingNumbers();
+
+    // Fetch live data
     await fetchPageData();
-    //fetch number of projects
+
     await fetchCount('items?resource_class_id=99')
       .then(data => {
-        projectsNum.value = data.total
+        projectsNum.value = data.total;
       });
-      //fetch active projects
-    const resp = await fetchByResourceClass(99)
-    // count those with status "active"
+
+    const resp = await fetchByResourceClass(99);
     activeNum.value = resp.reduce((count: number, item: Project) => {
       const status = item['schema:status']?.[0]?.['@value']?.toLowerCase() ?? '';
       return status === 'active' ? count + 1 : count;
     }, 0);
 
-
-    
     await fetchCount('items?resource_template_id=6')
       .then(data => {
-        toolsNum.value = data.total
+        toolsNum.value = data.total;
       });
-    //fetch projects funding
-    const response = await fetchByResourceClass(99)
-    //for each item, get the funding array and sum it
-    totFunding.value = 0
+
+    const response = await fetchByResourceClass(99);
+    totFunding.value = 0;
     response.forEach((item: any) => {
       if (item['schema:funding']) {
         item['schema:funding'].forEach((funding: any) => {
-          const amount = Number(funding['@value'])
+          const amount = Number(funding['@value']);
           if (!isNaN(amount)) {
-            totFunding.value += amount
-          } else {
-            console.log('not a number', funding['@value'])
+            totFunding.value += amount;
           }
-        })
+        });
       }
-    })
-    totFunding.value = totFunding.value / 1000000
-    //do not show decimals
-    totFunding.value = Math.round(totFunding.value)
+    });
+    totFunding.value = Math.round(totFunding.value / 1_000_000);
+
+    // Stop animated placeholders
+    stopRollingNumbers();
   });
+
 
   const fetchPageData = async () => {
     //fetch html text data
@@ -299,8 +341,8 @@ import type { Project } from '@/types';
     font-size: 50px;
     font-weight: 600;
     color: var(--theme-heading);
-    line-height:0.9;
-    margin-top:10px;
+    line-height: 0.9;
+    margin-top: 10px;
   }
 
   .intro-article {
@@ -311,7 +353,7 @@ import type { Project } from '@/types';
     font-weight: 300;
     text-align: justify;
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .intro-article p {
@@ -335,7 +377,7 @@ import type { Project } from '@/types';
     }
   }
 
-  .info-module a{
+  .info-module a {
     color: var(--theme-livedata1-dark);
   }
 
@@ -367,7 +409,7 @@ import type { Project } from '@/types';
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
- 
+
   }
 
   .row {
@@ -375,10 +417,10 @@ import type { Project } from '@/types';
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    align-items:center;
+    align-items: center;
     gap: 0px;
     margin: 0;
-    overflow:hidden;
+    overflow: hidden;
   }
 
   .row-left {
@@ -389,8 +431,8 @@ import type { Project } from '@/types';
     align-items: center;
     gap: 0px;
     margin: 0;
-    padding:0px;
-    overflow:hidden;
+    padding: 0px;
+    overflow: hidden;
   }
 
 
@@ -404,10 +446,12 @@ import type { Project } from '@/types';
     align-items: center;
     gap: 0px;
     margin: 0;
-    overflow:hidden;
+    overflow: hidden;
   }
 
   @media screen and (max-width: 900px) {
+    .intro-space {}
+
     .row-left {
       display: flex;
       flex-direction: column-reverse;
@@ -540,9 +584,10 @@ import type { Project } from '@/types';
     height: 100%;
   }
 
-  .info-module b, strong {
+  .info-module b,
+  strong {
     color: var(--theme-livedata1-dark);
-   }
+  }
 
   .info-module .left {
     text-align: right;
@@ -689,8 +734,6 @@ import type { Project } from '@/types';
     background-size: 105%;
   }
 
-
-
   .ocean {
     background: linear-gradient(180deg, rgba(00, 200, 250, 0.2) 0%, rgba(255, 240, 255, 1) 100%);
 
@@ -730,7 +773,7 @@ import type { Project } from '@/types';
     }
 
     .intro-space {
-      width: calc(100% - 50px);
+      width: calc(100% - 120px);
     }
 
     .text-module-link {
@@ -742,6 +785,8 @@ import type { Project } from '@/types';
       width: 100%;
       margin-top: 30px;
     }
+
+
 
     .info-module-slogan h2 {
       color: var(--theme-heading);
@@ -774,7 +819,7 @@ import type { Project } from '@/types';
       width: calc(100% - 30px);
       text-align: left;
       justify-content: left;
-      padding-left: 30px;
+      padding-left: 40px;
     }
 
     .info-module h1 {}
@@ -795,7 +840,7 @@ import type { Project } from '@/types';
       padding-left: 20px;
       align-items: flex-start;
       width: calc(100% - 20px);
-      
+
 
     }
 
@@ -821,7 +866,7 @@ import type { Project } from '@/types';
 
     .buffer {
       padding: 0px 0px;
-      margin-bottom:40px;
+      margin-bottom: 40px;
     }
 
     .link-item {
@@ -979,24 +1024,29 @@ import type { Project } from '@/types';
     }
   }
 
-    @media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .intro-space {
 
-    padding-left: 30px;
+      padding-left: 30px;
 
-  }
+    }
 
-  .info-module .left {
-    padding-left: 0px;
-width:100%;
+    .info-module {
 
-  }
+      padding-left: 30px;
+    }
 
-  .info-module .right {
-    padding-left: 0px;
+    .info-module .left {
+      padding-left: 0px;
+      width: 100%;
+
+    }
+
+    .info-module .right {
+      padding-left: 0px;
 
 
-  }
+    }
 
   }
 </style>

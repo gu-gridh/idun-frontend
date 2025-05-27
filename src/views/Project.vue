@@ -6,7 +6,7 @@
         <!-- <p>Identifier: <span v-for="id in project.identifier">{{ id['@value'] }}</span> </p> -->
         <div class="project-description">{{ project.description }}</div>
 
-        <div class="site">{{ project.homepage }}</div>
+        <div class="site"><p v-for="proj in project.homepage">{{ proj['@id'] }}</p> </div>
 
         <div class="metadata-group">
             <div class="label">Project owner:</div>
@@ -59,10 +59,6 @@
 
     const route = useRoute();
 
-    defineProps(["id", "title", "url", "subjectArea", "description"
-     ]);
-
-
     onMounted(async () => {
         const id = route.params.id;
         const response = await fetchItem(id as string);
@@ -80,7 +76,7 @@
             description: Array.isArray(response['dcterms:description'])
                 ? response['dcterms:description'][0]?.['@value']
                 : response['dcterms:description']?.['@value'],
-            homepage: response['foaf:homepage'][0]?.['@id'], // array
+            homepage: response['foaf:homepage'] || [], // array
             contributor: response['vivo:contributingRole'], // array
             fundingProvider: response['vivo:hasFundingVehicle'], // array
             funding: response['schema:funding'], // array
@@ -118,13 +114,15 @@
         border-radius:50%;
         background-color: var(--theme-livedata1-dark);
         margin-bottom:20px;
-        margin-left:-10px;
+        margin-left:-25px;
         overflow:hidden;
 
     }
 
     .project-image img{
         width:auto;
+        min-width:100px;
+        height:100px;
         height:100px;
     }
 
