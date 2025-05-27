@@ -172,7 +172,7 @@
                     <masonry-wall v-if="resources.length" :column-width="220" :items="resources" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
-                        <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                        <ResourceItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
                             :description="item.descriptionText" 
                             :color="item.color?.[0]?.['@value'] || ''"/>
@@ -192,7 +192,7 @@
     import type { Tool } from '@/types';
     import { onMounted, ref } from 'vue';
     import MasonryWall from '@yeger/vue-masonry-wall';
-    import ProjectItem from '@/components/ProjectItem.vue';
+    import ResourceItem from '@/components/ResourceItem.vue';
 
 
     const tools = ref(<Tool[] > []);
