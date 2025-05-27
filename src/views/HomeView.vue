@@ -149,11 +149,11 @@
 
 
           <div class="link-item   tools">
-            <router-link to="/" class="link-item-filler">
+            <a href="https://github.com/gu-gridh/documentation/blob/main/gridh-ai-ml/GRIDH_AI_ML.md" target="_blank" class="link-item-filler">
               <div class="link-title">
                 AI/ML development
               </div>
-            </router-link>
+            </a>
           </div>
 
 
@@ -246,9 +246,15 @@
     /*   rollingToolsNum.value = Math.floor(Math.random(1) * 50);
       rollingActiveNum.value = Math.floor(Math.random() * 25);
       rollingTotFunding.value = Math.floor(Math.random() * 250); */
-      rollingActiveNum.value += 1;
-      rollingToolsNum.value += 2;
-      rollingTotFunding.value += 3;
+      if (rollingActiveNum.value !== null) {
+        rollingActiveNum.value += 1;
+      }
+      if (rollingToolsNum.value !== null) {
+        rollingToolsNum.value += 2;
+      }
+      if (rollingTotFunding.value !== null) {
+        rollingTotFunding.value += 3;
+      }
     }, 500));
   };
 
