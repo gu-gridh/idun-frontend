@@ -7,7 +7,7 @@
                 <masonry-wall v-if="tools && databases.length" :column-width="220" :items="databases" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
-                        <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                        <ResourceItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
                             :description="item.descriptionText" 
                             :color="item.color?.[0]?.['@value'] || ''"/>
@@ -20,7 +20,7 @@
                 <masonry-wall v-if="tools && apps.length" :column-width="220" :items="apps" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
-                        <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                        <ResourceItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
                             :description="item.descriptionText"
                             :color="item.color?.[0]?.['@value'] || ''"/>
@@ -33,7 +33,7 @@
                 <masonry-wall v-if="tools && other.length" :column-width="220" :items="other" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
-                        <ProjectItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                        <ResourceItem :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
                             :description="item.descriptionText"
                             :color="item.color?.[0]?.['@value'] || ''"/>
@@ -50,7 +50,7 @@
                 <masonry-wall v-if="legacy && legacy.length" :column-width="440" :items="legacy" :gutter="0"
                     :responsive="true" :resize="true">
                     <template #default="{ index, item }">
-                        <ProjectItemLegacy :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
+                        <ResourceItemLegacy :id="item.id" :title="item.name" :url="item.links?.[0]?.['@id'] || ''"
                             :image="item.image?.large || ''" :subjectArea="item.subjectArea || []"
                             :description="item.descriptionText" 
                             :color="item.color?.[0]?.['@value'] || ''"/>
@@ -67,8 +67,8 @@
     import type { Tool } from '@/types';
     import { onMounted, ref } from 'vue';
     import MasonryWall from '@yeger/vue-masonry-wall';
-    import ProjectItem from '@/components/ProjectItem.vue';
-    import ProjectItemLegacy from '@/components/ProjectItemLegacy.vue';
+    import ResourceItem from '@/components/ResourceItem.vue';
+    import ResourceItemLegacy from '@/components/ResourceItemLegacy.vue';
 
 
     const tools = ref(<Tool[] > []);

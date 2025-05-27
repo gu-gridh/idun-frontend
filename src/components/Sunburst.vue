@@ -8,7 +8,7 @@
     <div class="sunburst-group">
       <div class="sunburst-title">Tech stack</div>
       <div ref="chartContainerTools" class="sunburst-chart"></div>
-    </div>
+    </div>  
   </div>
 </template>
 
