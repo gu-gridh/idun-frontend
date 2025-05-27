@@ -951,7 +951,7 @@
 
   .digicure {
     background:
-      linear-gradient(180deg, rgb(133, 133, 133) 0%, rgb(0, 0, 0) 100%),
+      linear-gradient(180deg, rgb(255, 2, 150) 0%, rgb(0, 0, 0) 100%),
       url('@/assets/digicure-link.jpg');
     background-blend-mode: soft-light;
     background-size: 100%;
