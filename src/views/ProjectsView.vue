@@ -117,7 +117,7 @@
 
 
     .projects-view .project {
-        padding-bottom: 20px !important;
+        padding-bottom: 0px !important;
         padding-top: 10px !important;
    
         cursor: pointer;
@@ -140,7 +140,7 @@
     .projects-view h2 {
         font-size: 1.2em;
         margin-bottom: 0px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.2;
     }
 
