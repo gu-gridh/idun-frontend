@@ -612,7 +612,7 @@
   .info-module-slogan {}
 
   .info-module-slogan span {
-    color: var(--theme-livedata1);
+    color: var(--theme-livedata1-dark);
     font-weight: 600;
   }
 
