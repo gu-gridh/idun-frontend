@@ -101,7 +101,7 @@ export interface Project {
 }   
 
 export interface Tool {
-    id: number
+    id: number | string
     name: string
     shortDescription: [{
         '@value': string
