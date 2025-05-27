@@ -152,7 +152,7 @@
   .logo {
     width: 120px;
     height: 120px;
-    background: url(gu_logo.png);
+    background: url(@/assets/gu_logo.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
