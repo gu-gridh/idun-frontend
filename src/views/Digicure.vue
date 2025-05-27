@@ -71,10 +71,10 @@
                                         <div class="image-stack-items-container">
 
                                             <div class="image-stack-item"
-                                                style="background-image:url(digicure/sophia1.jpg); background-size:cover; z-index:2;">
+                                                style="background-image:url(digicure_images/sophia1.jpg); background-size:cover; z-index:2;">
                                             </div>
                                             <div class="image-stack-item"
-                                                style="background-image:url(digicure/etruscan1.jpg); background-size:cover; z-index:2; margin-top:50px; margin-left:-200px;">
+                                                style="background-image:url(digicure_images/etruscan1.jpg); background-size:cover; z-index:2; margin-top:50px; margin-left:-200px;">
                                             </div>
 
                                         </div>
@@ -119,10 +119,10 @@
                                             style=" justify-content: left; padding-left:30px;  margin-right:0px;">
 
                                             <div class="image-stack-item-right"
-                                                style="background-image:url(digicure/etruscan2.jpg); background-size:cover;z-index:3;  margin-top:60px; width:535px; ">
+                                                style="background-image:url(digicure_images/etruscan2.jpg); background-size:cover;z-index:3;  margin-top:60px; width:535px; ">
                                             </div>
                                             <div class="image-stack-item-right"
-                                                style="background-image:url(digicure/sophia5.jpg); background-size:cover; z-index:2; margin-left:-100px; width:535px;">
+                                                style="background-image:url(digicure_images/sophia5.jpg); background-size:cover; z-index:2; margin-left:-100px; width:535px;">
                                             </div>
 
                                         </div>
@@ -141,11 +141,11 @@
                                 <div class="image-stack left">
                                     <div class="image-stack-items-container">
                                         <a href="https://saintsophia.dh.gu.se/viewer/?q=113-07b/rti" target="_blank">
-                                        <div class="image-stack-item" style="background-image:url(digicure/sophia3.jpg); background-size:cover; z-index:1; margin-top:50px;">
+                                        <div class="image-stack-item" style="background-image:url(digicure_images/sophia3.jpg); background-size:cover; z-index:1; margin-top:50px;">
                                         </div>
                                     </a>
                                         <a href="https://digicure.dh.gu.se/ukraine" target="_blank">
-                                        <div class="image-stack-item" style="background-image:url(digicure/digicure1.jpg); background-size:cover; z-index:3; margin-top:0px; margin-left:-200px;">
+                                        <div class="image-stack-item" style="background-image:url(digicure_images/digicure1.jpg); background-size:cover; z-index:3; margin-top:0px; margin-left:-200px;">
                                         </div>
                                     </a>
                                     </div>
