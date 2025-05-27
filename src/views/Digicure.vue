@@ -237,14 +237,12 @@
 
     const sortByType = (tools: Tool[]) => {
         tools.forEach((tool: Tool) => {
-            if (tool.family?.[0]?.['@id'] === digicure) {
-                resources.value.push(tool);
-            } 
-            if (tool.family?.[1]?.['@id'] === digicure) {
-                resources.value.push(tool);
-            }
-            if (tool.family?.[2]?.['@id'] === digicure) {
-                resources.value.push(tool);
+            for (let i = 0; i < 3; i++) {
+                const familyItem = tool.family?.[i];
+                if (familyItem && typeof familyItem === 'object' && '@id' in familyItem && (familyItem as any)['@id'] === digicure) {
+                    resources.value.push(tool);
+                    break;
+                }
             }
         });     
     };
