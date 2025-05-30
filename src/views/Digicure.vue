@@ -13,7 +13,7 @@
                     <div class="intro-article" style="">
 
                         DIGICURE, hosted by the Gothenburg Research Infrastructure in Digital Humanities (GRIDH),
-                        is designed to <span>safeguard endangered cultural heritage</span> while advancing digitally
+                        is an infrastructure that <span>safeguard endangered cultural heritage</span> while advancing digitally
                         supported research across a wide range of disciplines in the humanities and beyond. Through
                         strategic collaborations and training programs,
                         DIGICURE is designed to empower heritage professionals,
@@ -21,7 +21,7 @@
                         needed to safeguard cultural assets for future generations.
                         To digitize cultural heritage is a monumental task always in need of
                     <span>state-of-the-art expertise</span> and broader perspectives.
-                        Crucially, DigiCURE is designed to meet both preservation needs and
+                        Crucially, DigiCURE meet both preservation needs and
                         the evolving requirements of scholarly research,
                         offering tools, expertise, and workflows that ensure <span>accessibility,
                         interoperability, and analytical depth</span>.
