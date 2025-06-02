@@ -6,7 +6,7 @@
         <!-- <p>Identifier: <span v-for="id in project.identifier">{{ id['@value'] }}</span> </p> -->
         <div class="project-description">{{ project.description }}</div>
 
-        <div class="site"><p v-for="proj in project.homepage">{{ proj['@id'] }}</p> </div>
+        <div class="site"><p v-for="proj in project.homepage"><a :href="proj['@id']"> {{ proj['@id'] }}</a></p> </div>
 
         <div class="metadata-group">
             <div class="label">Project owner:</div>
