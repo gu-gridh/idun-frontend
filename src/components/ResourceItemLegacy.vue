@@ -76,9 +76,9 @@ img {
   padding: 0.5rem 1rem;
 }
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-block: 0 0.5rem;
-  font-weight:200;
+  font-weight:400;
   line-height: 1.0;
   margin-top:10px;
 }

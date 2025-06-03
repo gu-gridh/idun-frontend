@@ -117,19 +117,26 @@
 
 
     .projects-view .project {
-        padding-bottom: 20px !important;
+        padding-bottom: 0px !important;
         padding-top: 10px !important;
-   
+ 
         cursor: pointer;
         break-inside: avoid-column;
+        border-radius:12px;
+        border-width: 1px;
 
     }
 
-    .projects-view .project:hover {
-        color: var(--theme-livedata1)!important;
-        opacity:0.65;
+    .projects-view .project:hover{
+        transform:scale(0.98);
 
     }
+
+    .projects-view .project:hover h2{
+        color: var(--theme-livedata1-dark)!important;
+
+    }
+
 
     .projects-view h1 {
         font-weight: 300;
@@ -140,7 +147,7 @@
     .projects-view h2 {
         font-size: 1.2em;
         margin-bottom: 0px;
-        font-weight: 500;
+        font-weight:500;
         line-height: 1.2;
     }
 

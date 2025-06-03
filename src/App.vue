@@ -122,7 +122,7 @@
   /* Standard Syntax */
   @keyframes livedata-pulse {
     0% {
-      color: var(--theme-livedata1);
+      color: var(--theme-livedata1-dark);
     }
 
     50% {
@@ -130,7 +130,7 @@
     }
 
     100% {
-      color: var(--theme-livedata1);
+      color: var(--theme-livedata1-dark);
     }
   }
 

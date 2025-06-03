@@ -2,7 +2,7 @@ const apiUrl = 'https://idun.dh.gu.se/api/'
 
 const header: RequestInit = {
     method: "GET",
-    credentials: "include" as RequestCredentials
+   // credentials: "include" as RequestCredentials
 }
 
 export const fetchItem = async (id: string) => {

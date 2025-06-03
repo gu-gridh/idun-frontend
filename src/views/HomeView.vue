@@ -612,7 +612,7 @@
   .info-module-slogan {}
 
   .info-module-slogan span {
-    color: var(--theme-livedata1);
+    color: var(--theme-livedata1-dark);
     font-weight: 600;
   }
 
@@ -951,8 +951,8 @@
 
   .digicure {
     background:
-      linear-gradient(180deg, rgb(133, 133, 133) 0%, rgb(0, 0, 0) 100%),
-      url('digicure-link.jpg');
+      linear-gradient(180deg, rgb(255, 145, 145) 0%, rgb(198, 0, 129) 100%),
+      url('@/assets/digicure-link.jpg');
     background-blend-mode: soft-light;
     background-size: 100%;
     background-position: 50%;
