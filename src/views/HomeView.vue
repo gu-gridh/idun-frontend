@@ -775,7 +775,7 @@
     }
 
     .intro-space {
-      width: calc(100% - 60px);
+      width: calc(100% - 100px);
     }
 
     .text-module-link {
@@ -793,7 +793,7 @@
     .info-module-slogan h2 {
       color: var(--theme-heading);
       margin-top: -30px !important;
-      /* max-width: calc(100% - 80px); */
+      max-width: calc(100% - 50px);
       font-weight: 300;
       font-size: 20px;
     }
