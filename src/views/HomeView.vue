@@ -32,7 +32,7 @@
             <div class="text-module-title">Application Experts</div>
             <h1>So many projects!</h1>
             <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>45</span> funded research projects, and have helped raise in excess of <span>200
-                million</span> in external funding for these. We are currently involved in
+                million SEK</span> in external funding for these. We are currently involved in
               <span>{{ activeNum }}</span> funded projects. Additionally, GRIDH is a foundational member of
               <span>3</span> national research infrastructures and <span>1</span>
               research school: <span><a href="http://www.huminfra.se">Huminfra</a></span>, <span><a
@@ -59,7 +59,7 @@
 
 
             <div class="text-module-data"><span class="livedata-pulse">{{ rollingTotFunding ?? totFunding }}</span>
-              million in external
+              million SEK in external
               funding</div>
             <div class="text-module-description"><!-- Money-maker info text  --></div>
 
