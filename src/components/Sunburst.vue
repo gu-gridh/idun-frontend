@@ -9,6 +9,7 @@
       <div class="sunburst-title">Tech stack</div>
       <div ref="chartContainerTools" class="sunburst-chart"></div>
     </div>  
+    <div id="tooltip" style="position: absolute; display: none; pointer-events: none; background: white; border: 1px solid #ccc; padding: 5px; font-size: 12px;"></div>
   </div>
 </template>
 
@@ -54,6 +55,16 @@ const alternativePalette1 = [
 
 const color = d3.scaleOrdinal(alternativePalette1);
 
+const tooltip = d3.select('#tooltip');
+
+function handleInteraction(event, d) {
+  tooltip
+    .style('display', 'block')
+    .style('left', `${event.pageX + 10}px`)
+    .style('top', `${event.pageY + 10}px`)
+    .html(`<strong>${d.data.name}</strong> ${d.data.value}`);
+}
+
 
   const arcs = pie(data);
 
@@ -63,8 +74,9 @@ const color = d3.scaleOrdinal(alternativePalette1);
     .append('path')
     .attr('d', arc)
     .attr('fill', d => color(d.data.name))
-    .append('title')
-    .text(d => `${d.data.name}: ${d.data.value}`);
+    .on('mouseover', handleInteraction)
+    .on('click', handleInteraction)
+    .on('mouseout', () => tooltip.style('display', 'none'));
 }
 
 onMounted(async () => {
