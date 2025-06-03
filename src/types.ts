@@ -57,7 +57,8 @@ export interface Project {
     description: []
     homepage: [
         {
-            '@id': string
+            '@id': string,
+            'o:label': string
         }
     ]
     contributor: [

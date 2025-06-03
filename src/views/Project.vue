@@ -6,7 +6,7 @@
         <!-- <p>Identifier: <span v-for="id in project.identifier">{{ id['@value'] }}</span> </p> -->
         <div class="project-description">{{ project.description }}</div>
 
-        <div class="site"><p v-for="proj in project.homepage"><a :href="proj['@id']"> {{ proj['@id'] }}</a></p> </div>
+        <div class="site"><p v-for="proj in project.homepage"><a :href="proj['@id']" target="_blank"><button>{{ proj['o:label'] || 'Homepage'}}</button></a></p> </div>
 
         <div class="metadata-group">
             <div class="label">Project owner:</div>
@@ -62,7 +62,6 @@
     onMounted(async () => {
         const id = route.params.id;
         const response = await fetchItem(id as string);
-        console.log(response);
         project.value = translateResponse(response) as Project;
 
     })
@@ -114,7 +113,7 @@
         border-radius:50%;
         background-color: var(--theme-livedata1-dark);
         margin-bottom:20px;
-        margin-left:-25px;
+        margin-left:-15px;
         overflow:hidden;
 
     }
@@ -131,6 +130,16 @@
         columns:2;
         gap:30px;
         text-align:justify;
+    }
+
+    button {
+        background-color: var(--theme-livedata1-dark);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
     }
 
     @media screen and (max-width: 900px) {
