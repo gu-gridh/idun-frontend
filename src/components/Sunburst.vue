@@ -9,7 +9,7 @@
       <div class="sunburst-title">Tech stack</div>
       <div ref="chartContainerTools" class="sunburst-chart"></div>
     </div>  
-    <div id="tooltip" style="position: absolute; display: none; pointer-events: none; background: white; border: 1px solid #ccc; padding: 5px; font-size: 12px;"></div>
+    <div id="tooltip" style=""></div>
   </div>
 </template>
 
@@ -136,6 +136,17 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+  #tooltip{
+    position: absolute; 
+    display: none; 
+    pointer-events: none; 
+    background: rgba(255,255,255,0.8);    
+    padding: 5px 10px; 
+    font-size: 16px;
+    border-radius:8px;
+    backdrop-filter: blur(5px);
+  }
+
 .sunburst-grid {
   display: flex;
   flex-wrap: nowrap;
