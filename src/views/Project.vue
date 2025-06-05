@@ -27,7 +27,7 @@
         </div>
         <div class="metadata-group">
             <div class="label">Funding: </div>
-            <div class="metadata" v-for="fund in project.funding">{{ fund['@value'] }}</div>
+            <div class="metadata" v-for="fund in project.funding">{{ fund['@value'] }} SEK</div>
         </div>
         <div class="metadata-group">
             <div class="label">Time interval: </div>
