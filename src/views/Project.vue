@@ -135,15 +135,15 @@
 
     button {
         background-color: var(--theme-livedata1-dark);
-        
+            font-family: "Barlow Condensed", sans-serif !important;
         color: white;
         border: none;
         padding: 10px 20px 10px 40px;
         border-radius: 8px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 18px;
         font-weight:300;
-        min-width:200px;
+        min-width:160px;
         margin:0px;
           transition: all 0.2s ease-in-out;
           text-align: left;;
