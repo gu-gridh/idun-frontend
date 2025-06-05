@@ -6,7 +6,7 @@
         <!-- <p>Identifier: <span v-for="id in project.identifier">{{ id['@value'] }}</span> </p> -->
         <div class="project-description">{{ project.description }}</div>
 
-        <div class="site"><p v-for="proj in project.homepage"><a :href="proj['@id']" target="_blank"><button>{{ proj['o:label'] || 'Homepage'}}</button></a></p> </div>
+        <div class="site"><p v-for="proj in project.homepage"><a :href="proj['@id']" target="_blank"><button class="site-link">{{ proj['o:label'] || 'Homepage'}}</button></a></p> </div>
 
         <div class="metadata-group">
             <div class="label">Project owner:</div>
@@ -134,13 +134,34 @@
 
     button {
         background-color: var(--theme-livedata1-dark);
+        
         color: white;
         border: none;
         padding: 10px 20px;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
         font-size: 16px;
+        font-weight:300;
+        min-width:200px;
+        margin:0px;
+          transition: all 0.2s ease-in-out;
+       
     }
+
+      button:hover {
+         cursor: pointer;
+      transform:scale(1.03);
+       box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
+    }
+
+    .site-link{
+  background-image:url("https://data.dh.gu.se/ui-icons/arrow_link_white_circle.png");
+  background-size:22px;
+  background-position:10px 50%;
+  background-repeat:no-repeat;
+  padding-left:25px;
+
+}
 
     @media screen and (max-width: 900px) {
         .project-description {
@@ -152,8 +173,9 @@
     }
 
     .site {
-        margin-top: 20px;
+        margin-bottom: 10px;
         font-size: 20px;
+        min-width:300px;
     }
 
     .label {
