@@ -60,6 +60,7 @@
     const route = useRoute();
 
     onMounted(async () => {
+          window.scrollTo(0, 0);
         const id = route.params.id;
         const response = await fetchItem(id as string);
         project.value = translateResponse(response) as Project;
@@ -137,7 +138,7 @@
         
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 10px 20px 10px 40px;
         border-radius: 8px;
         cursor: pointer;
         font-size: 16px;
@@ -145,6 +146,7 @@
         min-width:200px;
         margin:0px;
           transition: all 0.2s ease-in-out;
+          text-align: left;;
        
     }
 
@@ -159,7 +161,7 @@
   background-size:22px;
   background-position:10px 50%;
   background-repeat:no-repeat;
-  padding-left:25px;
+
 
 }
 
