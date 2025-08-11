@@ -186,7 +186,7 @@
           <div class="projects">
             <a href="https://saintsophia.dh.gu.se" class="project-item"
               style="border-radius:10px 0 0 10px; background-image:url(https://data.dh.gu.se/idun/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
-              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
+              <!-- <div class="project-image-round" style="background-image:url(https://data.dh.gu.se/idun/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Saint Sophia's Inscriptions</div>
           </a>
 
@@ -195,7 +195,7 @@
             <a href="https://didoc.dh.gu.se" class="project-item"
               style="background-image:url(https://data.dh.gu.se/idun/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg);">
 
-              <!-- <div class="project-image-round" style="background-image:url(https://idun.dh.gu.se/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
+              <!-- <div class="project-image-round" style="background-image:url(https://data.dh.gu.se/idun/files/large/fb5565201c7c7bb2e9423cfdc88f42405b98ec0e.jpg); background-size: cover; background-position: 50%;"></div> -->
               <div class="project-title">Dawit Isaak Database of Censorship</div>
         </a>
 
