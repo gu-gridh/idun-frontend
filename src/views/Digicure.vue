@@ -85,7 +85,7 @@
                         <div class="info-module">
                             <div class="info-module-slogan right">
                                 <div class="text-module-title">Remote research</div>
-                                <h1>Multimodal Platform</h1>
+                                <h1>Multimodal platform</h1>
                                 <h2>DIGICURE develops and maintains a robust multimodal platform that facilitates digital
                                     preservation and remote access of endangered cultural assets. The platform
                                     integrates various data types – <span>including high-resolution images, 3D models, and
