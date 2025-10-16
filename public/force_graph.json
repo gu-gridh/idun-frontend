@@ -5,7 +5,7 @@
       "group": "root"
     },
     {
-      "id": "National Infrastructures",
+      "id": "Infrastructures",
       "group": "second"
     },
 
@@ -23,93 +23,93 @@
       "id": "Swe-Clarin",
       "group": "third"
     },
+  {
+      "id": "SHFA",
+      "group": "third"
+    },
+      {
+      "id": "Universities",
+      "group": "second"
+    },
 
     {
-      "id": "GU",
-      "group": "second"
+      "id": "University of Gothenburg",
+      "group": "third"
     },
     {
       "id": "The craft laboratory/Hantverslaboratoriet",
-      "group": "fourth"
+      "group": "sixth"
     },
     {
       "id": "Faculty of Social Sciences",
-      "group": "third"
+      "group": "fourth"
     },
     {
       "id": "Dept. of Political Science",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "SOM-institutet",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "Faculty of Humanities",
-      "group": "third"
+      "group": "fourth"
     },
     {
       "id": "Dept. of Philosophy, Linguistics and Theory of Science",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "Språkbanken text",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "Dept. of Historical Studies",
-      "group": "fourth"
-    },
-    {
-      "id": "SHFA",
       "group": "fifth"
     },
     {
       "id": "Dept. of Literature, History of Ideas, and Religion",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "Dept. of Languages and Literatures",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "University library",
-      "group": "third"
+      "group": "fourth"
     },
     {
       "id": "KvinnSam",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "Faculty of Science and Technology",
-      "group": "third"
+      "group": "fourth"
     },
     {
       "id": "Dept. of Conservation",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
       "id": "Dept. of Earth Sciences",
-      "group": "fourth"
+      "group": "fifth"
     },
     {
-      "id": "Artistic Faculty",
-      "group": "third"
-    },
-    {
-      "id": "HDK-Valand - Academy of Art and Design",
-      "group": "fourth"
+      "id": "HDK-Valand",
+      "group": "Fourth"
     },
     {
       "id": "Dept. of Cultural Sciences",
-      "group": "third"
+      "group": "fifth"
     },
     {
       "id": "Centre for Critical Heritage Studies",
-      "group": "third"
+      "group": "sixth"
     },
     {
-      "id": "Statligt",
+      "id": "Governmental",
       "group": "second"
     },
     {
@@ -146,7 +146,7 @@
     },
     {
       "id": "Vitlycke museum",
-      "group": "fourth"
+      "group": "third"
     },
     {
       "id": "Private sector",
@@ -165,7 +165,7 @@
       "group": "third"
     },
     {
-      "id": "Heritage Sector",
+      "id": "Heritage sector",
       "group": "second"
     },
     {
@@ -184,8 +184,8 @@
       "id": "Göteborgs konstmuseum",
       "group": "third"
     },
-    {
-      "id": "Universeum",
+      {
+      "id": "Grenna museum",
       "group": "third"
     },
     {
@@ -197,94 +197,67 @@
       "group": "third"
     },
     {
-      "id": "Internationellt",
+      "id": "Institutes",
       "group": "second"
     },
-    {
-      "id": "Argentina",
-      "group": "third"
-    },
+  
     {
       "id": "Instituto Antártico Argentino",
-      "group": "fourth"
-    },
-    {
-      "id": "Malta",
       "group": "third"
     },
     {
       "id": "Sveriges konsulat i Valletta",
-      "group": "fourth"
+      "group": "third"
     },
     {
       "id": "University of Malta",
-      "group": "fourth"
-    },
-    {
-      "id": "USA",
       "group": "third"
     },
     {
       "id": "University of Michigan",
-      "group": "fourth"
-    },
-    {
-      "id": "Ukraine",
       "group": "third"
     },
     {
       "id": "The National Conservation Area 'St. Sophia of Kyiv'",
-      "group": "fourth"
+      "group": "third"
     },
 
     {
       "id": "The National Museum of the History of Ukraine",
-      "group": "fourth"
+      "group": "third"
     },
 
     {
-      "id": "Italy",
-      "group": "third"
-    },
-    {
       "id": "Swedish Institute in Rome",
-      "group": "fourth"
-    },
-    {
-      "id": "Norway",
       "group": "third"
     },
     {
       "id": "Norwegian Polar institute",
-      "group": "fourth"
+      "group": "third"
     },
-    {
-      "id": "UK",
+      {
+      "id": "Svalbard Museum",
       "group": "third"
     },
     {
       "id": "University of Plymouth",
-      "group": "fourth"
-    },
-    {
-      "id": "Rwanda",
       "group": "third"
     },
     {
       "id": "University of Kigali",
-      "group": "fourth"
+      "group": "third"
     },
     {
       "id": "Lunds universitet",
-      "group": "second"
+      "group": "third"
     },
     {
       "id": "Mälardalens universitet",
-      "group": "second"
+      "group": "third"
     },
     {
       "id": "KTH",
-      "group": "second"
+      "group": "third"
     },
     {
       "id": "Språkbanken tal",
@@ -292,19 +265,19 @@
     },
     {
       "id": "Chalmers tekniska högskola",
-      "group": "second"
+      "group": "third"
     },
     {
       "id": "Högskolan i Borås",
-      "group": "second"
+      "group": "third"
     },
     {
       "id": "Södertörns högskola",
-      "group": "second"
+      "group": "third"
     },
     {
       "id": "Linnéuniversitetet",
-      "group": "second"
+      "group": "third"
     }
   ],
   "links": [
@@ -312,28 +285,32 @@
       "source": "GRIDH",
       "target": "GRIDH"
     },
-    {
+     {
       "source": "GRIDH",
-      "target": "GU"
+      "target": "Universities"
+    },
+    {
+      "source": "Universities",
+      "target": "University of Gothenburg"
     },
     {
       "source": "GRIDH",
-      "target": "National Infrastructures"
+      "target": "Infrastructures"
     },
     {
-      "source": "National Infrastructures",
+      "source": "Infrastructures",
       "target": "Infravis"
     },
     {
-      "source": "National Infrastructures",
+      "source": "Infrastructures",
       "target": "HumInfra"
     },
     {
-      "source": "National Infrastructures",
+      "source": "Infrastructures",
       "target": "Swe-Clarin"
     },
     {
-      "source": "GU",
+      "source": "University of Gothenburg",
       "target": "Faculty of Social Sciences"
     },
     {
@@ -345,7 +322,7 @@
       "target": "SOM-institutet"
     },
     {
-      "source": "GU",
+      "source": "University of Gothenburg",
       "target": "Faculty of Humanities"
     },
     {
@@ -361,7 +338,7 @@
       "target": "Dept. of Historical Studies"
     },
     {
-      "source": "Dept. of Historical Studies",
+      "source": "Infrastructures",
       "target": "SHFA"
     },
     {
@@ -373,7 +350,7 @@
       "target": "Dept. of Languages and Literatures"
     },
     {
-      "source": "GU",
+      "source": "University of Gothenburg",
       "target": "University library"
     },
     {
@@ -381,7 +358,7 @@
       "target": "KvinnSam"
     },
     {
-      "source": "GU",
+      "source": "University of Gothenburg",
       "target": "Faculty of Science and Technology"
     },
     {
@@ -399,27 +376,23 @@
       "target": "Dept. of Earth Sciences"
     },
     {
-      "source": "GU",
-      "target": "Artistic Faculty"
+      "source": "University of Gothenburg",
+      "target": "HDK-Valand"
     },
     {
-      "source": "Artistic Faculty",
-      "target": "HDK-Valand - Academy of Art and Design"
-    },
-    {
-      "source": "GU",
+      "source": "University of Gothenburg",
       "target": "Dept. of Cultural Sciences"
     },
     {
-      "source": "GU",
+      "source": "University of Gothenburg",
       "target": "Centre for Critical Heritage Studies"
     },
     {
       "source": "GRIDH",
-      "target": "Statligt"
+      "target": "Governmental"
     },
     {
-      "source": "Statligt",
+      "source": "Governmental",
       "target": "KB"
     },
     {
@@ -427,19 +400,19 @@
       "target": "KB-Lab"
     },
     {
-      "source": "Statligt",
+      "source": "Governmental",
       "target": "Riksarkivet"
     },
     {
-      "source": "Statligt",
+      "source": "Governmental",
       "target": "SND (Svensk nationell datatjänst)"
     },
     {
-      "source": "Statligt",
+      "source": "Governmental",
       "target": "Swedish National Heritage Board"
     },
     {
-      "source": "Statligt",
+      "source": "Governmental",
       "target": "The Royal Swedish Academy"
     },
     
@@ -452,7 +425,7 @@
       "target": "Västra Götalandsregionen"
     },
     {
-      "source": "Västra Götalandsregionen",
+      "source": "Heritage sector",
       "target": "Vitlycke museum"
     },
     {
@@ -460,7 +433,7 @@
       "target": "Private sector"
     },
     {
-      "source": "Heritage Sector",
+      "source": "Heritage sector",
       "target": "Insamlingsstiftelsen Södra Råda gamla kyrkplats"
     },
     {
@@ -473,122 +446,94 @@
     },
     {
       "source": "GRIDH",
-      "target": "Heritage Sector"
+      "target": "Heritage sector"
     },
     {
-      "source": "Heritage Sector",
+      "source": "Heritage sector",
       "target": "Statens historiska museum"
     },
     {
-      "source": "Heritage Sector",
+      "source": "Heritage sector",
       "target": "Dawit Isaak-biblioteket"
     },
     {
-      "source": "Heritage Sector",
+      "source": "Heritage sector",
       "target": "Svenska barnboksinstitutet"
     },
     {
-      "source": "Heritage Sector",
+      "source": "Heritage sector",
       "target": "Göteborgs konstmuseum"
     },
-    {
-      "source": "Heritage Sector",
-      "target": "Universeum"
+      {
+      "source": "Heritage sector",
+      "target": "Grenna museum"
     },
     {
-      "source": "Heritage Sector",
+      "source": "Heritage sector",
       "target": "Nationalmuseum"
     },
     {
-      "source": "Heritage Sector",
+      "source": "Infrastructures",
       "target": "Litteraturbanken"
     },
-    {
+     {
       "source": "GRIDH",
-      "target": "Internationellt"
+      "target": "Institutes"
     },
     {
-      "source": "Internationellt",
-      "target": "Argentina"
-    },
-    {
-      "source": "Argentina",
+      "source": "Institutes",
       "target": "Instituto Antártico Argentino"
     },
     {
-      "source": "Internationellt",
-      "target": "Malta"
-    },
-    {
-      "source": "Malta",
+      "source": "Governmental",
       "target": "Sveriges konsulat i Valletta"
     },
     {
-      "source": "Malta",
+      "source": "Universities",
       "target": "University of Malta"
     },
     {
-      "source": "Internationellt",
-      "target": "USA"
-    },
-    {
-      "source": "USA",
+      "source": "Universities",
       "target": "University of Michigan"
     },
     {
-      "source": "Internationellt",
-      "target": "Ukraine"
-    },
-    {
-      "source": "Ukraine",
+      "source": "Heritage sector",
       "target": "The National Conservation Area 'St. Sophia of Kyiv'"
     },
     {
-      "source": "Ukraine",
+      "source": "Heritage sector",
       "target": "The National Museum of the History of Ukraine"
     },
     {
-      "source": "Internationellt",
-      "target": "Italy"
-    },
-    {
-      "source": "Italy",
+      "source": "Institutes",
       "target": "Swedish Institute in Rome"
     },
     {
-      "source": "Internationellt",
-      "target": "Norway"
-    },
-    {
-      "source": "Norway",
+      "source": "Institutes",
       "target": "Norwegian Polar institute"
     },
-    {
-      "source": "Internationellt",
-      "target": "UK"
+     {
+      "source": "Heritage sector",
+      "target": "Svalbard Museum"
     },
     {
-      "source": "UK",
+      "source": "Universities",
       "target": "University of Plymouth"
     },
     {
-      "source": "Internationellt",
-      "target": "Rwanda"
-    },
-    {
-      "source": "Rwanda",
+      "source": "Universities",
       "target": "University of Kigali"
     },
     {
-      "source": "GRIDH",
+      "source": "Universities",
       "target": "Lunds universitet"
     },
     {
-      "source": "GRIDH",
+      "source": "Universities",
       "target": "Mälardalens universitet"
     },
     {
-      "source": "GRIDH",
+      "source": "Universities",
       "target": "KTH"
     },
     {
@@ -596,19 +541,19 @@
       "target": "Språkbanken tal"
     },
     {
-      "source": "GRIDH",
+      "source": "Universities",
       "target": "Chalmers tekniska högskola"
     },
     {
-      "source": "GRIDH",
+      "source": "Universities",
       "target": "Högskolan i Borås"
     },
     {
-      "source": "GRIDH",
+      "source": "Universities",
       "target": "Södertörns högskola"
     },
     {
-      "source": "GRIDH",
+      "source": "Universities",
       "target": "Linnéuniversitetet"
     }
   ]

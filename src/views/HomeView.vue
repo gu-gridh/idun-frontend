@@ -1,20 +1,18 @@
 <template>
 
   <div class="intro-space" style="">
-    <div class="text-module-title">Cutting Edge Expertise</div>
+    <div class="text-module-title">Cutting-edge expertise</div>
     <div class="intro-title">
       A resource for research!
     </div>
     <div class="intro-article">
       <p> The Gothenburg Research Infrastructure in Digital Humanities (GRIDH) is a research node and infrastructure
         that offer expertise in <span>deep learning and artificial intelligence</span>, <span>visualisation</span> and
-        <span>visual analysis</span>, <span>spatio-temporal
-          interfaces</span>, and <span>natural language processing</span>. Our mission is to strengthen, renew and
-        enrich research and
-        teaching through digital source material, tools and methods.
+        <span>visual analysis</span>, <span>spatio-temporal interfaces</span>, <span>natural language processing</span>, <span>interdisciplinary digital project design</span>, and <span>humanistic AI</span>. 
+        Our mission is to strengthen, renew and enrich research and teaching through digital source material, tools and methods.
       </p>
 
-      <p>We help researchers to develop research applications and navigate datasets, and is a resource for memory
+      <p>We help researchers to develop research applications and navigate datasets, and we are a resource for memory
         institutions that seek new ways to make their collections and archives available for research and public
         alike. We publish both human and machine readable interfaces for a number of our research projects.</p>
     </div>
@@ -29,7 +27,7 @@
       <div class="row grey-gradient" style="">
         <div class="info-module">
           <div class="info-module-slogan left">
-            <div class="text-module-title">Application Experts</div>
+            <div class="text-module-title">Application experts</div>
             <h1>So many projects!</h1>
             <h2 style="margin-top:-20px!important;">GRIDH have to date supported more than <span>45</span> funded research projects, and have helped raise in excess of <span>200
                 million SEK</span> in external funding for these. We are currently involved in
@@ -63,12 +61,11 @@
               funding</div>
             <div class="text-module-description"><!-- Money-maker info text  --></div>
 
-            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px;"><router-link
-                to="/projects">See all projects</router-link></div>
+            <div class="text-module-link hoverable" style="margin-bottom:20px; margin-top:-10px; "><router-link
+                to="/projects"><span style="color:var(--theme-livedata2)!important;font-weight:600;">See all projects</span></router-link></div>
 
             <div class="text-module-title">Infrastructures </div>
-            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">3</span> National
-                infrastructures</router-link> </div>
+            <div class="text-module-data"><router-link to="/projects"> <span class="livedata-pulse">3</span> national research infrastructures</router-link> </div>
             <div class="text-module-description"></div>
 
 
@@ -89,8 +86,8 @@
         </div>
         <div class="info-module">
           <div class="info-module-slogan right">
-            <div class="text-module-title">University wide support</div>
-            <h1>Transdisciplinary collaborations!</h1>
+            <div class="text-module-title">University-wide support</div>
+            <h1>Interdisciplinary collaborations!</h1>
             <h2 v-html="redData2.html"></h2>
           </div>
         </div>
@@ -171,7 +168,7 @@
               <div class="link-title">
 
                 <div class="link-title">
-                  GitHub Repositories
+                  GitHub repositories
                 </div>
 
               </div>
@@ -182,7 +179,7 @@
         <div class="project-container">
 
           <!-- TODO: hook up the title, link, and image to something that cna be decided in the backend -->
-          <h3>Highlighted Resources</h3>
+          <h3>Featured resources</h3>
           <div class="projects">
             <a href="https://saintsophia.dh.gu.se" class="project-item"
               style="border-radius:10px 0 0 10px; background-image:url(https://data.dh.gu.se/idun/files/large/bc1bb1c389814bae436d6328357d21a0946b3358.jpg); ">
@@ -214,7 +211,7 @@
       </div>
     </div>
     <div class="project-button">
-      <div class="text-module-link hoverable"><router-link to="/resources">See all resources</router-link></div>
+      <div class="text-module-link hoverable"><router-link to="/resources"><span style="color:var(--theme-livedata2)!important;font-weight:600;">All our resources</span></router-link></div>
     </div>
   </div>
 </template>

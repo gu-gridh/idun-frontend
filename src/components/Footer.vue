@@ -6,11 +6,11 @@
         <a class="site-link link" href="https://github.com/gu-gridh/" target="_blank">GitHub repository</a>
       </div>
       <div class="links-stack">
-        <a class="site-link link" href="https://www.gu.se/digital-humaniora/om-oss/kontakt#accordion=be36559a-f62b-4d9c-9e31-16b35444922f" target="_blank">Personell</a>
+        <a class="site-link link" href="https://www.gu.se/digital-humaniora/om-oss/kontakt#accordion=be36559a-f62b-4d9c-9e31-16b35444922f" target="_blank">Staff</a>
         <a class="site-link link" href="https://www.gu.se/digital-humaniora/om-oss/kontakt" target="_blank">Contact</a>
       </div>
      <div class="links-stack border-style">
-      Address: Box 100, 405 30 Gothenburg <br>
+      Address: Box 200, 405 30 Gothenburg <br>
       Telephone: +46 (0) 31-786 0000
     </div> 
  

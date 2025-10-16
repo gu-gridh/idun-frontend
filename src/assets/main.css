@@ -29,6 +29,10 @@ body{
   color: black;
 } 
 
+span a{
+    color: var(--theme-livedata2)!important;
+}
+
 
 
 @media (hover: hover) {

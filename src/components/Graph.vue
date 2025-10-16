@@ -48,6 +48,8 @@
         node.fx = node.x;
         node.fy = node.y;
       })
+
+      
       .nodePointerAreaPaint((node, color, ctx) => {
         ctx.fillStyle = color;
         ctx.beginPath();
@@ -59,15 +61,15 @@
       .linkDirectionalArrowLength(0)
       .linkDirectionalArrowRelPos(0)
 
-    // .nodeCanvasObject((node, ctx, globalScale) => {
-    //   const label = node.id;
-    //   const fontSize = 10 / globalScale;
-    //   ctx.font = `${fontSize}px Sans-Serif`;
-    //   ctx.fillStyle = groupColors[node.group] || '#444';
-    //   ctx.textAlign = 'center';
-    //   ctx.textBaseline = 'top';
-    //   ctx.fillText(label, node.x, node.y + 8);
-    // });
+/*   .nodeCanvasObject((node, ctx, globalScale) => {
+      const label = node.id;
+      const fontSize = 10 / globalScale;
+       ctx.font = `${fontSize}px Sans-Serif`;
+       ctx.fillStyle = groupColors[node.group] || '#444';
+       ctx.textAlign = 'center';
+       ctx.textBaseline = 'top';
+       ctx.fillText(label, node.x, node.y + 8);
+     });  */
 
     // Resize handler
     resizeObserver = new ResizeObserver(entries => {
