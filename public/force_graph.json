@@ -98,7 +98,7 @@
     },
     {
       "id": "HDK-Valand",
-      "group": "Fourth"
+      "group": "fourth"
     },
     {
       "id": "Dept. of Cultural Sciences",
@@ -384,7 +384,7 @@
       "target": "Dept. of Cultural Sciences"
     },
     {
-      "source": "University of Gothenburg",
+      "source": "Dept. of Historical Studies",
       "target": "Centre for Critical Heritage Studies"
     },
     {
