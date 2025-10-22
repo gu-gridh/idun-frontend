@@ -49,6 +49,33 @@
         node.fy = node.y;
       })
 
+      //add text 
+      .nodeCanvasObjectMode(() => 'after') // 👈 ensures labels are drawn AFTER all nodes
+      .nodeCanvasObject((node, ctx, globalScale) => {
+        ctx.save();
+
+        const label = node.id;
+        const fontSize = 12 / globalScale;
+        ctx.font = `${fontSize}px Sans-Serif`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'top';
+
+        const nodeRelSize = 8;
+        const r = Math.cbrt(node.val || 1) * nodeRelSize;
+        const offset = r + 10 / globalScale; // further away from node
+
+        // text
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+        ctx.fillText(label, node.x, node.y + offset);
+
+        // improve contrast
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+        ctx.lineWidth = 0.4 / globalScale;
+        ctx.strokeText(label, node.x, node.y + offset);
+
+        ctx.restore();
+      })
+
       
       .nodePointerAreaPaint((node, color, ctx) => {
         ctx.fillStyle = color;
@@ -60,16 +87,6 @@
       .linkColor(() => '#aaa')
       .linkDirectionalArrowLength(0)
       .linkDirectionalArrowRelPos(0)
-
-/*   .nodeCanvasObject((node, ctx, globalScale) => {
-      const label = node.id;
-      const fontSize = 10 / globalScale;
-       ctx.font = `${fontSize}px Sans-Serif`;
-       ctx.fillStyle = groupColors[node.group] || '#444';
-       ctx.textAlign = 'center';
-       ctx.textBaseline = 'top';
-       ctx.fillText(label, node.x, node.y + 8);
-     });  */
 
     // Resize handler
     resizeObserver = new ResizeObserver(entries => {
