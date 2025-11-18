@@ -61,7 +61,9 @@ onMounted(async () => {
     .nodeCanvasObjectMode(() => 'after')
     .nodeCanvasObject((node, ctx, globalScale) => {
       const label = node.id;
-      const fontSize = (12 + (node.degree || 0) * 1) / globalScale;
+      const fontSize = (12 + (node.degree || 0)) / globalScale;
+      const paddingX = 8 / globalScale;
+      const paddingY = 4 / globalScale;
 
       ctx.save();
       ctx.font = `${fontSize}px 'Barlow Condensed', sans-serif`;
@@ -70,11 +72,26 @@ onMounted(async () => {
 
       const nodeRelSize = 8;
       const r = Math.cbrt((node.degree || 0) + 1) * nodeRelSize;
-      const y = node.y - (r + 6 / globalScale);
+      const y = node.y - (r + (fontSize + paddingY * 2) / 2);
 
-      // text
-      ctx.globalAlpha = 1;
-      ctx.fillStyle = 'black';
+      const textWidth = ctx.measureText(label).width;
+      const boxWidth = textWidth + paddingX * 2;
+      const boxHeight = fontSize + paddingY * 2;
+      const boxX = node.x - boxWidth / 2;
+      const boxY = y - boxHeight / 2;
+      const radius = 6 / globalScale;
+
+      ctx.fillStyle = '#fff'; //background color
+      ctx.strokeStyle = groupColors[node.group] || '#aaa';
+      ctx.lineWidth = 1 / globalScale;
+
+      //draw rounded edges
+      ctx.beginPath();
+      ctx.roundRect(boxX, boxY, boxWidth, boxHeight, radius);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#111'; //text color
       ctx.fillText(label, node.x, y);
 
       ctx.restore();
