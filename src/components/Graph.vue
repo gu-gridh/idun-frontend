@@ -58,7 +58,7 @@ onMounted(async () => {
       node.fy = node.y;
     })
 
-    .d3Force('charge', d3.forceManyBody().strength(-150)) //repulsion + attraction of nodes
+    .d3Force('charge', d3.forceManyBody().strength(-250)) //repulsion + attraction of nodes
     .d3Force('link', d3.forceLink().distance(180)) //spacing between nodes
     .nodeCanvasObjectMode(() => 'after')
     .nodeCanvasObject((node, ctx, globalScale) => {
@@ -102,7 +102,7 @@ onMounted(async () => {
     .nodePointerAreaPaint((node, color, ctx) => {
       ctx.fillStyle = color;
       ctx.beginPath();
-      ctx.arc(node.x, node.y, 12, 0, 2 * Math.PI, false); // << larger hit area
+      ctx.arc(node.x, node.y, 22, 0, 2 * Math.PI, false); // << larger hit area
       ctx.fill();
     })
     .linkWidth(0.5)
