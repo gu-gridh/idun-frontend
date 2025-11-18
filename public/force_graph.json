@@ -137,10 +137,6 @@
       "group": "third"
     },
     {
-      "id": "Regioner",
-      "group": "second"
-    },
-    {
       "id": "Västra Götalandsregionen",
       "group": "third"
     },
@@ -415,13 +411,8 @@
       "source": "Governmental",
       "target": "The Royal Swedish Academy"
     },
-    
     {
-      "source": "GRIDH",
-      "target": "Regioner"
-    },
-    {
-      "source": "Regioner",
+      "source": "Governmental",
       "target": "Västra Götalandsregionen"
     },
     {
