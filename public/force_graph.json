@@ -145,7 +145,7 @@
       "group": "third"
     },
     {
-      "id": "Vitlycke museum",
+      "id": "Vitlycke Museum",
       "group": "third"
     },
     {
@@ -426,7 +426,7 @@
     },
     {
       "source": "Heritage sector",
-      "target": "Vitlycke museum"
+      "target": "Vitlycke Museum"
     },
     {
       "source": "GRIDH",
