@@ -46,7 +46,9 @@ onMounted(async () => {
     // .width(graphContainer.value.clientWidth)
     // .height(graphContainer.value.clientHeight)
     .nodeId('id')
-    .nodeLabel(node => node.id)
+
+    // Comment out to remove label on hover
+    //.nodeLabel(node => node.id)
     .nodeColor(node => groupColors[node.group] || '#cccccc')
     .nodeRelSize(8)
     .nodeVal(node => (node.degree || 0) + 1)
@@ -56,8 +58,8 @@ onMounted(async () => {
       node.fy = node.y;
     })
 
-    .d3Force('charge', d3.forceManyBody().strength(-220)) //repulsion + attraction of nodes
-    .d3Force('link', d3.forceLink().distance(200)) //spacing between nodes
+    .d3Force('charge', d3.forceManyBody().strength(-150)) //repulsion + attraction of nodes
+    .d3Force('link', d3.forceLink().distance(180)) //spacing between nodes
     .nodeCanvasObjectMode(() => 'after')
     .nodeCanvasObject((node, ctx, globalScale) => {
       const label = node.id;
@@ -72,7 +74,7 @@ onMounted(async () => {
 
       const nodeRelSize = 8;
       const r = Math.cbrt((node.degree || 0) + 1) * nodeRelSize;
-      const y = node.y - (r + (fontSize + paddingY * 2) / 2);
+      const y = node.y - (r + (fontSize + paddingY * 6) / 2);
 
       const textWidth = ctx.measureText(label).width;
       const boxWidth = textWidth + paddingX * 2;
@@ -83,15 +85,15 @@ onMounted(async () => {
 
       ctx.fillStyle = '#fff'; //background color
       ctx.strokeStyle = groupColors[node.group] || '#aaa';
-      ctx.lineWidth = 1 / globalScale;
+      ctx.lineWidth = 0.5 / globalScale;
 
       //draw rounded edges
       ctx.beginPath();
       ctx.roundRect(boxX, boxY, boxWidth, boxHeight, radius);
       ctx.fill();
-      ctx.stroke();
+      //ctx.stroke();
 
-      ctx.fillStyle = '#111'; //text color
+      ctx.fillStyle = '#999'; //text color
       ctx.fillText(label, node.x, y);
 
       ctx.restore();
@@ -103,7 +105,7 @@ onMounted(async () => {
       ctx.arc(node.x, node.y, 12, 0, 2 * Math.PI, false); // << larger hit area
       ctx.fill();
     })
-    .linkWidth(2)
+    .linkWidth(0.5)
     .linkColor(() => '#aaa')
     .linkDirectionalArrowLength(0)
     .linkDirectionalArrowRelPos(0)

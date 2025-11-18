@@ -33,11 +33,11 @@
     },
 
     {
-      "id": "University of Gothenburg",
+      "id": "Univ. of Gothenburg",
       "group": "third"
     },
     {
-      "id": "The craft laboratory/Hantverslaboratoriet",
+      "id": "The craft laboratory",
       "group": "sixth"
     },
     {
@@ -57,7 +57,7 @@
       "group": "fourth"
     },
     {
-      "id": "Dept. of Philosophy, Linguistics and Theory of Science",
+      "id": "FLOV",
       "group": "fifth"
     },
     {
@@ -69,7 +69,7 @@
       "group": "fifth"
     },
     {
-      "id": "Dept. of Literature, History of Ideas, and Religion",
+      "id": "LIR",
       "group": "fifth"
     },
     {
@@ -77,7 +77,7 @@
       "group": "fifth"
     },
     {
-      "id": "University library",
+      "id": "Univ. library",
       "group": "fourth"
     },
     {
@@ -105,7 +105,7 @@
       "group": "fifth"
     },
     {
-      "id": "Centre for Critical Heritage Studies",
+      "id": "CCHS",
       "group": "sixth"
     },
     {
@@ -125,11 +125,11 @@
       "group": "third"
     },
     {
-      "id": "SND (Svensk nationell datatjänst)",
+      "id": "SND",
       "group": "third"
     },
     {
-      "id": "Swedish National Heritage Board",
+      "id": "National Heritage Board",
       "group": "third"
     },
     {
@@ -153,11 +153,11 @@
       "group": "second"
     },
     {
-      "id": "Insamlingsstiftelsen Södra Råda gamla kyrkplats",
+      "id": "Södra Råda",
       "group": "third"
     },
     {
-      "id": "Göteborg International Organ Academy Association",
+      "id": "GIOAA",
       "group": "third"
     },
     {
@@ -210,20 +210,20 @@
       "group": "third"
     },
     {
-      "id": "University of Malta",
+      "id": "Univ. of Malta",
       "group": "third"
     },
     {
-      "id": "University of Michigan",
+      "id": "Univ. of Michigan",
       "group": "third"
     },
     {
-      "id": "The National Conservation Area 'St. Sophia of Kyiv'",
+      "id": "St. Sophia of Kyiv",
       "group": "third"
     },
 
     {
-      "id": "The National Museum of the History of Ukraine",
+      "id": "MIST",
       "group": "third"
     },
 
@@ -240,11 +240,11 @@
       "group": "third"
     },
     {
-      "id": "University of Plymouth",
+      "id": "Univ. of Plymouth",
       "group": "third"
     },
     {
-      "id": "University of Kigali",
+      "id": "Univ. of Kigali",
       "group": "third"
     },
     {
@@ -291,7 +291,7 @@
     },
     {
       "source": "Universities",
-      "target": "University of Gothenburg"
+      "target": "Univ. of Gothenburg"
     },
     {
       "source": "GRIDH",
@@ -310,7 +310,7 @@
       "target": "Swe-Clarin"
     },
     {
-      "source": "University of Gothenburg",
+      "source": "Univ. of Gothenburg",
       "target": "Faculty of Social Sciences"
     },
     {
@@ -322,12 +322,12 @@
       "target": "SOM-institutet"
     },
     {
-      "source": "University of Gothenburg",
+      "source": "Univ. of Gothenburg",
       "target": "Faculty of Humanities"
     },
     {
       "source": "Faculty of Humanities",
-      "target": "Dept. of Philosophy, Linguistics and Theory of Science"
+      "target": "FLOV"
     },
     {
       "source": "Faculty of Humanities",
@@ -343,22 +343,22 @@
     },
     {
       "source": "Faculty of Humanities",
-      "target": "Dept. of Literature, History of Ideas, and Religion"
+      "target": "LIR"
     },
     {
       "source": "Faculty of Humanities",
       "target": "Dept. of Languages and Literatures"
     },
     {
-      "source": "University of Gothenburg",
-      "target": "University library"
+      "source": "Univ. of Gothenburg",
+      "target": "Univ. library"
     },
     {
-      "source": "University library",
+      "source": "Univ. library",
       "target": "KvinnSam"
     },
     {
-      "source": "University of Gothenburg",
+      "source": "Univ. of Gothenburg",
       "target": "Faculty of Science and Technology"
     },
     {
@@ -368,7 +368,7 @@
 
     {
       "source": "Dept. of Conservation",
-      "target": "The craft laboratory/Hantverslaboratoriet"
+      "target": "The craft laboratory"
     },
 
     {
@@ -376,16 +376,16 @@
       "target": "Dept. of Earth Sciences"
     },
     {
-      "source": "University of Gothenburg",
+      "source": "Univ. of Gothenburg",
       "target": "HDK-Valand"
     },
     {
-      "source": "University of Gothenburg",
+      "source": "Univ. of Gothenburg",
       "target": "Dept. of Cultural Sciences"
     },
     {
       "source": "Dept. of Historical Studies",
-      "target": "Centre for Critical Heritage Studies"
+      "target": "CCHS"
     },
     {
       "source": "GRIDH",
@@ -405,11 +405,11 @@
     },
     {
       "source": "Governmental",
-      "target": "SND (Svensk nationell datatjänst)"
+      "target": "SND"
     },
     {
       "source": "Governmental",
-      "target": "Swedish National Heritage Board"
+      "target": "National Heritage Board"
     },
     {
       "source": "Governmental",
@@ -434,11 +434,11 @@
     },
     {
       "source": "Heritage sector",
-      "target": "Insamlingsstiftelsen Södra Råda gamla kyrkplats"
+      "target": "Södra Råda"
     },
     {
       "source": "Private sector",
-      "target": "Göteborg International Organ Academy Association"
+      "target": "GIOAA"
     },
     {
       "source": "Private sector",
@@ -490,19 +490,19 @@
     },
     {
       "source": "Universities",
-      "target": "University of Malta"
+      "target": "Univ. of Malta"
     },
     {
       "source": "Universities",
-      "target": "University of Michigan"
+      "target": "Univ. of Michigan"
     },
     {
       "source": "Heritage sector",
-      "target": "The National Conservation Area 'St. Sophia of Kyiv'"
+      "target": "St. Sophia of Kyiv"
     },
     {
       "source": "Heritage sector",
-      "target": "The National Museum of the History of Ukraine"
+      "target": "MIST"
     },
     {
       "source": "Institutes",
@@ -518,11 +518,11 @@
     },
     {
       "source": "Universities",
-      "target": "University of Plymouth"
+      "target": "Univ. of Plymouth"
     },
     {
       "source": "Universities",
-      "target": "University of Kigali"
+      "target": "Univ. of Kigali"
     },
     {
       "source": "Universities",
