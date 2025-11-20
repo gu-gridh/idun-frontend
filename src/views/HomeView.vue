@@ -764,7 +764,7 @@
   }
 
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     .content {
       flex-direction: column;
       justify-content: left;

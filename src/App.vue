@@ -100,10 +100,7 @@
   .title-gridh {
     width: 100%;
     font-size: 80px;
-
-
   }
-
 
   .subtitle-gridh {
     width: 100%;
