@@ -446,7 +446,7 @@
     overflow: hidden;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     .intro-space {
       max-width: 100%;;
     }
@@ -567,16 +567,12 @@
     color: var(--theme-heading);
   }
 
-
   .module {
     border-radius: 15px;
     width: 100%;
     min-height: 300px;
     height: 30vh;
   }
-
-
-
 
   .info-module {
     width: 50%;
@@ -607,14 +603,10 @@
     padding: 0px 60px 0px 30px;
   }
 
-
-  .info-module-slogan {}
-
   .info-module-slogan span {
     color: var(--theme-livedata1-dark);
     font-weight: 600;
   }
-
 
   .info-module-slogan h1 {
     color: var(--theme-heading);
@@ -630,8 +622,6 @@
     font-weight: 300;
     font-size: 20px;
   }
-
-
 
   .links {
     display: flex;
@@ -656,7 +646,6 @@
     font-weight: 300;
   }
 
-
   .projects {
     display: flex;
     flex-direction: row;
@@ -667,15 +656,6 @@
     gap: 0px;
 
   }
-
-
-
-
-
-
-
-
-
 
   .project-image-round {
     pointer-events: none;
@@ -728,24 +708,20 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   }
 
-
   .project-item:hover {
     background-size: 105%;
   }
 
   .ocean {
     background: linear-gradient(180deg, rgba(00, 200, 250, 0.2) 0%, rgba(255, 240, 255, 1) 100%);
-
   }
 
   .pink {
     background: linear-gradient(180deg, rgba(255, 0, 200, 0.2) 0%, rgba(240, 240, 250, 1) 100%);
-
   }
 
   .yellow {
     background: linear-gradient(180deg, rgba(255, 255, 00, 0.2) 0%, rgba(210, 250, 230, 1) 100%);
-
   }
 
   .project-button {
@@ -756,13 +732,11 @@
     justify-content: center;
   }
 
-
   .graph-wrapper {
     width: 100%;
     height: 300px;
     position: relative;
   }
-
 
   @media screen and (max-width: 1200px) {
     .content {
@@ -785,8 +759,6 @@
       margin-top: 30px;
     }
 
-
-
     .info-module-slogan h2 {
       color: var(--theme-heading);
       margin-top: -30px !important;
@@ -801,8 +773,6 @@
       justify-content: center;
       padding-left: 0px;
       margin-left: 0px;
-
-
     }
 
     .visualisation {
@@ -812,8 +782,6 @@
       margin-left: 0px;
     }
 
-
-
     .info-module {
       width: calc(100% - 30px);
       text-align: left;
@@ -821,13 +789,9 @@
       padding-left: 40px;
     }
 
-    .info-module h1 {}
-
-
     .text-module-description {
       width: 100%;
     }
-
 
     .info-module .left {
       display: flex;
@@ -839,8 +803,6 @@
       padding-left: 20px;
       align-items: flex-start;
       width: calc(100% - 20px);
-
-
     }
 
     .info-module .right {
@@ -858,10 +820,6 @@
       width: 100%;
       padding: 0px 20px;
     }
-
-
-
-
 
     .buffer {
       padding: 0px 0px;

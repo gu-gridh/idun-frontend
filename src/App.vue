@@ -166,7 +166,7 @@
 
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     .container {
       flex-direction: column;
       align-items: left;

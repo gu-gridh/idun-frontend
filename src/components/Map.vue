@@ -132,7 +132,7 @@ const convertCoords = (coords: string) => {
   background-color: black;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
 
     #map .leaflet-control-zoom-in {
  left: calc(50vw - 67px);

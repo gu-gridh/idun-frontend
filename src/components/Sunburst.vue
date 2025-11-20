@@ -233,7 +233,8 @@ function drawPieChart(data, containerEl, type) {
   if (!width || !height) return;
 
   d3.select(containerEl).selectAll('*').remove();
-  const radius = Math.min(width, height) / 2 - 10;
+  const radius = Math.max(Math.min(width, height) / 2 - 10, 30);
+  const innerRadius = Math.max(radius * 0.55, radius - 50);
 
   const svg = d3.select(containerEl)
     .append('svg')
@@ -242,11 +243,11 @@ function drawPieChart(data, containerEl, type) {
 
   const pie = d3.pie().value(d => d.value);
   const baseArc = d3.arc()
-    .innerRadius(radius - 50)
+    .innerRadius(innerRadius)
     .outerRadius(radius);
 
   const activeArc = d3.arc()
-    .innerRadius(radius - 50)
+    .innerRadius(innerRadius)
     .outerRadius(radius + 8); //slice sticks out by 8px
 
   containerEl.__arcFns = { baseArc, activeArc };
