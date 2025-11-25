@@ -98,7 +98,7 @@ const convertCoords = (coords: string) => {
 
 #map .leaflet-control-zoom-in {
  left: calc(25vw - 87px);
-  top: calc(240px) !important;
+  top: calc(260px) !important;
   position: absolute;
   border-radius: 8px 0px 0px 8px !important;
   height: 25px;
@@ -116,7 +116,7 @@ const convertCoords = (coords: string) => {
 
 #map .leaflet-control-zoom-out {
   left: calc(25vw - 48px);
-  top: calc(240px) !important;
+  top: calc(260px) !important;
   position: absolute;
   border-radius: 0px 8px 8px 0px !important;
   height: 25px;

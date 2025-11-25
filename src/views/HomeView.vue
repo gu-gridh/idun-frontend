@@ -94,7 +94,7 @@
       </div>
 
       <div class="row-right">
-        <!-- some kind of vizualisation -->
+
         <div class="info-module">
           <div class="info-module-slogan left">
             <div class="text-module-title">Data stewardship</div>
@@ -468,6 +468,7 @@
       align-items: center;
       gap: 0px;
       margin-top: 30px;
+     
     }
   }
 
@@ -571,8 +572,7 @@
   .module {
     border-radius: 15px;
     width: 100%;
-    min-height: 300px;
-    height: 30vh;
+   height:320px;
   }
 
 
@@ -759,7 +759,7 @@
 
   .graph-wrapper {
     width: 100%;
-    height: 300px;
+
     position: relative;
   }
 
