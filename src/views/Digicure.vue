@@ -105,7 +105,7 @@
                                 <div class="text-module-title">Deep data</div>
                                 <h1>Multimodal digitisation</h1>
                                 <h2>DIGICURE provides cutting-edge software solutions for <span>digitisation, metadata
-                                    structuring, and secure archiving</span>. DigiCURE also equips researchers with
+                                    structuring, and secure archiving</span>. DIGICURE also equips researchers with
                                     high-resolution imaging, 3D scanning, and digital reconstruction tools to support
                                     detailed documentation and analysis of heritage materials.
                                 </h2>
@@ -158,8 +158,8 @@
                             <div class="text-module-title">Best practices</div>
                             <h1>Multimodal expertise</h1>
                             <h2>DIGICURE facilitates expert <span>consultation services, and open-source resources to build
-                                capacity in digital preservation practices</span>. DigiCURE ensures adherence to best practices
-                                and standards, promoting responsible and sustainable stewardship of cultural heritage. Sharing this expertise, DigiCURE is the foundation of <span>DIGICURE:Ukraine</span>, a project that aids the Ukrainian heritage sector with training, sotware solutions and consultation.
+                                capacity in digital preservation practices</span>. DIGICURE ensures adherence to best practices
+                                and standards, promoting responsible and sustainable stewardship of cultural heritage. Sharing this expertise, DIGICURE is the foundation of <span>DIGICURE:Ukraine</span>, a project that aids the Ukrainian heritage sector with training, sotware solutions and consultation.
                             </h2>
                         </div>
                     </div>
