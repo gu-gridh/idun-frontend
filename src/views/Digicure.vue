@@ -104,7 +104,7 @@
                             <div class="info-module-slogan left">
                                 <div class="text-module-title">Deep data</div>
                                 <h1>Multimodal digitisation</h1>
-                                <h2>DigiCURE provides cutting-edge software solutions for <span>digitisation, metadata
+                                <h2>DIGICURE provides cutting-edge software solutions for <span>digitisation, metadata
                                     structuring, and secure archiving</span>. DigiCURE also equips researchers with
                                     high-resolution imaging, 3D scanning, and digital reconstruction tools to support
                                     detailed documentation and analysis of heritage materials.
@@ -157,7 +157,7 @@
                         <div class="info-module-slogan right">
                             <div class="text-module-title">Best practices</div>
                             <h1>Multimodal expertise</h1>
-                            <h2>DigiCURE facilitates expert <span>consultation services, and open-source resources to build
+                            <h2>DIGICURE facilitates expert <span>consultation services, and open-source resources to build
                                 capacity in digital preservation practices</span>. DigiCURE ensures adherence to best practices
                                 and standards, promoting responsible and sustainable stewardship of cultural heritage. Sharing this expertise, DigiCURE is the foundation of <span>DIGICURE:Ukraine</span>, a project that aids the Ukrainian heritage sector with training, sotware solutions and consultation.
                             </h2>
@@ -167,7 +167,7 @@
 
                 <div class="row pink-gradient-inverted" style="padding-top:30px; display:flex; flex-direction: column; align-items:flex-start; justify-content: center;">
                 <div class="tools-container" style="">
-                    <h1>Portals and tools that are using DigiCURE resources</h1>
+                    <h1>Portals and tools that are using DIGICURE resources</h1>
 
                     <masonry-wall v-if="resources.length" :column-width="220" :items="resources" :gutter="0"
                     :responsive="true" :resize="true">
