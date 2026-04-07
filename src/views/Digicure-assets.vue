@@ -119,7 +119,7 @@
                         </div>
                         <div class="asset-info">
                             <div class="asset-description">Tools developed with Swedish Rock Art Archive for creating images from meshes that visualises small topographic variations.</div>
-                            <div class="asset-link">Web site</div>
+                            <a href="https://tvt.dh.gu.se"><div class="asset-link">Web site</div></a>
                         
                         </div>
                     </div>
@@ -259,8 +259,8 @@
                         <div class="asset-info">
                             <div class="asset-description">Workshop material for planning an immersive and public
                                 oriented project that includes stakeholder and research perspectives.</div>
-                            <div class="asset-link">Visit the site (Swedish)</div>
-                            <div class="asset-link">Documentation</div>
+                            <a href="https://medium.shm.se"><div class="asset-link">Visit the site (Swedish)</div></a>
+                            <a href="https://medium.shm.se"><div class="asset-link">Documentation</div></a>
                      
                         </div>
                     </div>
@@ -340,6 +340,9 @@
 </script>
 
 <style scoped>
+    a:link{
+        padding: 0px;
+    }
     #assets-back-button{
         position:fixed;
         background: url("https://data.dh.gu.se/ui-icons/arrow_back_white.png");
