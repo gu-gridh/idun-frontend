@@ -34,6 +34,11 @@ const router = createRouter({
       name: 'digicure',
       component: () => import('../views/Digicure.vue'),
     },
+     {
+      path: '/digicure/assets',
+      name: 'assets',
+      component: () => import('../views/Digicure-assets.vue'),
+    },
   ],
 })
 
