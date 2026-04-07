@@ -377,7 +377,7 @@ transform:scale(1.1);
     }
 
     .inactive{
-        opacity:0.4; 
+        opacity:0.3; 
         pointer-events:none;
     }
 
