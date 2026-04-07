@@ -1,6 +1,6 @@
 <template>
     <div id="assets">
-       <div id="assets-back-button" @click="$router.push('/digicure')"></div>
+       <div id="assets-back-button" @click="$router.push('/digicure')" title="Back to DIGICURE main page"></div>
         <div id="components">
             <div class="grey-gradient" style="margin-top:-300px;">
                 <div class="intro-space" style="padding-bottom:0px;">
@@ -24,7 +24,7 @@
 
                 <div class="row" style="width:auto; align-items: flex-start; padding-bottom:40px; padding-left: 140px;
         padding-right: 30px;">
-                    <div class="asset-module" style="background-color:#FEAE00">
+                    <div class="asset-module longer" style="background-color:#FEAE00" title="DIGICURE Mesh Viewer">
                         <div class="asset-image" style="background-image:"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>MESH VIEWER</div>
@@ -33,12 +33,12 @@
                             <div class="asset-description">Web viewer for high resolution 3d meshes. The viewer is built
                                 on 3DHOP with custom UI and navigation for the DIGICURE platform.</div>
                             <div class="asset-link">Repository and instructions</div>
+                              <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
-                            <!-- <div class="divider"></div>
-                            <div class="asset-link source-link">3DHOP</div> -->
+      
                         </div>
                     </div>
-                    <div class="asset-module" style="background-color:#FF7FCD">
+                    <div class="asset-module longer" style="background-color:#FF7FCD"  title="DIGICURE Model Viewer">
                         <div class="asset-image" style="background-image:"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>MODEL VIEWER</div>
@@ -47,12 +47,12 @@
                             <div class="asset-description">Web viewer for textured 3d models. The viewer is built
                                 on Three.JS with custom UI and navigation for the DIGICURE platform.</div>
                             <div class="asset-link">Repository and instructions</div>
+                            <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
-                            <!--  <div class="divider"></div>
-                            <div class="asset-link source-link">Three.JS</div> -->
+              
                         </div>
                     </div>
-                    <div class="asset-module" style="background-color:#00E2FF">
+                    <div class="asset-module longer" style="background-color:#00E2FF"  title="DIGICURE Pointcloud Viewer">
                         <div class="asset-image" style="background-image:"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>POINTCLOUD VIEWER</div>
@@ -61,12 +61,12 @@
                             <div class="asset-description">Web viewer for high resolution pointclouds. The viewer is
                                 built on Potree.JS with custom UI and navigation for the DIGICURE platform.</div>
                             <div class="asset-link">Repository and instructions</div>
+                            <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
-                            <!-- <div class="divider"></div>
-                            <div class="asset-link source-link">POTREE.JS</div> -->
+               
                         </div>
                     </div>
-                    <div class="asset-module" style="background-color:#60D937">
+                    <div class="asset-module longer" style="background-color:#60D937"  title="DIGICURE Image Viewer">
                         <div class="asset-image" style="background-image:"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>IMAGE VIEWER</div>
@@ -75,55 +75,52 @@
                             <div class="asset-description">Web viewer for high resolution images. The viewer is built on
                                 OpenSeadragon with custom UI and navigation for the DIGICURE platform.</div>
                             <div class="asset-link">Repository and instructions</div>
+                            <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
-                            <!-- <div class="divider"></div>
-                            <div class="asset-link source-link">OpenSeadragon</div> -->
+                 
                         </div>
                     </div>
-                    <div class="asset-module" style="background-color:#00FFD5">
+                    <div class="asset-module longer" style="background-color:#00FFD5"  title="DIGICURE RTI Viewer">
                         <div class="asset-image" style="background-image:"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>RTI VIEWER</div>
                         </div>
+
                         <div class="asset-info">
                             <div class="asset-description">Web viewer for RTI models. The viewer is built on OpenLime
                                 with custom UI and navigation for the
                                 DIGICURE platform.</div>
                             <div class="asset-link">Repository and instructions</div>
+                            <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
-                            <!--      <div class="divider"></div>
-                            <div class="asset-link source-link">OpenLime</div> -->
+               
                         </div>
                     </div>
 
-                    <div class="asset-module" style="background-color:#FFF056">
+                    <div class="asset-module longer" style="background-color:#FFF056"  title="DIGICURE IIIF Viewer">
                         <div class="asset-image" style="background-image:"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">IIIF <br>CONVERTER</div>
                             <div class="asset-subtitle"></div>
                         </div>
                         <div class="asset-info">
-                            <div class="asset-description">App for converting images to IIIF files.</div>
-                            <div class="asset-link">Web site</div>
-                            <div class="asset-link">Live example</div>
-                            <!--      <div class="divider"></div>
-                            <div class="asset-link source-link">OpenLime</div> -->
+                            <div class="asset-description">Application for converting high-resolution images to IIIF files ready for the Image Viewer component.</div>
+                            <div class="asset-link">Repository and instructions</div>
+                            <div class="asset-link">Quick download</div>
+                       
                         </div>
                     </div>
 
-                    <div class="asset-module" style="background-color:#FF968D">
+                    <div class="asset-module longer" style="background-color:#FF968D"  title="Topography Visualisation Toolbox">
                         <div class="asset-image" style="background-image:"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">TVT:</div>
                             <div class="asset-subtitle">TOPOGRAPHY <br>VISUALISATION TOOLBOX</div>
                         </div>
                         <div class="asset-info">
-                            <div class="asset-description">Web viewer for RTI models. The viewer is built on
-                                OpenLime with custom UI and navigation for the DIGICURE platform.</div>
+                            <div class="asset-description">Tools developed with Swedish Rock Art Archive for creating images from meshes that visualises small topographic variations.</div>
                             <div class="asset-link">Web site</div>
-                            <div class="asset-link">Live example</div>
-                            <!--      <div class="divider"></div>
-                            <div class="asset-link source-link">OpenLime</div> -->
+                        
                         </div>
                     </div>
                     
@@ -166,8 +163,7 @@
                                 Stave Church.</div>
                             <div class="asset-link">Download</div>
                             <div class="asset-link">Documentation</div>
-                            <!-- <div class="divider"></div>
-                            <div class="asset-link source-link">3DHOP</div> -->
+                    
                         </div>
                     </div>
                     <div class="asset-module" style="background-color:#FF7FCD">
@@ -180,8 +176,7 @@
                                 Etruscan chamber tombs from San Giovenale.</div>
                             <div class="asset-link">Download</div>
                             <div class="asset-link">Documentation</div>
-                            <!--  <div class="divider"></div>
-                            <div class="asset-link source-link">Three.JS</div> -->
+                    
                         </div>
                     </div>
                     <div class="asset-module" style="background-color:#00E2FF">
@@ -194,12 +189,11 @@
                                 of the Nordenskjöld Expedition to Antarctica.</div>
                             <div class="asset-link">Download</div>
                             <div class="asset-link">Documentation</div>
-                            <!-- <div class="divider"></div>
-                            <div class="asset-link source-link">POTREE.JS</div> -->
+               
                         </div>
                     </div>
 
-                    <div class="asset-module" style="background-color:#60D937; opacity:0.4;">
+                    <div class="asset-module" style="background-color:#60D937; opacity:0.4; pointer-events:none;">
                         <div class="asset-image" style="background-image:"></div>
                          <div class="asset-title-area">
                         <div class="asset-title">SÖDRA RÅDA<br>CHURCH</div>
@@ -209,8 +203,7 @@
                                 Church.</div>
                             <div class="asset-link">Download</div>
                             <div class="asset-link">Documentation</div>
-                            <!-- <div class="divider"></div>
-                            <div class="asset-link source-link">POTREE.JS</div> -->
+                    
                         </div>
                     </div>
 
@@ -254,8 +247,7 @@
                                 project that includes stakeholder and research perspectives.</div>
                             <div class="asset-link">Download material (Swedish)</div>
                             <div class="asset-link">Documentation</div>
-                            <!-- <div class="divider"></div>
-                            <div class="asset-link source-link">3DHOP</div> -->
+              
                         </div>
                     </div>
                     <div class="asset-module" style="background-color:#FF7FCD">
@@ -269,8 +261,7 @@
                                 oriented project that includes stakeholder and research perspectives.</div>
                             <div class="asset-link">Visit the site (Swedish)</div>
                             <div class="asset-link">Documentation</div>
-                            <!--  <div class="divider"></div>
-                            <div class="asset-link source-link">Three.JS</div> -->
+                     
                         </div>
                     </div>
 
@@ -380,6 +371,10 @@ transform:scale(1.1);
         flex-direction: column;
 
         align-items: center;
+    }
+
+    .longer {
+         height: 485px;
     }
 
     .asset-image {
