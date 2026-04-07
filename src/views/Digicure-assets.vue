@@ -193,7 +193,7 @@
                         </div>
                     </div>
 
-                    <div class="asset-module" style="background-color:#60D937; opacity:0.4; pointer-events:none;">
+                    <div class="asset-module inactive" style="background-color:#60D937;">
                         <div class="asset-image" style="background-image:"></div>
                          <div class="asset-title-area">
                         <div class="asset-title">SÖDRA RÅDA<br>CHURCH</div>
@@ -374,6 +374,11 @@ transform:scale(1.1);
         flex-direction: column;
 
         align-items: center;
+    }
+
+    .inactive{
+        opacity:0.4; 
+        pointer-events:none;
     }
 
     .longer {
