@@ -39,6 +39,12 @@ const router = createRouter({
       name: 'assets',
       component: () => import('../views/Digicure-assets.vue'),
     },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('../views/ContactForm.vue'),
+    },
+
   ],
 })
 
