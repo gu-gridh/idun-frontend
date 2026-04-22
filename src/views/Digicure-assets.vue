@@ -25,7 +25,7 @@
                 <div class="row" style="width:auto; align-items: flex-start; padding-bottom:40px; padding-left: 140px;
         padding-right: 30px;">
                     <div class="asset-module longer" style="background-color:#FEAE00" title="DIGICURE Mesh Viewer">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-mesh.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>MESH VIEWER</div>
                         </div>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="asset-module longer" style="background-color:#FF7FCD"  title="DIGICURE Model Viewer">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-model.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>MODEL VIEWER</div>
                         </div>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="asset-module longer" style="background-color:#00E2FF"  title="DIGICURE Pointcloud Viewer">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-pointcloud.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>POINTCLOUD VIEWER</div>
                         </div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="asset-module longer" style="background-color:#60D937"  title="DIGICURE Image Viewer">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-image.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>IMAGE VIEWER</div>
                         </div>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="asset-module longer" style="background-color:#00FFD5"  title="DIGICURE RTI Viewer">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-rti.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">DIGICURE <br>RTI VIEWER</div>
                         </div>
@@ -97,8 +97,8 @@
                         </div>
                     </div>
 
-                    <div class="asset-module longer" style="background-color:#FFF056"  title="DIGICURE IIIF Viewer">
-                        <div class="asset-image" style="background-image:"></div>
+                    <div class="asset-module longer" style="background-color:#FFF056"  title="DIGICURE IIIF Converter">
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-iiif.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">IIIF <br>CONVERTER</div>
                             <div class="asset-subtitle"></div>
@@ -112,7 +112,7 @@
                     </div>
 
                     <div class="asset-module longer" style="background-color:#FF968D"  title="Topography Visualisation Toolbox">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-tvt.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                             <div class="asset-title">TVT:</div>
                             <div class="asset-subtitle">TOPOGRAPHY <br>VISUALISATION TOOLBOX</div>
@@ -141,12 +141,8 @@
 
                     <div class="intro-article" style="columns:1; max-width:900px">
 
-                        DIGICURE develops and maintains a robust multimodal platform that facilitates digital
-                        preservation and remote access of endangered cultural assets.
-                        The platform integrates various data types – including high-resolution images, 3D models,
-                        and
-                        metadata – to ensure comprehensive documentation and accessibility for research purposes and
-                        public engagement.
+                        DIGICURE has developed several immersive resources, for both reseach and educational purposes, related to lost, sensitive or threatened cultural heritage. 
+                        The experiences below can be downloaded and installed on Meta Quest 3.
 
                     </div>
                 </div>
@@ -154,41 +150,41 @@
                 <div class="row" style="width:auto; align-items: flex-start; padding-bottom:40px; padding-left: 140px;
         padding-right: 30px;">
                     <div class="asset-module" style="background-color:#FEAE00">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/vr-hemse.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                         <div class="asset-title">HEMSE<br>STAVE CHURCH</div>
                         </div>
                         <div class="asset-info">
-                            <div class="asset-description">Interacftive Virtual reality reconstruction of Hemse
+                            <div class="asset-description">Hemse Stave Church Revisited. Interactive Virtual Reality reconstruction of Hemse
                                 Stave Church.</div>
-                            <div class="asset-link">Download</div>
-                            <div class="asset-link">Documentation</div>
+                               <a href="https://data.dh.gu.se/digicure/vr/hemse.zip"><div class="asset-link">Download</div></a>
+                            <div class="asset-link inactive">Documentation</div>
                     
                         </div>
                     </div>
                     <div class="asset-module" style="background-color:#FF7FCD">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/vr-etruscan.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                         <div class="asset-title">ETRUSCAN<br>CHAMBER TOMBS</div>
                         </div>
                         <div class="asset-info">
-                            <div class="asset-description">Interacftive Virtual reality visualisation of documented
+                            <div class="asset-description">Interactive Virtual Reality visualisation of documented
                                 Etruscan chamber tombs from San Giovenale.</div>
-                            <div class="asset-link">Download</div>
-                            <div class="asset-link">Documentation</div>
+                            <a href="https://data.dh.gu.se/digicure/vr/etruscan.zip"><div class="asset-link">Download</div></a>
+                            <div class="asset-link inactive">Documentation</div>
                     
                         </div>
                     </div>
                     <div class="asset-module" style="background-color:#00E2FF">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/vr-nordenskjold.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                         <div class="asset-title">THE NORDENSKJÖLD<br>EXPEDITION</div>
                         </div>
                         <div class="asset-info">
-                            <div class="asset-description">Interacftive Virtual reality visualisation of the remains
+                            <div class="asset-description">Interactive Virtual Reality visualisation of the remains
                                 of the Nordenskjöld Expedition to Antarctica.</div>
-                            <div class="asset-link">Download</div>
-                            <div class="asset-link">Documentation</div>
+                            <a href="https://data.dh.gu.se/digicure/vr/nordenskjold.zip"><div class="asset-link">Download</div></a>
+                            <div class="asset-link inactive">Documentation</div>
                
                         </div>
                     </div>
@@ -199,10 +195,10 @@
                         <div class="asset-title">SÖDRA RÅDA<br>CHURCH</div>
                         </div>
                         <div class="asset-info">
-                            <div class="asset-description">Interacftive Virtual reality reconstruction of Södra Råda
+                            <div class="asset-description">Interactive Virtual Reality reconstruction of Södra Råda
                                 Church.</div>
                             <div class="asset-link">Download</div>
-                            <div class="asset-link">Documentation</div>
+                            <div class="asset-link inactive">Documentation</div>
                     
                         </div>
                     </div>
@@ -225,11 +221,7 @@
 
                     <div class="intro-article" style="columns:1; max-width:900px">
 
-                        DIGICURE develops and maintains a robust multimodal platform that facilitates digital
-                        preservation and remote access of endangered cultural assets.
-                        The platform integrates various data types – including high-resolution images, 3D models,
-                        and metadata – to ensure comprehensive documentation and accessibility for research purposes and
-                        public engagement.
+                        
 
                     </div>
                 </div>
@@ -237,7 +229,7 @@
                 <div class="row" style="width:auto; align-items: flex-start; padding-bottom:40px; padding-left: 140px;
         padding-right: 30px;">
                     <div class="asset-module" style="background-color:#FEAE00">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-workshop.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                         <div class="asset-title">DIGICURE:</div>
                            <div class="asset-subtitle">RESEARCH DRIVEN <br>DIGITALISATION</div>
@@ -246,12 +238,12 @@
                             <div class="asset-description">Workshop material for planning a deep digitalisation
                                 project that includes stakeholder and research perspectives.</div>
                             <div class="asset-link">Download material (Swedish)</div>
-                            <div class="asset-link">Documentation</div>
+                            <div class="asset-link inactive">Documentation</div>
               
                         </div>
                     </div>
                     <div class="asset-module" style="background-color:#FF7FCD">
-                        <div class="asset-image" style="background-image:"></div>
+                        <div class="asset-image" style="background-image:url(../digicure_assets_images/dc-medium.jpg); background-size:cover;"></div>
                         <div class="asset-title-area">
                         <div class="asset-title">MEDIUM:</div>
                          <div class="asset-subtitle">MENINGSFULLA DIGITALA <br>MUSEIUPPLEVELSER</div>
@@ -389,9 +381,11 @@ transform:scale(1.1);
         height: 150px;
         width: 150px;
         background-color: black;
-        opacity: 0.2;
+        opacity: 0.8;
         border-radius: 50%;
         margin-top: 35px;
+        
+         mix-blend-mode:multiply
     }
 
        .asset-title-area {
