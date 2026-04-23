@@ -32,7 +32,7 @@
                         <div class="asset-info">
                             <div class="asset-description">Web viewer for high resolution 3d meshes. The viewer is built
                                 on 3DHOP with custom UI and navigation for the DIGICURE platform.</div>
-                            <div class="asset-link">Repository and instructions</div>
+                            <a href="https://github.com/gu-gridh/3DHOP" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                               <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
       
@@ -46,7 +46,7 @@
                         <div class="asset-info">
                             <div class="asset-description">Web viewer for textured 3d models. The viewer is built
                                 on Three.JS with custom UI and navigation for the DIGICURE platform.</div>
-                            <div class="asset-link">Repository and instructions</div>
+                            <a href="https://github.com/gu-gridh/three.js" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
               
@@ -60,7 +60,7 @@
                         <div class="asset-info">
                             <div class="asset-description">Web viewer for high resolution pointclouds. The viewer is
                                 built on Potree.JS with custom UI and navigation for the DIGICURE platform.</div>
-                            <div class="asset-link">Repository and instructions</div>
+                            <a href="https://github.com/gu-gridh/potree" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
                
@@ -74,7 +74,7 @@
                         <div class="asset-info">
                             <div class="asset-description">Web viewer for high resolution images. The viewer is built on
                                 OpenSeadragon with custom UI and navigation for the DIGICURE platform.</div>
-                            <div class="asset-link">Repository and instructions</div>
+                            <a href="https://github.com/gu-gridh/openseadragon" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
                  
@@ -90,7 +90,7 @@
                             <div class="asset-description">Web viewer for RTI models. The viewer is built on OpenLime
                                 with custom UI and navigation for the
                                 DIGICURE platform.</div>
-                            <div class="asset-link">Repository and instructions</div>
+                            <a href="https://github.com/gu-gridh/openlime" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
                             <div class="asset-link">Live example</div>
                
@@ -105,7 +105,7 @@
                         </div>
                         <div class="asset-info">
                             <div class="asset-description">Application for converting high-resolution images to IIIF files ready for the Image Viewer component.</div>
-                            <div class="asset-link">Repository and instructions</div>
+                            <a href="https://github.com/gu-gridh/IIIF_tools" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
                        
                         </div>
