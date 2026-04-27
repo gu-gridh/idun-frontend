@@ -34,7 +34,7 @@
                                 on 3DHOP with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/3DHOP" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                               <div class="asset-link">Quick download</div>
-                            <div class="asset-link">Live example</div>
+                            <a href="https://dh.gu.se/digicure/resources/meshviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
       
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                                 on Three.JS with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/three.js" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
-                            <div class="asset-link">Live example</div>
+                            <a href="https://dh.gu.se/digicure/resources/modelviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
               
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                                 built on Potree.JS with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/potree" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
-                            <div class="asset-link">Live example</div>
+                            <a href="https://dh.gu.se/digicure/resources/pointcloudviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
                
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                 OpenSeadragon with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/openseadragon" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
-                            <div class="asset-link">Live example</div>
+                            <a href="https://dh.gu.se/digicure/resources/imageviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
                  
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/openlime" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
-                            <div class="asset-link">Live example</div>
+                            <a href="https://dh.gu.se/digicure/resources/rtiviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
                
                         </div>
                     </div>
@@ -107,7 +107,6 @@
                             <div class="asset-description">Application for converting high-resolution images to IIIF files ready for the Image Viewer component.</div>
                             <a href="https://github.com/gu-gridh/IIIF_tools" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
                             <div class="asset-link">Quick download</div>
-                       
                         </div>
                     </div>
 
