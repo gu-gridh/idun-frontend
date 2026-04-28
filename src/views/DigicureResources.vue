@@ -33,7 +33,7 @@
                             <div class="asset-description">Web viewer for high resolution 3d meshes. The viewer is built
                                 on 3DHOP with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/3DHOP" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
-                              <div class="asset-link">Quick download</div>
+                            <a href="https://data.dh.gu.se/digicure/3DHOP-master.zip" target="_blank" rel="noopener noreferrer"><div class="asset-link">Quick download</div></a>
                             <a href="https://dh.gu.se/digicure/resources/meshviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
       
                         </div>
@@ -47,7 +47,7 @@
                             <div class="asset-description">Web viewer for textured 3d models. The viewer is built
                                 on Three.JS with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/three.js" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
-                            <div class="asset-link">Quick download</div>
+                            <a href="https://data.dh.gu.se/digicure/three.js-dev.zip" target="_blank" rel="noopener noreferrer"><div class="asset-link">Quick download</div></a>
                             <a href="https://dh.gu.se/digicure/resources/modelviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
               
                         </div>
@@ -61,7 +61,7 @@
                             <div class="asset-description">Web viewer for high resolution pointclouds. The viewer is
                                 built on Potree.JS with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/potree" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
-                            <div class="asset-link">Quick download</div>
+                            <a href="https://data.dh.gu.se/digicure/potree-develop.zip" target="_blank" rel="noopener noreferrer"><div class="asset-link">Quick download</div></a>
                             <a href="https://dh.gu.se/digicure/resources/pointcloudviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
                
                         </div>
@@ -75,7 +75,7 @@
                             <div class="asset-description">Web viewer for high resolution images. The viewer is built on
                                 OpenSeadragon with custom UI and navigation for the DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/openseadragon" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
-                            <div class="asset-link">Quick download</div>
+                            <a href="https://data.dh.gu.se/digicure/openseadragon-master.zip" target="_blank" rel="noopener noreferrer"><div class="asset-link">Quick download</div></a>
                             <a href="https://dh.gu.se/digicure/resources/imageviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
                  
                         </div>
@@ -91,7 +91,7 @@
                                 with custom UI and navigation for the
                                 DIGICURE platform.</div>
                             <a href="https://github.com/gu-gridh/openlime" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
-                            <div class="asset-link">Quick download</div>
+                            <a href="https://data.dh.gu.se/digicure/openlime-main.zip" target="_blank" rel="noopener noreferrer"><div class="asset-link">Quick download</div></a>
                             <a href="https://dh.gu.se/digicure/resources/rtiviewer" target="_blank" rel="noopener noreferrer"><div class="asset-link">Live example</div></a>
                
                         </div>
@@ -106,7 +106,7 @@
                         <div class="asset-info">
                             <div class="asset-description">Application for converting high-resolution images to IIIF files ready for the Image Viewer component.</div>
                             <a href="https://github.com/gu-gridh/IIIF_tools" target="_blank" rel="noopener noreferrer"><div class="asset-link">Repository and instructions</div></a>
-                            <div class="asset-link">Quick download</div>
+                            <a href="https://data.dh.gu.se/digicure/IIIF_tools.zip" target="_blank" rel="noopener noreferrer"><div class="asset-link">Quick download</div></a>
                         </div>
                     </div>
 
